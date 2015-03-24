@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>NTUIM 2015 Orientation Camp</title>
+	<link rel="stylesheet" href="css/normalize.css">
+	<link rel="stylesheet" href="css/semantic.min.css">
+	<link rel="stylesheet" href="css/style.css">
+	<script src="js/jquery-2.1.3.min.js"></script>
+	<script src="js/semantic.min.js"></script>
+	<script src="js/form.js"></script>
+</head>
+
+<body>
+	<div class="parallax">
+		<div class="parallax_layer parallax_layer-back">
+			<div class="bg-img">
+				<img src="img/bg-img01.jpg" alt="">
+				<img src="http://i.imgur.com/tbQom87.jpg" alt="">
+			</div>
+			<div class="bg-img">
+				<img src="img/bg-img02.jpg" alt="">
+				<img src="http://i.imgur.com/nkIh4rR.jpg" alt="">
+			</div>
+		</div>
+		<div class="parallax_layer parallax_layer-base">
+			<div id="Cover" class="page">
+				<div class="chip">
+					<h1>網站建置中</h1>
+					<p>臺灣大學資訊管理學系 2015 迎新宿營活動籌備中敬請期待！</p>
+				</div>
+			</div>
+			<div id="Infor" class="page">
+				<div class="chip">
+					<h1>#Info</h1>
+					<p>活動相關資訊</p>
+				</div>
+			</div>
+			<div id="Staff" class="page">
+				<div class="chip">
+					<h1>#Staff</h1>
+					<p>籌備幹部名單</p>
+				</div>
+			</div>
+			<div id="SignUp" class="page">
+				<div class="chip">
+					<h1>#SignUp</h1>
+					<p>填寫報名表單</p>
+					<p>測試人員填寫用表單</p>
+					<form action="https://docs.google.com/forms/d/1TD02Ltll0QCekEsZcqMmjjcWTMj8Exg99-LbkAkqXJM/formResponse" method="post" onsubmit="checkForm()" class="ui form">
+						<div class="two fields">
+							<div class="field">
+								<label>作業系統</label>
+								<select name="entry.1152289928" id="entry.1152289928" class="ui selection dropdown">
+									<option value="Windows">Windows</option>
+									<option value="OS X">OS X</option>
+									<option value="Linux">Linux</option>
+									<option value="Android">Android</option>
+									<option value="iOS">iOS</option>
+								</select>
+							</div>
+							<div class="field">
+								<label>網頁瀏覽器</label>
+								<select name="entry.357541403" id="entry.357541403" class="ui selection dropdown">
+									<option value="Internet Explorer">Internet Explorer</option>
+									<option value="Google Chrome">Google Chrome</option>
+									<option value="Apple Safari">Apple Safari</option>
+									<option value="Mozilla Firefox">Mozilla Firefox</option>
+									<option value="Opera">Opera</option>
+								</select>
+							</div>
+						</div>
+						<div class="field">
+							<label>任何建議或錯誤回報</label>
+							<textarea name="entry.837454648" id="entry.837454648"></textarea>
+						</div>
+						<label>版本</label>
+						<div if="Version" class="field">
+							<input type="text" name="entry.677460826" id="entry.677460826" value="20150324/0.1/test" disabled="disabled">
+						</div>
+						<input type="submit" name="submit" id="submit" class="ui button submit" value="Submit">
+					</form>
+				</div>
+			</div>
+		</div>
+	</div>
+</body>
+
+</html>
