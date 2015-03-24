@@ -10,50 +10,57 @@
 	<link rel="stylesheet" href="css/style.css">
 	<script src="js/jquery-2.1.3.min.js"></script>
 	<script src="js/semantic.min.js"></script>
-	<script src="js/form.js"></script>
 </head>
 
 <body>
 	<div class="parallax">
 		<div class="parallax_layer parallax_layer-back">
 			<div class="bg-img">
-				<img src="img/bg-img01.jpg" alt="">
-				<img src="http://i.imgur.com/tbQom87.jpg" alt="">
+				<img src="http://i.imgur.com/tbQom87.jpg" alt="No Image.">
 			</div>
 			<div class="bg-img">
-				<img src="img/bg-img02.jpg" alt="">
-				<img src="http://i.imgur.com/nkIh4rR.jpg" alt="">
+				<img src="http://i.imgur.com/1IHsQVX.jpg" alt="No Image.">
 			</div>
 		</div>
 		<div class="parallax_layer parallax_layer-base">
 			<div id="Cover" class="page">
 				<div class="chip">
-					<h1>網站建置中</h1>
+					<h1 class="header">網站建置中</h1>
 					<p>臺灣大學資訊管理學系 2015 迎新宿營活動籌備中敬請期待！</p>
 				</div>
 			</div>
 			<div id="Infor" class="page">
 				<div class="chip">
-					<h1>#Info</h1>
+					<h1 class="header">#Info</h1>
 					<p>活動相關資訊</p>
 				</div>
 			</div>
 			<div id="Staff" class="page">
 				<div class="chip">
-					<h1>#Staff</h1>
+					<h1 class="header">#Staff</h1>
 					<p>籌備幹部名單</p>
+				</div>
+			</div>
+			<div id="Thanks" class="page">
+				<div class="chip">
+					<h1 class="header">感謝填寫表單！</h1>
+					<p>資訊部在此感謝任何建議與回報，資訊部網頁團隊將會在報名網頁正式上線後提供豐厚獎賞給提出大量有用的建議或是抓到特別多錯誤的貢獻者 (❀╹◡╹)</p>
+					<p>關於獎勵的部分請與正式網頁一起敬請期待吧～ (๑•̀ω•́)ノ</p>
+					<!-- 至於獎賞是什麼我還沒想到 -->
 				</div>
 			</div>
 			<div id="SignUp" class="page">
 				<div class="chip">
-					<h1>#SignUp</h1>
+					<h1 class="header">#SignUp</h1>
 					<p>填寫報名表單</p>
-					<p>測試人員填寫用表單</p>
-					<form action="https://docs.google.com/forms/d/1TD02Ltll0QCekEsZcqMmjjcWTMj8Exg99-LbkAkqXJM/formResponse" method="post" onsubmit="checkForm()" class="ui form">
+					<h1 class="header">測試人員填寫用表單</h1>
+					<iframe id="hidden_frame" name="hidden_frame"></iframe>
+					<form id="SignUpForm" class="ui form" action="https://docs.google.com/forms/d/1TD02Ltll0QCekEsZcqMmjjcWTMj8Exg99-LbkAkqXJM/formResponse" method="post" target="hidden_frame" onsubmit="return checkForm()">
 						<div class="two fields">
 							<div class="field">
 								<label>作業系統</label>
-								<select name="entry.1152289928" id="entry.1152289928" class="ui selection dropdown">
+								<select id="entry-1152289928" class="ui search dropdown" name="entry.1152289928">
+									<option value=""></option>
 									<option value="Windows">Windows</option>
 									<option value="OS X">OS X</option>
 									<option value="Linux">Linux</option>
@@ -63,7 +70,7 @@
 							</div>
 							<div class="field">
 								<label>網頁瀏覽器</label>
-								<select name="entry.357541403" id="entry.357541403" class="ui selection dropdown">
+								<select id="entry-357541403" class="ui selection dropdown" name="entry.357541403">
 									<option value="Internet Explorer">Internet Explorer</option>
 									<option value="Google Chrome">Google Chrome</option>
 									<option value="Apple Safari">Apple Safari</option>
@@ -74,18 +81,24 @@
 						</div>
 						<div class="field">
 							<label>任何建議或錯誤回報</label>
-							<textarea name="entry.837454648" id="entry.837454648"></textarea>
+							<textarea id="entry-837454648" name="entry.837454648"></textarea>
+							<!-- 再吵就把你給 POI 掉喔！ -->
 						</div>
-						<label>版本</label>
-						<div if="Version" class="field">
-							<input type="text" name="entry.677460826" id="entry.677460826" value="20150324/0.1/test" disabled="disabled">
+						<div class="field hidden">
+							<label>版本</label>
+							<input id="entry-677460826" type="text" name="entry.677460826" value="">
 						</div>
-						<input type="submit" name="submit" id="submit" class="ui button submit" value="Submit">
+						<div class="ui error message">
+							<p>所有欄位必須填入資料。</p>
+						</div>
+						<input id="submit" class="ui button submit" type="submit" name="submit" value="確認送出">
 					</form>
 				</div>
 			</div>
 		</div>
 	</div>
+	<div id="Version">20150324/0.1.1/form</div>
+	<script src="js/form.js"></script>
 </body>
 
 </html>

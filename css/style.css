@@ -2,6 +2,19 @@ body {
 	background-color: #EEEEEE;
 }
 
+iframe {
+	display: none;
+	border: none;
+}
+
+p {
+	margin: 0 0 .7em 0;
+	line-height: 1.7em;
+	text-align: justify;
+	text-justify: ideographic;
+	text-indent: 2em;
+}
+
 .parallax {
 	perspective: 1px;
 	-webkit-perspective: 1px;
@@ -30,6 +43,8 @@ body {
 }
 
 .bg-img img {
+	position: relative;
+	top: 0;
 	min-width: 100vw;
 }
 
@@ -43,18 +58,6 @@ body {
 	height: 100vh;
 }
 
-#Infor {
-	background-color: #E3F2FD;
-}
-
-#Staff {
-	/*background-color: #E8EAF6;*/
-}
-
-#SignUp {
-	background-color: #EDE7F6;
-}
-
 .chip {
 	min-height: 500px;
 	width: 90%;
@@ -62,23 +65,29 @@ body {
 	margin: 0 auto;
 	padding: 32px;
 	background-color: rgba(255, 255, 255, .7);
-	/*text-align: center;*/
 	border-radius: 16px;
 }
 
-p {
-	margin: 0 0 .7em 0;
-	line-height: 1.7em;
-	text-align: justify;
-	text-justify: ideographic;
-	text-indent: 2em;
+#Infor {
+	background-color: #BBDEFB;
 }
 
-#version {
+#Staff {
+	
+}
+
+#SignUp {
+	background-color: #C5CAE9;
+}
+
+#Thanks {
+	background-color: #D1C4E9;
+}
+
+#Version {
 	display: none;
 }
 
-/*form {
-	width: 90%;
-	margin: 0 auto;
-}*/
+.hidden {
+	display: none;
+}
