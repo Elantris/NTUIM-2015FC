@@ -1,9 +1,9 @@
 body {
 	background-color: #EEEEEE;
+	overflow: hidden;
 }
 
 iframe {
-	display: none;
 	border: none;
 }
 
@@ -14,14 +14,16 @@ p {
 	text-justify: ideographic;
 	text-indent: 2em;
 }
+/*Theme styles*/
 
 .parallax {
-	perspective: 1px;
-	-webkit-perspective: 1px;
 	height: 100vh;
 	overflow-x: hidden;
 	overflow-y: auto;
+	perspective: 1px;
+	-webkit-perspective: 1px;
 	perspective-origin-x: 100%;
+	-webkit-perspective-origin-x: 100%;
 }
 
 .parallax_layer {
@@ -31,9 +33,11 @@ p {
 	bottom: 0;
 	left: 0;
 	transform-origin-x: 100%;
+	-webkit-transform-origin-x: 100%;
 }
 
 .parallax_layer-back {
+	z-index: -5;
 	transform: translateZ(-1px) scale(2);
 	-webkit-transform: translateZ(-1px) scale(2);
 }
@@ -42,59 +46,53 @@ p {
 	overflow: hidden;
 	height: 100vh;
 	width: 100vw;
-}
-
-.bg-img img {
-	position: relative;
-	top: 0;
-	min-width: 100vw;
+	background-image: url('http://i.imgur.com/tbQom87.jpg');
+	background-position: center;
+	background-repeat: no-repeat;
+	background-size: cover;
 }
 
 .parallax_layer-base {
+	z-index: 5;
 	transform: translateZ(0);
 	-webkit-transform: translateZ(0);
 }
+/*Parallax styles*/
 
 .page {
-	padding-top: 5vh;
-	padding-bottom: 5vh;
-	height: 100vh;
-	overflow-y: hidden;
+	padding: 10vh 5% 10vh 5%;
 }
 
 .chip {
-	height: 90vh;
 	width: 100%;
 	max-width: 700px;
 	margin: 0 auto;
 	padding: 16px;
-	background-color: rgba(255, 255, 255, .7);
+	background-color: rgba(255, 255, 255, .6);
 	border-radius: 16px;
 	overflow-y: auto;
 }
+/*Components*/
 
-.segment {}
-
-.ui.cards {
-	margin-left: 10px;
+#Cover {
+	height: 100vh;
+	overflow-y: hidden;
 }
-
-@media (max-width: 767px) {}
 
 #Info {
 	background-color: #BBDEFB;
 }
 
-#Staff {}
-
-#Sign {
+#Staff {
 	background-color: #C5CAE9;
 }
 
-#Version {
-	display: none;
+#Sign {
+	background-color: #D1C4E9;
 }
+/*Page Name*/
 
 .hidden {
 	display: none;
 }
+/*Special prupose*/

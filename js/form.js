@@ -1,5 +1,6 @@
 $(document).ready(function() {
-	$('#ThankYou').hide();
+	$('#WarnJS').hide();
+	$('#SignUpForm').show();
 	$('.dropdown').dropdown({
 		transition: 'slide down'
 	});
@@ -9,24 +10,28 @@ $(document).ready(function() {
 
 function checkForm() {
 	$('#SignUpForm').addClass('loading');
-	var flag = true;
-	var inputId = [
-		'#entry-1152289928',
-		'#entry-357541403',
-		'#entry-837454648'
-	];
+	var flag = true,
+		tmp,
+		inputId = [
+			'#entry-1152289928',
+			'#entry-357541403',
+			'#entry-837454648'
+		];
 	for (var i = 0; i < inputId.length && flag; i++) {
-		var tmp = $(inputId[i]).val();
+		tmp = $(inputId[i]).val();
 		if (tmp == '' || tmp == null) {
 			flag = false;
-		}
-	}
+		};
+	};
+	tmp = $("#entry-791517028").val();
+	if (isNaN(tmp) || tmp <= 0 || tmp >= 52) {
+		flag = false;
+	};
 	if (flag) {
-		$('#SignUpForm').slideUp(500).removeClass('error loading');
-		$('#ThankYou').slideDown(500);
+		$('#SignUpForm').slideUp(200).removeClass('error loading');
+		$('#ThankYou').slideDown(200);
 	} else {
-		$('#SignUpForm').addClass('error');
-		$('#SignUpForm').removeClass('loading');
-	}
+		$('#SignUpForm').addClass('error').removeClass('loading');
+	};
 	return flag;
 }
