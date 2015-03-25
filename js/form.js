@@ -1,8 +1,11 @@
-$('#Thanks').hide();
-$('.dropdown').dropdown({
-	transition: 'slide down'
+$(document).ready(function() {
+	$('#ThankYou').hide();
+	$('.dropdown').dropdown({
+		transition: 'slide down'
+	});
+	$('#entry-677460826').attr('value', $('#Version').html());
 });
-$('#entry-677460826').attr('value', $('#Version').html());
+
 
 function checkForm() {
 	$('#SignUpForm').addClass('loading');
@@ -19,9 +22,8 @@ function checkForm() {
 		}
 	}
 	if (flag) {
-		$('#SignUpForm').removeClass('error');
-		$('#Thanks').fadeIn(500);
-		$('#SignUp').fadeOut(500);
+		$('#SignUpForm').slideUp(500).removeClass('error loading');
+		$('#ThankYou').slideDown(500);
 	} else {
 		$('#SignUpForm').addClass('error');
 		$('#SignUpForm').removeClass('loading');

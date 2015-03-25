@@ -21,6 +21,7 @@ p {
 	height: 100vh;
 	overflow-x: hidden;
 	overflow-y: auto;
+	perspective-origin-x: 100%;
 }
 
 .parallax_layer {
@@ -29,6 +30,7 @@ p {
 	right: 0;
 	bottom: 0;
 	left: 0;
+	transform-origin-x: 100%;
 }
 
 .parallax_layer-back {
@@ -54,34 +56,39 @@ p {
 }
 
 .page {
-	padding-top: 20vh;
+	padding-top: 5vh;
+	padding-bottom: 5vh;
 	height: 100vh;
+	overflow-y: hidden;
 }
 
 .chip {
-	min-height: 500px;
-	width: 90%;
+	height: 90vh;
+	width: 100%;
 	max-width: 700px;
 	margin: 0 auto;
-	padding: 32px;
+	padding: 16px;
 	background-color: rgba(255, 255, 255, .7);
 	border-radius: 16px;
+	overflow-y: auto;
 }
 
-#Infor {
+.segment {}
+
+.ui.cards {
+	margin-left: 10px;
+}
+
+@media (max-width: 767px) {}
+
+#Info {
 	background-color: #BBDEFB;
 }
 
-#Staff {
-	
-}
+#Staff {}
 
-#SignUp {
+#Sign {
 	background-color: #C5CAE9;
-}
-
-#Thanks {
-	background-color: #D1C4E9;
 }
 
 #Version {

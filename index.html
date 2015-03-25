@@ -3,13 +3,14 @@
 
 <head>
 	<meta charset="UTF-8">
-	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<!-- <meta name="viewport" content="width=device-width, initial-scale=1"> -->
 	<title>NTUIM 2015 Orientation Camp</title>
 	<link rel="stylesheet" href="css/normalize.css">
 	<link rel="stylesheet" href="css/semantic.min.css">
 	<link rel="stylesheet" href="css/style.css">
 	<script src="js/jquery-2.1.3.min.js"></script>
 	<script src="js/semantic.min.js"></script>
+	<script src="js/form.js"></script>
 </head>
 
 <body>
@@ -22,84 +23,199 @@
 				<img src="http://i.imgur.com/1IHsQVX.jpg" alt="No Image.">
 			</div>
 		</div>
+		<!-- End of Background -->
+
 		<div class="parallax_layer parallax_layer-base">
 			<div id="Cover" class="page">
 				<div class="chip">
-					<h1 class="header">網站建置中</h1>
-					<p>臺灣大學資訊管理學系 2015 迎新宿營活動籌備中敬請期待！</p>
+					<div class="ui purple message">
+						<div class="header">網站建置中</div>
+						<p>臺灣大學資訊管理學系 2015 迎新宿營活動籌備中敬請期待！</p>
+					</div>
+					<div class="ui red message">
+						<div class="header">注意事項</div>
+						<p>目前還沒針對行動裝置做優化，任何不合理的畫面都是瀏覽器自動生成，我們將會在之後的版本更新中修復行動裝置的瀏覽狀況。</p>
+					</div>
+					<div class="ui blue message">
+						<div class="header">latest Updates</div>
+						<div class="header">20150325/0.1.3/Form Improved</div>
+						<ul>
+							<li>Modify external javaScript files.</li>
+							<li>Modify chip styles.</li>
+							<li>Add School ID field for testers.</li>
+							<li>Use cards to place staff introduction.</li>
+							<li>Fix bug: right useless space (webkit).</li>
+						</ul>
+					</div>
+					<div class="ui message">
+						<div class="header">Version History</div>
+						<div class="header">20150324/0.1.2/Form</div>
+						<ul>
+							<li>Bugs fixed.</li>
+						</ul>
+						<div class="header">20150324/0.1.1/form</div>
+						<ul>
+							<li>Modify frames colors.</li>
+							<li>Create form javascript.</li>
+						</ul>
+						<div class="header">20150324/0.1/test</div>
+						<ul>
+							<li>Add default frames.</li>
+							<li>Cover equipt parallax.</li>
+							<li>Add test report form without validation.</li>
+						</ul>
+					</div>
 				</div>
 			</div>
-			<div id="Infor" class="page">
+			<!-- End of Cover page -->
+
+			<div id="Info" class="page">
 				<div class="chip">
-					<h1 class="header">#Info</h1>
+					<h1>#Info</h1>
 					<p>活動相關資訊</p>
 				</div>
 			</div>
+			<!-- End of Information page -->
+
 			<div id="Staff" class="page">
-				<div class="chip">
-					<h1 class="header">#Staff</h1>
-					<p>籌備幹部名單</p>
+				<div class="ui four doubling cards">
+					<div class="card">
+						<div class="image">
+							<img src="http://i.imgur.com/puHiQaB.jpg" alt="剛毛的照片">
+						</div>
+						<div class="content">
+							<a class="header">張晉華／剛毛</a>
+							<div class="meta"><span class="date">宿營總召</span></div>
+							<div class="description">典型綽號比本名有名的人。</div>
+						</div>
+					</div>
+					<div class="card">
+						<div class="image">
+							<img src="http://i.imgur.com/puHiQaB.jpg" alt="卷姊的照片">
+						</div>
+						<div class="content">
+							<a class="header">徐嘉琪／卷姊</a>
+							<div class="meta"><span class="date">宿營副召</span></div>
+							<div class="description">這個也是綽號比本名有名的人。</div>
+						</div>
+					</div>
+					<div class="card">
+						<div class="image">
+							<img src="http://i.imgur.com/puHiQaB.jpg" alt="毫無反應，就只是一個照片">
+						</div>
+						<div class="content">
+							<a class="header">黃楷翔</a>
+							<div class="meta"><span class="date">宿營副召</span></div>
+							<div class="description">不被知道綽號的人。</div>
+						</div>
+					</div>
+					<div class="green card">
+						<div class="ui green message">幹部名單</div>
+						<div class="content">
+							<div class="header">張博程</div>
+							<div class="meta">財務秘書</div>
+							<div class="description"></div>
+							<div class="header">陳品、林品瑢</div>
+							<div class="meta">活動長、副活動長</div>
+							<div class="description"></div>
+							<div class="header">王思淇、洪念綺</div>
+							<div class="meta">公關長、副公關長</div>
+							<div class="description"></div>
+							<div class="header">陳維漢、張睿君</div>
+							<div class="meta">庶務長、副庶務長</div>
+							<div class="description"></div>
+							<div class="header">謝惠羽、黃詣</div>
+							<div class="meta">美宣長、副美宣長</div>
+							<div class="description"></div>
+							<div class="header">林書攸、林軒逸</div>
+							<div class="meta">器材長、副器材長</div>
+							<div class="description"></div>
+							<div class="header">林子期、許承佑</div>
+							<div class="meta">資訊長、副資訊長</div>
+							<div class="description"></div>
+						</div>
+					</div>
 				</div>
 			</div>
-			<div id="Thanks" class="page">
+			<!-- End of Staff Introduction page -->
+
+			<div id="Sign" class="page">
 				<div class="chip">
-					<h1 class="header">感謝填寫表單！</h1>
-					<p>迎新宿營資訊部網頁團隊在此感謝任何建議與回報，我們將會在報名網頁正式上線後提供豐厚獎賞給提出大量有用的建議或是回報特別多錯誤的貢獻者 (❀╹◡╹)</p>
-					<p>關於獎勵的部分敬請與正式網頁一起期待吧～ (๑•̀ω•́)ノ</p>
-					<!-- 至於是什麼其實是我還沒想到 -->
-				</div>
-			</div>
-			<div id="SignUp" class="page">
-				<div class="chip">
-					<h1 class="header">#SignUp</h1>
+					<h1>#SignUp</h1>
 					<p>填寫報名表單</p>
-					<h1 class="header">測試人員填寫用表單</h1>
+					<h1>測試人員填寫用表單</h1>
 					<iframe id="hidden_frame" name="hidden_frame"></iframe>
 					<form id="SignUpForm" class="ui form" action="https://docs.google.com/forms/d/1TD02Ltll0QCekEsZcqMmjjcWTMj8Exg99-LbkAkqXJM/formResponse" method="post" target="hidden_frame" onsubmit="return checkForm()">
-						<div class="two fields">
+						<div class="three fields">
 							<div class="field">
 								<label>作業系統</label>
-								<select id="entry-1152289928" class="ui search dropdown" name="entry.1152289928">
+								<select id="entry-1152289928" class="ui selection dropdown" name="entry.1152289928">
 									<option value=""></option>
 									<option value="Windows">Windows</option>
 									<option value="OS X">OS X</option>
 									<option value="Linux">Linux</option>
 									<option value="Android">Android</option>
 									<option value="iOS">iOS</option>
+									<option value="Chrome OS">Chrome OS</option>
+									<option value="Firefox OS">Firefox OS</option>
+									<option value="Other Desktop OS">Other Desktop OS</option>
+									<option value="Other Mobile OS">Other Mobile OS</option>
 								</select>
 							</div>
 							<div class="field">
 								<label>網頁瀏覽器</label>
-								<select id="entry-357541403" class="ui selection search dropdown" name="entry.357541403">
+								<select id="entry-357541403" class="ui selection  dropdown" name="entry.357541403">
 									<option value=""></option>
 									<option value="Internet Explorer">Internet Explorer</option>
 									<option value="Google Chrome">Google Chrome</option>
 									<option value="Apple Safari">Apple Safari</option>
 									<option value="Mozilla Firefox">Mozilla Firefox</option>
 									<option value="Opera">Opera</option>
+									<option value="Other"></option>
 								</select>
 							</div>
+							<div class="field">
+								<label>學號</label>
+								<div class="ui labeled input">
+									<div class="ui label">
+										B037050
+									</div>
+									<input id="entry-791517028" type="text" name="entry.791517028">
+								</div>
+							</div>
+						</div>
+						<div class="ui blue message">
+							<div class="header">僅限台大資管大一同仁</div>
+							<p>認真填寫回饋資料的話有機會參加抽獎喔～請記得留下學號以供辨識，如果沒有填寫學號欄位工作人員會非常感謝你的匿名支援XD</p>
 						</div>
 						<div class="field">
 							<label>任何建議或錯誤回報</label>
-							<textarea id="entry-837454648" name="entry.837454648" placeholder="認真填寫的話有機會獲得精美小禮物喔！記得留下資料以供辨識～"></textarea>
+							<textarea id="entry-837454648" name="entry.837454648" placeholder=""></textarea>
 							<!-- 再吵就把你給 POI 掉喔！ -->
 						</div>
+						<div class="ui error message">所有欄位必須填入資料。</div>
 						<div class="field hidden">
 							<label>版本</label>
 							<input id="entry-677460826" type="text" name="entry.677460826" value="">
-						</div>
-						<div class="ui error message">
-							<p>所有欄位必須填入資料。</p>
+							<!-- Default Version -->
 						</div>
 						<input id="submit" class="ui button submit" type="submit" name="submit" value="確認送出">
+						<div class="ui yellow message">
+							<div class="header">注意事項</div>
+							<p>測試版網頁僅從技術層面開始研究，尚未與美術單位合作，填寫建議與回報錯誤請從系統的操作性與穩定度做評論，任何過度偏激或與網頁無關的言論將不列入抽獎名單。</p>
+							<!-- 行動裝置的瀏覽好難做啊！決定先把一些東西註解掉 -->
+						</div>
 					</form>
+					<div id="ThankYou" class="ui green message">
+						<div class="header">感謝填寫表單！</div>
+						<p>迎新宿營資訊部網頁團隊（其實只有一個人）在此感謝任何建議與回報，我（們）將會在報名網頁正式上線後提供特別獎勵給予提出非常有用的建議或是回報特別多錯誤的貢獻者 (❀╹◡╹)</p>
+						<p>關於獎勵的部分敬請與正式網頁的上線一起期待吧～ (๑•̀ω•́)ノ</p>
+					</div>
 				</div>
 			</div>
 		</div>
 	</div>
-	<div id="Version">20150324/0.1.2/Form</div>
-	<script src="js/form.js"></script>
+	<div id="Version">20150325/0.1.3/Form Improved</div>
 </body>
 
 </html>
