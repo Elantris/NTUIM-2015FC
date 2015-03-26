@@ -4,7 +4,7 @@ $(document).ready(function() {
 	$('.dropdown').dropdown({
 		transition: 'slide down'
 	});
-	$('#entry-677460826').attr('value', $('#Version').html());
+	$('#entry-677460826').attr('value', $('#Version').text());
 });
 
 

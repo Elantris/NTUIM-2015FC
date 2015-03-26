@@ -40,13 +40,16 @@
 					<h1>#Updating Information</h1>
 					<div class="ui blue feed message">
 						<div class="header">Latest Updates</div>
-						<div class="header">20150325/0.1.4/Check Method</div>
-						<ul>
-							<li>Modify checkForm() method.</li>
-							<li>Modify styles of default frames.</li>
-							<li>Correct some spellings.</li>
-							<li>Bugs fixed: Parallax overflow, pages height, box-models</li>
-						</ul>
+						<div class="event">
+							<div class="content">
+								<div id="Version" class="summary">20150325/0.1.5/Clear view</div>
+								<!-- Lastest Version -->
+								<div class="extra text">
+									Modify background colors.
+									<br>Modify components box-model.
+								</div>
+							</div>
+						</div>
 					</div>
 					<div class="ui orange message">
 						<div class="header">Pending Issues</div>
@@ -60,6 +63,17 @@
 						<div class="header">Version History</div>
 						<div class="event">
 							<div class="content">
+								<div class="summary">20150325/0.1.4/Check Method</div>
+								<div class="extra text">
+									Modify checkForm() method.
+									<br>Modify styles of default frames.
+									<br>Correct some spellings.
+									<br>Bugs fixed: Parallax overflow, pages height, box-models
+								</div>
+							</div>
+						</div>
+						<div class="event">
+							<div class="content">
 								<div class="summary">20150325/0.1.3/Form Improved</div>
 								<div class="extra text">
 									Modify external javaScript files.
@@ -68,7 +82,6 @@
 									<br>Use cards to place staff introduction.
 									<br>Bugs fixed: right useless space (webkit).
 								</div>
-								<div class="meta"></div>
 							</div>
 						</div>
 						<div class="event">
@@ -77,7 +90,6 @@
 								<div class="extra text">
 									Bugs fixed.
 								</div>
-								<div class="meta"></div>
 							</div>
 						</div>
 						<div class="event">
@@ -87,7 +99,6 @@
 									Modify frames colors.
 									<br>Create form javascript.
 								</div>
-								<div class="meta"></div>
 							</div>
 						</div>
 						<div class="event">
@@ -98,7 +109,6 @@
 									<br>Cover equipt parallax.
 									<br>Add test report form without validation.
 								</div>
-								<div class="meta"></div>
 							</div>
 						</div>
 					</div>
@@ -143,7 +153,7 @@
 							</div>
 							<div class="field">
 								<label>網頁瀏覽器</label>
-								<select id="entry-357541403" class="ui selection  dropdown" name="entry.357541403">
+								<select id="entry-357541403" class="ui selection dropdown" name="entry.357541403">
 									<option value=""></option>
 									<option value="Internet Explorer">Internet Explorer</option>
 									<option value="Google Chrome">Google Chrome</option>
@@ -156,10 +166,8 @@
 							<div class="field">
 								<label>學號</label>
 								<div class="ui labeled input">
-									<div class="ui label">
-										B037050
-									</div>
-									<input id="entry-791517028" type="text" name="entry.791517028" placeholder="00">
+									<div class="ui black label">B037050</div>
+									<input id="entry-791517028" class="" type="text" name="entry.791517028" placeholder="00">
 								</div>
 							</div>
 						</div>
@@ -169,16 +177,15 @@
 						</div>
 						<div class="field">
 							<label>任何建議或錯誤回報</label>
-							<textarea id="entry-837454648" name="entry.837454648"></textarea>
-							<!-- 再吵就把你給 POI 掉喔！ -->
+							<textarea id="entry-837454648" class="" name="entry.837454648"></textarea>
+							<!-- 隨便亂寫就把你給 POI 掉喔！ -->
 						</div>
 						<div class="ui error message">所有欄位必須填入資料。</div>
 						<div class="field hidden">
 							<label>版本</label>
 							<input id="entry-677460826" type="text" name="entry.677460826" value="">
-							<!-- Hidden Version -->
 						</div>
-						<input id="submit" class="ui button" type="submit" name="submit" value="確認送出">
+						<input id="submit" class="ui black button" type="submit" name="submit" value="確認送出">
 						<div class="ui yellow message">
 							<div class="header">注意事項</div>
 							<p>目前還沒針對行動裝置做優化，任何不合理的畫面都是由瀏覽器自動生成，製作團隊將會在之後的更新版本中修復行動裝置的瀏覽狀況。</p>
@@ -195,10 +202,11 @@
 				</div>
 			</div>
 			<!-- End of Sign up page -->
+
 		</div>
 		<!-- End of front layer -->
+
 	</div>
-	<div id="Version" class="hidden">20150325/0.1.4/Check Method</div>
 </body>
 
 </html>
