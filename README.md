@@ -1,7 +1,7 @@
 #NTUIM-2015OC
 National Taiwan University Information Management 2015 Orientation Camp
 ##Update
-* 20150325/0.1.5/Clear view
+* 20150326/0.1.5/Clear view
 ```
 Modify background colors.
 Modify components box-model.
