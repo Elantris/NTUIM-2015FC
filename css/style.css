@@ -1,5 +1,6 @@
 body {
 	margin: 0;
+	background-color: black;
 }
 
 iframe {
@@ -73,9 +74,15 @@ nav:hover #Logo {
 }
 
 footer {
+	z-index: 100;
+	position: relative;
+	bottom: 0;
+	left: 0;
+	margin: 10vh 0;
 	padding: 5vh 0;
 	color: white;
 	text-align: center;
+	line-height: 32px;
 	transition: background-color .2s linear;
 	-webkit-transition: background-color .2s linear;
 }
@@ -88,8 +95,7 @@ footer:hover {
 .page {
 	padding: 10vh 0;
 	width: 100%;
-	background-color: white;
-	/*overflow: hidden;*/
+	background: transparent;
 }
 
 .chip {
@@ -106,13 +112,11 @@ footer:hover {
 
 .blank {
 	height: 50vh;
-	background: transparent;
 }
 
 #Cover {
 	min-height: 700px;
 	height: 100vh;
-	background: transparent;
 }
 
 #Cover #signUpButton {
@@ -128,11 +132,11 @@ footer:hover {
 }
 
 #Intro {
-	background-color: #0D47A1;
+	/*background-color: #0D47A1;*/
 }
 
 #Staff {
-	background-color: #1A237E;
+	/*background-color: #1A237E;*/
 }
 
 #Staff .ui.cards {
@@ -140,6 +144,7 @@ footer:hover {
 }
 
 #Sign {
-	background-color: #311B92;
+	padding-bottom: 0;
+	/*background-color: #263238;*/
 }
 /*Pages*/

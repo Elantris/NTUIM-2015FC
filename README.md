@@ -1,6 +1,11 @@
 #NTUIM-2015OC
 National Taiwan University Information Management 2015 Orientation Camp
 ##Update
+* 20150408/0.2.1/Fixed Backgrounds
+```
+Fix background image path.
+Modify footer positoin.
+```
 * 20150408/0.2/Parallax JS
 ```
 Add parallax javascript framework.

@@ -47,25 +47,38 @@
 	<div id="Intro" class="page">
 		<div class="chip">
 			<h1>#Intro</h1>
-			<p>Activity Introduction, Starting Film</p>
+			<p>Activity Introduction</p>
 			<h1>#Update</h1>
 			<div class="ui blue feed message">
 				<div class="header">Latest Updates</div>
 				<div class="event">
 					<div class="content">
-						<div id="Version" class="summary">20150408/0.2/Parallax JS</div>
+						<div id="Version" class="summary">20150408/0.2.1/Fixed Backgrounds</div>
 						<!-- Lastest Version -->
+						<div class="extra text">
+							Fix background image path.
+							<br>Modify footer positoin.
+						</div>
+					</div>
+				</div>
+			</div>
+			<!-- end message -->
+			<div class="ui feed message">
+				<div class="header">Version History</div>
+				<div class="event">
+					<div class="content">
+						<div class="summary">20150408/0.2/Parallax JS</div>
 						<div class="extra text">
 							Add parallax javascript framework.
 							<br>Re-design the feedback form for more technical needed.
 							<br>Add check(), validate() methods to form.
 							<br>Use regular expression for form validation.
 						</div>
-						<div class="meta"><a href="http://github.com/Elantris/NTUIM-2015OC">View codes on Github</a></div>
 					</div>
 				</div>
 			</div>
 			<!-- end message -->
+			<a href="http://github.com/Elantris/NTUIM-2015OC">View codes on Github</a>
 			<div class="ui orange message">
 				<div class="header">Pending Issues</div>
 				<ul>
@@ -240,18 +253,18 @@
 			</div>
 			<!-- end ThankYou message -->
 		</div>
+		<footer>
+			<div>National Taiwan University Information Management All Rights Reserved.</div>
+			<div class="ui inverted buttons">
+				<a href="https://github.com/Elantris/NTUIM-2015OC" class="ui blue inverted button">Github</a>
+				<a href="https://jquery.com" class="ui blue inverted button">jQuery</a>
+				<a href="https://semantic-ui.com" class="ui blue inverted button">Semantic UI</a>
+				<a href="http://ianlunn.co.uk" class="ui blue inverted button">Ian Lunn</a>
+				<a href="http://www.google.com/design/spec/style/color.html" class="ui blue inverted button">Google Design</a>
+			</div>
+		</footer>
 	</div>
 	<!-- end page staff -->
-	<footer>
-		<div class="header">National Taiwan University Information Management All Rights Reserved.</div>
-		<div class="ui inverted buttons">
-			<a href="https://github.com/Elantris/NTUIM-2015OC" class="ui blue inverted button">Github</a>
-			<a href="https://jquery.com" class="ui blue inverted button">jQuery</a>
-			<a href="https://semantic-ui.com" class="ui blue inverted button">Semantic UI</a>
-			<a href="http://ianlunn.co.uk" class="ui blue inverted button">Ian Lunn</a>
-			<a href="http://www.google.com/design/spec/style/color.html" class="ui blue inverted button">Google Design</a>
-		</div>
-	</footer>
 	<!-- end footer -->
 	<script src="js/semantic.min.js"></script>
 	<script src="js/parallax.js"></script>
@@ -259,10 +272,16 @@
 	<script src="js/form.js"></script>
 	<script>
 		$('#Cover').parallax({
-			imageSrc: 'img/M9CWiWF.png'
+			imageSrc: 'http://i.imgur.com/M9CWiWF.png'
 		});
-		$('footer').parallax({
-			imageSrc: 'img/M9CWiWF.png'
+		$('#Intro').parallax({
+			imageSrc: 'http://i.imgur.com/tbQom87.jpg'
+		});
+		$('#Staff').parallax({
+			imageSrc: 'http://i.imgur.com/1IHsQVX.jpg'
+		});
+		$('#Sign').parallax({
+			imageSrc: 'http://i.imgur.com/M9CWiWF.png'
 		});
 	</script>
 </body>
