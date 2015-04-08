@@ -1,6 +1,14 @@
 #NTUIM-2015OC
 National Taiwan University Information Management 2015 Orientation Camp
 ##Update
+* 20150408/0.2/Parallax JS
+```
+Add parallax javascript framework.
+Re-design the feedback form for more technical needed.
+Add check(), validate() methods to form.
+Use regular expression for form validation.
+```
+* 20150326/0.1.5.1/Little change
 * 20150326/0.1.5/Clear view
 ```
 Modify background colors.

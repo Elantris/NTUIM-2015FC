@@ -1,99 +1,145 @@
 body {
-	background-color: #EEEEEE;
-	overflow: hidden;
+	margin: 0;
 }
 
 iframe {
+	display: none;
 	border: none;
 }
 
+form {
+	display: none;
+}
+
 p {
-	margin: 0 0 .7em 0;
+	margin-bottom: .7em;
 	line-height: 1.7em;
 	text-align: justify;
 	text-justify: ideographic;
 	text-indent: 2em;
 }
+
+label i {
+	color: red;
+}
+
+.hidden {
+	display: none;
+}
+
+.hidden.content {
+	display: block;
+}
 /*Theme*/
 
-.parallax {
-	height: 100vh;
-	overflow-x: hidden;
-	overflow-y: auto;
-	perspective: 1px;
-	-webkit-perspective: 1px;
-	perspective-origin-x: 100%;
-	-webkit-perspective-origin-x: 100%;
-}
-
-.parallax_layer {
+nav {
 	position: absolute;
 	top: 0;
-	right: 0;
-	bottom: 0;
 	left: 0;
-	transform-origin-x: 100%;
-	-webkit-transform-origin-x: 100%;
+	padding: 8px;
+	width: 100%;
+	transition: background-color .2s linear;
+	-webkit-transition: background-color .2s linear;
 }
 
-.parallax_layer-back {
-	z-index: -5;
-	transform: translateZ(-1px) scale(2);
-	-webkit-transform: translateZ(-1px) scale(2);
+nav:hover {
+	background-color: rgba(0, 0, 0, .6);
 }
 
-.bg-img {
-	overflow: hidden;
-	height: 100vh;
-	width: 100vw;
-	background-image: url('http://i.imgur.com/tbQom87.jpg');
-	background-position: center;
-	background-repeat: no-repeat;
-	background-size: cover;
+nav .left {
+	float: left;
 }
 
-.parallax_layer-base {
-	z-index: 0;
-	transform: translateZ(0);
-	-webkit-transform: translateZ(0);
+nav .right {
+	float: right;
 }
-/*Parallax*/
+
+#Logo {
+	height: 32px;
+	width: 32px;
+	background-color: gray;
+	color: white;
+	/**/
+	
+	font-size: 0.8em;
+	text-align: center;
+	line-height: 32px;
+	transition: background-color .2s linear;
+	-webkit-transition: background-color .2s linear;
+}
+
+nav:hover #Logo {
+	background-color: silver;
+}
+
+footer {
+	padding: 5vh 0;
+	color: white;
+	text-align: center;
+	transition: background-color .2s linear;
+	-webkit-transition: background-color .2s linear;
+}
+
+footer:hover {
+	background-color: rgba(0, 0, 0, .6);
+}
+/*Structure*/
 
 .page {
 	padding: 10vh 0;
+	width: 100%;
+	background-color: white;
+	/*overflow: hidden;*/
 }
 
 .chip {
 	width: 100%;
 	max-width: 767px;
 	margin: 0 auto;
-	padding: 32px;
-	background-color: rgba(255, 255, 255, .6);
-	border-radius: 16px;
+	padding: 16px;
+	background-color: rgba(255, 255, 255, .8);
+	border-radius: 8px;
 	overflow-y: auto;
-	box-shadow: 0 8px 16px #616161;
+	box-shadow: 0 8px 16px #212121;
 }
 /*Components*/
 
-#Cover {
-	height: 100vh;
-	overflow-y: hidden;
+.blank {
+	height: 50vh;
+	background: transparent;
 }
 
-#Info {
-	background-color: #E57373;
+#Cover {
+	min-height: 700px;
+	height: 100vh;
+	background: transparent;
+}
+
+#Cover #signUpButton {
+	position: absolute;
+	left: 50%;
+	bottom: 10vh;
+	transform: translateX(-50%);
+	-webkit-transform: translateX(-50%);
+}
+
+#signUpButton .button {
+	border-radius: 16px;
+}
+
+#Intro {
+	background-color: #0D47A1;
 }
 
 #Staff {
-	background-color: #BA68C8;
+	background-color: #1A237E;
+}
+
+#Staff .ui.cards {
+	margin: 0 auto;
 }
 
 #Sign {
-	background-color: #7986CB;
+	background-color: #311B92;
 }
-/*Page Name*/
-
-.hidden {
-	display: none;
-}
-/*Special prupose*/
+/*Pages*/

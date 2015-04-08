@@ -2,212 +2,269 @@
 <html lang="en">
 
 <head>
-	<meta charset="UTF-8">
-	<!-- <meta name="viewport" content="width=device-width, initial-scale=1"> -->
+	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<title>NTUIM 2015 Orientation Camp</title>
+	<base target="_blank">
 	<link rel="stylesheet" href="css/normalize.css">
 	<link rel="stylesheet" href="css/semantic.min.css">
 	<link rel="stylesheet" href="css/style.css">
 	<script src="js/jquery-2.1.3.min.js"></script>
-	<script src="js/semantic.min.js"></script>
-	<script src="js/form.js"></script>
 </head>
 
 <body>
-	<div class="parallax">
-		<div class="parallax_layer parallax_layer-back">
-			<div class="bg-img"></div>
+	<nav>
+		<div class="left">
+			<div id="Logo">Logo</div>
 		</div>
-		<!-- End of Background layer -->
-
-		<div class="parallax_layer parallax_layer-base">
-			<div id="Cover" class="page">
-				<div class="chip">
-					<div class="ui purple message">
-						<div class="header">網站建置中</div>
-						<p>臺灣大學資訊管理學系 2015 迎新宿營</p>
-						<div class="header">Preparing</div>
-						<p>National Taiwan University Information Management 2015 Orientation Camp</p>
-					</div>
-				</div>
+		<div class="right">
+			<div class="ui inverted buttons">
+				<a href="#Cover" class="ui blue inverted button">Cover</a>
+				<a href="#Intro" class="ui blue inverted button">Intro</a>
+				<a href="#Staff" class="ui blue inverted button">Staff</a>
+				<a href="#Sign" class="ui blue inverted button">Sign</a>
 			</div>
-			<!-- End of Cover page -->
-
-			<div id="Info" class="page">
-				<div class="chip">
-					<h1>#Info</h1>
-					<p>Activities Introduction</p>
-					<h1>#Updating Information</h1>
-					<div class="ui blue feed message">
-						<div class="header">Latest Updates</div>
-						<div class="event">
-							<div class="content">
-								<div id="Version" class="summary">20150326/0.1.5/Clear view</div>
-								<!-- Lastest Version -->
-								<div class="extra text">
-									Modify background colors.
-									<br>Modify components box-model.
-								</div>
-								<div class="meta">20150326/0.1.5.1/Little Change</div>
-							</div>
-						</div>
-					</div>
-					<div class="ui orange message">
-						<div class="header">Pending Issues</div>
-						<ul>
-							<li>Parallax CSS for mobile viewer</li>
-							<li>Background image for each page</li>
-							<li>Staff contacts layout design</li>
-						</ul>
-					</div>
-					<div class="ui feed message">
-						<div class="header">Version History</div>
-						<div class="event">
-							<div class="content">
-								<div class="summary">20150325/0.1.4/Check Method</div>
-								<div class="extra text">
-									Modify checkForm() method.
-									<br>Modify styles of default frames.
-									<br>Correct some spellings.
-									<br>Bugs fixed: Parallax overflow, pages height, box-models
-								</div>
-							</div>
-						</div>
-						<div class="event">
-							<div class="content">
-								<div class="summary">20150325/0.1.3/Form Improved</div>
-								<div class="extra text">
-									Modify external javaScript files.
-									<br>Modify chip styles.
-									<br>Add School ID field for testers.
-									<br>Use cards to place staff introduction.
-									<br>Bugs fixed: right useless space (webkit).
-								</div>
-							</div>
-						</div>
-						<div class="event">
-							<div class="content">
-								<div class="summary">20150324/0.1.2/Form</div>
-								<div class="extra text">
-									Bugs fixed.
-								</div>
-							</div>
-						</div>
-						<div class="event">
-							<div class="content">
-								<div class="summary">20150324/0.1.1/form</div>
-								<div class="extra text">
-									Modify frames colors.
-									<br>Create form javascript.
-								</div>
-							</div>
-						</div>
-						<div class="event">
-							<div class="content">
-								<div class="summary">20150324/0.1/test</div>
-								<div class="extra text">
-									Add default frames.
-									<br>Cover equipt parallax.
-									<br>Add test report form without validation.
-								</div>
-							</div>
-						</div>
-					</div>
-				</div>
-			</div>
-			<!-- End of Information page -->
-
-			<div id="Staff" class="page">
-				<div class="chip">
-					<h1>#Staff</h1>
-					<p>Staffs Contacts</p>
-				</div>
-			</div>
-			<!-- End of Staff Introduction page -->
-
-			<div id="Sign" class="page">
-				<div class="chip">
-					<h1>#SignUp</h1>
-					<p>Sign Up Form</p>
-					<h1>#Feedback</h1>
-					<div id="WarnJS" class="ui red message">
-						<div class="header">JavaScript</div>
-						<p>啟用 JavaScript 以填寫表單。</p>
-					</div>
-					<iframe id="hidden_frame" class="hidden" name="hidden_frame"></iframe>
-					<form id="SignUpForm" class="ui form hidden" action="https://docs.google.com/forms/d/1TD02Ltll0QCekEsZcqMmjjcWTMj8Exg99-LbkAkqXJM/formResponse" method="post" target="hidden_frame" onsubmit="return checkForm()">
-						<div class="three fields">
-							<div class="field">
-								<label>作業系統</label>
-								<select id="entry-1152289928" class="ui selection dropdown" name="entry.1152289928">
-									<option value=""></option>
-									<option value="Windows">Windows</option>
-									<option value="OS X">OS X</option>
-									<option value="Linux">Linux</option>
-									<option value="Android">Android</option>
-									<option value="iOS">iOS</option>
-									<option value="Chrome OS">Chrome OS</option>
-									<option value="Firefox OS">Firefox OS</option>
-									<option value="Other Desktop OS">Other Desktop OS</option>
-									<option value="Other Mobile OS">Other Mobile OS</option>
-								</select>
-							</div>
-							<div class="field">
-								<label>網頁瀏覽器</label>
-								<select id="entry-357541403" class="ui selection dropdown" name="entry.357541403">
-									<option value=""></option>
-									<option value="Internet Explorer">Internet Explorer</option>
-									<option value="Google Chrome">Google Chrome</option>
-									<option value="Apple Safari">Apple Safari</option>
-									<option value="Mozilla Firefox">Mozilla Firefox</option>
-									<option value="Opera">Opera</option>
-									<option value="Other Browser">Other Browser</option>
-								</select>
-							</div>
-							<div class="field">
-								<label>學號</label>
-								<div class="ui labeled input">
-									<div class="ui black label">B037050</div>
-									<input id="entry-791517028" class="" type="text" name="entry.791517028" placeholder="00">
-								</div>
-							</div>
-						</div>
-						<div class="ui blue message">
-							<div class="header">僅限台大資管大一同仁</div>
-							<p>認真填寫回饋資料的話有機會參加抽獎喔～請記得留下學號以供辨識，如果沒有填寫學號欄位工作人員會非常感謝你的匿名支持XD</p>
-						</div>
-						<div class="field">
-							<label>任何建議或錯誤回報</label>
-							<textarea id="entry-837454648" class="" name="entry.837454648"></textarea>
-							<!-- 隨便亂寫就把你給 POI 掉喔！ -->
-						</div>
-						<div class="ui error message">所有欄位必須填入資料。</div>
-						<div class="field hidden">
-							<label>版本</label>
-							<input id="entry-677460826" type="text" name="entry.677460826" value="">
-						</div>
-						<input id="submit" class="ui black button" type="submit" name="submit" value="確認送出">
-						<div class="ui yellow message">
-							<div class="header">注意事項</div>
-							<p>目前還沒針對行動裝置做優化，任何不合理的畫面都是由瀏覽器自動生成，製作團隊將會在之後的更新版本中修復行動裝置的瀏覽狀況。</p>
-							<p>測試版網頁僅從技術層面開始研究，若有平面設計相關的建言請具體且詳細的提供設計方案，我們將會在接下來的更新版本中盡全力實作出來。</p>
-							<!-- 行動裝置的瀏覽好難做啊！決定先把一些東西註解掉，以後再來更新XD -->
-						</div>
-					</form>
-					<div id="ThankYou" class="ui green message hidden">
-						<div class="header">感謝填寫表單！</div>
-						<p>迎新宿營資訊部網頁團隊（其實只有一個人）在此感謝任何建議與回報，我（們）將會在報名網頁正式上線後提供特別獎勵給予提出非常有用的建議或是回報特別多錯誤的貢獻者 (❀╹◡╹)</p>
-						<p>關於獎勵的部分敬請與正式網頁的上線一起期待吧～ (๑•̀ω•́)ノ</p>
-						<!-- 我還沒想到要準備什麼禮物呢www -->
-					</div>
-				</div>
-			</div>
-			<!-- End of Sign up page -->
-
 		</div>
-		<!-- End of front layer -->
-
+	</nav>
+	<div id="Cover" class="page">
+		<div class="chip">
+			<div class="ui purple message">
+				<div class="header">網站建置中</div>
+				<p>臺灣大學資訊管理學系 2015 迎新宿營</p>
+				<div class="header">Preparing</div>
+				<p>National Taiwan University Information Management 2015 Orientation Camp</p>
+			</div>
+		</div>
+		<div id="signUpButton">
+			<a href="#Sign" class="ui animated fade green inverted button massive">
+				<div class="visible content">現在報名</div>
+				<div class="hidden content">Sign Up Now</div>
+			</a>
+		</div>
+		<!-- 聽說黃詣跟陳主牧在這個網頁要埋彩蛋 -->
 	</div>
+	<!-- end page cover -->
+	<div class="page blank"></div>
+	<div id="Intro" class="page">
+		<div class="chip">
+			<h1>#Intro</h1>
+			<p>Activity Introduction, Starting Film</p>
+			<h1>#Update</h1>
+			<div class="ui blue feed message">
+				<div class="header">Latest Updates</div>
+				<div class="event">
+					<div class="content">
+						<div id="Version" class="summary">20150408/0.2/Parallax JS</div>
+						<!-- Lastest Version -->
+						<div class="extra text">
+							Add parallax javascript framework.
+							<br>Re-design the feedback form for more technical needed.
+							<br>Add check(), validate() methods to form.
+							<br>Use regular expression for form validation.
+						</div>
+						<div class="meta"><a href="http://github.com/Elantris/NTUIM-2015OC">View codes on Github</a></div>
+					</div>
+				</div>
+			</div>
+			<!-- end message -->
+			<div class="ui orange message">
+				<div class="header">Pending Issues</div>
+				<ul>
+					<li><del>Parallax CSS for mobile viewer</del></li>
+					<li>Parallax JS usage</li>
+					<li>Introduction film layout design</li>
+					<li>Staff contacts layout design</li>
+				</ul>
+			</div>
+			<!-- end message -->
+			<div class="ui purple message">
+				<div class="header">Waiting Resources</div>
+				<ul>
+					<li>Background for each section</li>
+					<li>Introduction film</li>
+					<li>Staffs contacts</li>
+				</ul>
+			</div>
+			<!-- end message -->
+		</div>
+	</div>
+	<!-- end page intro -->
+	<div class="page blank"></div>
+	<div id="Staff" class="page">
+		<div class="ui cards doubling">
+			<div class="ui card">
+				<div class="image">
+					<img src="img/default-profile4.jpg" alt="">
+				</div>
+				<div class="content">
+					<a href="" class="header">張晉華</a>
+					<div class="meta">總召／剛毛</div>
+				</div>
+				<div class="description">
+					<p>標準綽號比本名有名的人。</p>
+				</div>
+				<div class="extra content">09XX-XXX-XXX
+					<br>username@domain</div>
+			</div>
+			<div class="ui card">
+				<div class="image">
+					<img src="img/default-profile4.jpg" alt="">
+				</div>
+				<div class="content">
+					<a href="" class="header">徐嘉琪</a>
+					<div class="meta">副召／卷姐</div>
+				</div>
+				<div class="description">
+					<p>不喊綽號不回頭的人。</p>
+				</div>
+				<div class="extra content">09XX-XXX-XXX
+					<br>username@domain</div>
+			</div>
+			<div class="ui card">
+				<div class="image">
+					<img src="img/default-profile4.jpg" alt="">
+				</div>
+				<div class="content">
+					<a href="" class="header">黃楷翔</a>
+					<div class="meta">副召／</div>
+				</div>
+				<div class="description">
+					<p>綽號不有名或者是沒有的人。</p>
+				</div>
+				<div class="extra content">09XX-XXX-XXX
+					<br>username@domain</div>
+			</div>
+		</div>
+		<!-- end cards group -->
+	</div>
+	<!-- end page staff -->
+	<div class="page blank"></div>
+	<div id="Sign" class="page">
+		<div class="chip">
+			<h1>#Sign</h1>
+			<p>Sign Up Form</p>
+			<h1>#Feedback</h1>
+			<div id="WarnJS" class="ui red message">
+				<div class="header">JavaScript Disabled</div>
+				<p>請啟用 JavaScript 以填寫表單 ╮(′～‵〞)╭</p>
+				<p>若持續發生問題請回報 jk50254@yahoo.com.tw</p>
+			</div>
+			<iframe id="hidden_frame" class="hidden" name="hidden_frame"></iframe>
+			<form id="SignUpForm" class="ui form hidden" action="https://docs.google.com/forms/d/18xm6yqYQLA4Xy_KIfPrNBaRaBFlw5O6M8rDKSmsAY8w/formResponse" method="post" target="hidden_frame" onsubmit="return checkForm();">
+				<div class="three fields">
+					<div class="field">
+						<label>作業系統 <i>*</i></label>
+						<select id="entry-182736608" class="ui selection dropdown" name="entry.182736608">
+							<option value=""></option>
+							<option value="Windows">Windows</option>
+							<option value="OS X">OS X</option>
+							<option value="Linux">Linux</option>
+							<option value="Android">Android</option>
+							<option value="iOS">iOS</option>
+							<option value="Chrome OS">Chrome OS</option>
+							<option value="Firefox OS">Firefox OS</option>
+							<option value="Other Desktop OS">Other Desktop OS</option>
+							<option value="Other Mobile OS">Other Mobile OS</option>
+						</select>
+					</div>
+					<div class="field">
+						<label>網頁瀏覽器 <i>*</i></label>
+						<select id="entry-1959991238" class="ui selection dropdown" name="entry.1959991238">
+							<option value=""></option>
+							<option value="Internet Explorer">Internet Explorer</option>
+							<option value="Google Chrome">Google Chrome</option>
+							<option value="Mozilla Firefox">Mozilla Firefox</option>
+							<option value="Apple Safari">Apple Safari</option>
+							<option value="Opera">Opera</option>
+							<option value="Other Browser">Other Browser</option>
+						</select>
+					</div>
+					<div class="field">
+						<label>學號</label>
+						<div class="ui labeled input">
+							<div class="ui black label">B037050</div>
+							<input id="entry-537207203" class="" type="text" name="entry.537207203" placeholder="00">
+						</div>
+					</div>
+				</div>
+				<div class="field">
+					<label>回饋留言 <i>*</i></label>
+					<textarea id="entry-1907044871" class="" name="entry.1907044871" placeholder="任何建議或錯誤回報"></textarea>
+					<!-- 隨便亂寫就把你給 POI 掉喔！ -->
+				</div>
+				<div class="ui blue message">
+					<div class="header">僅限台大資管大一同仁</div>
+					<p>認真填寫回饋資料的話就有機會參加抽獎喔～記得留下學號以供辨認，如果沒有填寫學號欄位工作人員會非常感謝你的匿名支持XD</p>
+					<p>如果有任何資源可以提供給網頁使用請在回饋留言中附上網頁連結 ◝(　ﾟ∀ ﾟ )◟</p>
+				</div>
+				<div class="two fields">
+					<div class="field">
+						<div id="error1" class="ui red message hidden">
+							<div class="header">注意 (눈‸눈) - 未完成</div>
+							<p>所有含紅色星號的必填欄位都必須填寫 (눈‸눈)</p>
+						</div>
+					</div>
+					<div class="field">
+						<div id="error2" class="ui red message hidden">
+							<div class="header">注意 (눈‸눈) - 格式有誤</div>
+							<p>回饋留言的第一個字必須是中文字 ヽ(・×・´)ゞ</p>
+							<p>若有填寫學號必須介於 1 ~ 52 之間 σ`∀´)σ</p>
+						</div>
+					</div>
+				</div>
+				<div class="two fields hidden">
+					<div class="field">
+						<label>Version</label>
+						<input id="entry-905367400" type="text" name="entry.905367400" value="">
+					</div>
+					<div class="field">
+						<label for="">User Agent</label>
+						<input type="text" id="entry-1258616304" name="entry.1258616304" value="">
+					</div>
+				</div>
+				<button class="ui animated fade green button" onclick="">
+					<div class="visible content">確認送出</div>
+					<div class="hidden content">Submit</div>
+				</button>
+			</form>
+			<div id="ThankYou" class="hidden">
+				<div class="ui green message">
+					<div class="header">感謝填寫表單！</div>
+					<p>迎新宿營資訊部網頁團隊（其實只有一個人）在此感謝任何建議與回報，我將會在報名網頁正式上線後提供特別獎勵，給予提出非常有用的建議或是回報特別多錯誤的貢獻者 (❀╹◡╹)</p>
+					<!-- 行動裝置的瀏覽好難做啊！決定先把一些東西註解掉，以後再來更新XD -->
+					<p>關於獎勵的部分敬請與正式網頁的上線一起期待吧～ (๑•̀ω•́)ノ</p>
+					<!-- 其實是我還沒想到要準備什麼禮物www -->
+				</div>
+				<div class="ui segment">
+					<a href="https://docs.google.com/spreadsheets/d/19Wy_3WGKpaec1YnXRCGoelaMOe-fxRRCCDE8hyWrkaM/edit?usp=sharing">View responses on Google Drive</a>
+				</div>
+			</div>
+			<!-- end ThankYou message -->
+		</div>
+	</div>
+	<!-- end page staff -->
+	<footer>
+		<div class="header">National Taiwan University Information Management All Rights Reserved.</div>
+		<div class="ui inverted buttons">
+			<a href="https://github.com/Elantris/NTUIM-2015OC" class="ui blue inverted button">Github</a>
+			<a href="https://jquery.com" class="ui blue inverted button">jQuery</a>
+			<a href="https://semantic-ui.com" class="ui blue inverted button">Semantic UI</a>
+			<a href="http://ianlunn.co.uk" class="ui blue inverted button">Ian Lunn</a>
+			<a href="http://www.google.com/design/spec/style/color.html" class="ui blue inverted button">Google Design</a>
+		</div>
+	</footer>
+	<!-- end footer -->
+	<script src="js/semantic.min.js"></script>
+	<script src="js/parallax.js"></script>
+	<script src="js/smoothScrolling.js"></script>
+	<script src="js/form.js"></script>
+	<script>
+		$('#Cover').parallax({
+			imageSrc: 'img/M9CWiWF.png'
+		});
+		$('footer').parallax({
+			imageSrc: 'img/M9CWiWF.png'
+		});
+	</script>
 </body>
 
 </html>
