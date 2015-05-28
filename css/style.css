@@ -1,150 +1,195 @@
+html,
 body {
-	margin: 0;
-	background-color: black;
-}
-
-iframe {
-	display: none;
-	border: none;
-}
-
-form {
-	display: none;
+	height: auto;
+	background: transparent;
 }
 
 p {
-	margin-bottom: .7em;
+	margin: .5em 0;
 	line-height: 1.7em;
 	text-align: justify;
 	text-justify: ideographic;
-	text-indent: 2em;
 }
 
-label i {
-	color: red;
+a {
+	text-decoration: none;
+}
+
+iframe {
+	border: none;
+}
+
+.button {
+	font-size: 14px;
 }
 
 .hidden {
 	display: none;
 }
 
-.hidden.content {
-	display: block;
+.meta {
+	color: gray;
+	font-size: .8em;
 }
-/*Theme*/
+
+.row img {
+	width: 100%;
+}
+/*default style*/
 
 nav {
-	position: absolute;
+	z-index: 10;
+	position: fixed;
 	top: 0;
 	left: 0;
-	padding: 8px;
-	width: 100%;
-	transition: background-color .2s linear;
-	-webkit-transition: background-color .2s linear;
-}
-
-nav:hover {
-	background-color: rgba(0, 0, 0, .6);
-}
-
-nav .left {
-	float: left;
-}
-
-nav .right {
-	float: right;
-}
-
-#Logo {
-	height: 32px;
-	width: 32px;
-	background-color: gray;
-	color: white;
-	/**/
-	
-	font-size: 0.8em;
+	right: 0;
+	height: 4em;
+	line-height: 4em;
 	text-align: center;
-	line-height: 32px;
-	transition: background-color .2s linear;
-	-webkit-transition: background-color .2s linear;
+	background-color: #FFF;
+	box-shadow: 0 4px 8px silver;
 }
 
-nav:hover #Logo {
-	background-color: silver;
+nav a {
+	margin: 0;
+	padding: 4px 16px;
+	color: #90CAF9;
+	font-size: 1.2em;
+}
+
+nav a.active {
+	color: #2196F3;
+	border-bottom: 2px solid silver;
+}
+
+nav a:hover {
+	color: #1565C0;
+}
+
+header {
+	margin-top: 7em;
 }
 
 footer {
-	z-index: 100;
-	position: relative;
-	bottom: 0;
-	left: 0;
-	margin: 10vh 0;
-	padding: 5vh 0;
-	color: white;
-	text-align: center;
-	line-height: 32px;
-	transition: background-color .2s linear;
-	-webkit-transition: background-color .2s linear;
+	height: 150px;
+	background-color: #EEE;
 }
 
-footer:hover {
-	background-color: rgba(0, 0, 0, .6);
+footer .container {
+	padding: 32px;
 }
-/*Structure*/
+/*nav and footer*/
 
 .page {
-	padding: 10vh 0;
 	width: 100%;
-	background: transparent;
+	padding: 7em 0;
 }
 
-.chip {
-	width: 100%;
-	max-width: 767px;
-	margin: 0 auto;
-	padding: 16px;
-	background-color: rgba(255, 255, 255, .8);
-	border-radius: 8px;
-	overflow-y: auto;
-	box-shadow: 0 8px 16px #212121;
+.page .container {
+	padding-bottom: 32px;
+	border-bottom: 3px solid silver;
 }
-/*Components*/
 
-.blank {
-	height: 50vh;
+.page h2 {
+	border-bottom: 1px solid gray;
 }
+/*page*/
 
 #Cover {
-	min-height: 700px;
 	height: 100vh;
+	width: 100%;
+	background-color: #EEE;
 }
 
-#Cover #signUpButton {
-	position: absolute;
-	left: 50%;
-	bottom: 10vh;
-	transform: translateX(-50%);
-	-webkit-transform: translateX(-50%);
+#Cover .container {
+	padding: 128px 32px;
 }
 
-#signUpButton .button {
-	border-radius: 16px;
+#Staff {}
+
+#Staff .tab {
+	border: 0;
+	border-radius: 0;
+}
+/*page style*/
+
+#Staff span.like {}
+
+.fa {
+	font-size: 1.2em;
 }
 
-#Intro {
-	/*background-color: #0D47A1;*/
+.fa-heart-o {
+	color: silver;
 }
 
-#Staff {
-	/*background-color: #1A237E;*/
+.fa-heart-o:hover {
+	color: #90CAF9;
 }
 
-#Staff .ui.cards {
-	margin: 0 auto;
+.fa-heart-o:hover:after {
+	content: " Click";
 }
 
-#Sign {
-	padding-bottom: 0;
-	/*background-color: #263238;*/
+.fa-heart {
+	color: #2196F3;
 }
-/*Pages*/
+
+.fa-heart:hover:after {
+	content: " Love";
+}
+/*like button*/
+
+.message {
+	border-radius: 8px;
+	padding: 16px;
+	box-shadow: 0 0 8px silver;
+}
+
+label i {
+	color: red;
+}
+
+textarea,
+select {
+	appearance: none;
+	-moz-appearance: none;
+	-webkit-appearance: none;
+}
+
+input[type="text"],
+select,
+textarea {
+	width: 100%;
+}
+
+select {
+	width: 100%;
+	display: inline-block;
+	height: 38px;
+	padding: 0 12px;
+	color: #555;
+	font-size: 14px;
+	line-height: 38px;
+	letter-spacing: .1rem;
+	text-transform: uppercase;
+	text-decoration: none;
+	white-space: nowrap;
+	background-color: transparent;
+	border-radius: 4px;
+	border: 1px solid #bbb;
+	cursor: pointer;
+	box-sizing: border-box;
+}
+
+input[type="radio"] {
+	font-size: 2em;
+}
+
+textarea {
+	max-width: 100%;
+	height: 10em;
+}
+/*form style*/
+
+#Feedback {}

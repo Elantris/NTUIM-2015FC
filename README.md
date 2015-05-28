@@ -1,6 +1,13 @@
 #NTUIM-2015OC
 National Taiwan University Information Management 2015 Orientation Camp
 ##Update
+* 20150520/0.3/Skeleton
+```
+Use framework "Skeleton".
+Re-design the sign up form.
+Add scrollInToView function.
+Use regular expression for validation.
+```
 * 20150408/0.2.1/Fixed Backgrounds
 ```
 Fix background image path.
