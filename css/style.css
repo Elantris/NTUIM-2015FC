@@ -43,11 +43,15 @@ nav {
 	top: 0;
 	left: 0;
 	right: 0;
-	height: 4em;
-	line-height: 4em;
+	overflow-x: auto;
+	overflow-y: hidden;
 	text-align: center;
 	background-color: #FFF;
 	box-shadow: 0 4px 8px silver;
+}
+
+nav .container {
+	min-width: 480px;
 }
 
 nav a {
@@ -55,6 +59,7 @@ nav a {
 	padding: 4px 16px;
 	color: #90CAF9;
 	font-size: 1.2em;
+	line-height: 3em;
 }
 
 nav a.active {

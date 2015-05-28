@@ -1,6 +1,11 @@
 #NTUIM-2015OC
 National Taiwan University Information Management 2015 Orientation Camp
 ##Update
+* 20150520/0.3.1/bugs fixed
+```
+Modify styles to fit the phone viewing.
+Fix pictures source url.
+```
 * 20150520/0.3/Skeleton
 ```
 Use framework "Skeleton".
