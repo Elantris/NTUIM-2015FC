@@ -110,8 +110,6 @@ footer .container {
 	padding: 128px 32px;
 }
 
-#Staff {}
-
 #Staff .tab {
 	border: 0;
 	border-radius: 0;
@@ -146,8 +144,9 @@ footer .container {
 /*like button*/
 
 .message {
+	margin-bottom: 16px;
+	padding: 8px 16px;
 	border-radius: 8px;
-	padding: 16px;
 	box-shadow: 0 0 8px silver;
 }
 
@@ -196,5 +195,3 @@ textarea {
 	height: 10em;
 }
 /*form style*/
-
-#Feedback {}

@@ -37,8 +37,7 @@ $('#form-extra').click(function() {
 
 function formValidation() {
 	var validation = true;
-	$('#test1, #test2, #ErrorMessage').html('');
-
+	$('#ErrorMessage, #test1, #test2').html('');
 	// Name
 	if (!$('[name="entry.name"]').val()) {
 		$('#ErrorMessage').append('<li>姓名 必須填寫</li>');
@@ -87,7 +86,7 @@ function formValidation() {
 	}
 	// Account
 	tmp = /^[0-9]{5}$/.test($('[name="entry.account"]').val());
-	if(!tmp) {
+	if (!tmp) {
 		$('#ErrorMessage').append('<li>帳戶末五碼 格式錯誤</li>');
 		validation = false;
 	}
@@ -96,57 +95,33 @@ function formValidation() {
 		$('#ErrorMessage').append('<li>飲食習慣 必須填寫</li>');
 		validation = false;
 	}
-
+	// Like
 	$('#LIKE').val(like);
 
 	// debug
-	$('#test1').append('<b>* TEXT</b><br>');
-	$('#Basic-infor [type="text"]').each(function() {
-		if ($(this).val()) {
+	$('#Basic-infor [name]').each(function() {
+		if ($(this).attr('type') == 'radio') {
+			if ($(this).prop('checked')) {
+				$('#test1').append($(this).attr('name') + ' = ' + $(this).val() + '<br>');
+			}
+		} else if ($(this).val()) {
 			$('#test1').append($(this).attr('name') + ' = ' + $(this).val() + '<br>');
 		}
 	});
-	$('#test1').append('<b>* SELECT</b><br>');
-	$('#Basic-infor select').each(function() {
-		$('#test1').append($(this).attr('name') + ' = ' + $(this).val() + '<br>');
-	});
-	$('#test1').append('<b>* RADIO</b><br>');
-	$('#Basic-infor [type="radio"]:checked').each(function() {
-		$('#test1').append($(this).attr('name') + ' = ' + $(this).val() + '<br>');
-	});
-	$('#test1').append('<b>* TEXTAREA</b><br>');
-	$('#Basic-infor textarea').each(function() {
-		if ($(this).val()) {
-			$('#test1').append($(this).attr('name') + ' = ' + $(this).val() + '<br>');
-		}
-	});
-
-	$('#test2').append('<b>* TEXT</b><br>');
-	$('#Extra-infor [type="text"]').each(function() {
-		if ($(this).val()) {
+	$('#Extra-infor [name]').each(function() {
+		if ($(this).attr('type') == 'radio') {
+			if ($(this).prop('checked')) {
+				$('#test2').append($(this).attr('name') + ' = ' + $(this).val() + '<br>');
+			}
+		} else if ($(this).val()) {
 			$('#test2').append($(this).attr('name') + ' = ' + $(this).val() + '<br>');
 		}
 	});
-	$('#test2').append('<b>* SELECT</b><br>');
-	$('#Extra-infor select').each(function() {
-		$('#test2').append($(this).attr('name') + ' = ' + $(this).val() + '<br>');
-	});
-	$('#test2').append('<b>* RADIO</b><br>');
-	$('#Extra-infor [type="radio"]:checked').each(function() {
-		$('#test2').append($(this).attr('name') + ' = ' + $(this).val() + '<br>');
-	});
-	$('#test2').append('<b>* TEXTAREA</b><br>');
-	$('#Extra-infor textarea').each(function() {
-		if ($(this).val()) {
-			$('#test2').append($(this).attr('name') + ' = ' + $(this).val() + '<br>');
-		}
-	});
-
+	// main frame
 	if (validation) {
-		$('#ErrorMessage').hide();
+		$('#ErrorMessage, #Staff span.like').hide();
 		$('#Sign form').slideUp(300);
 		$('#ThanksPage').slideDown(300);
-		$('#Staff span.like').hide();
 	} else {
 		$('#ErrorMessage').show();
 	}
@@ -155,18 +130,14 @@ function formValidation() {
 
 function formValidation_Feedback() {
 	var validation = true;
-	if ($('[name="entry.1404204003"]').val() == '' || $('[name="entry.1404204003"]').val() == null) {
-		validation = false;
-	}
-	if ($('[name="entry.2002821061"]').val() == '' || $('[name="entry.2002821061"]').val() == null) {
+	if (!$('[name="entry.1404204003"]').val() || !$('[name="entry.2002821061"]').val()) {
 		validation = false;
 	}
 	$('#LIKE').val(like);
 	if (validation) {
-		$('#EM').hide();
+		$('#EM, #Staff span.like').hide();
 		$('#Feedback form').slideUp(300);
 		$('#TP').slideDown(300);
-		$('#Staff span.like').hide();
 	} else {
 		$('#EM').show();
 	}
