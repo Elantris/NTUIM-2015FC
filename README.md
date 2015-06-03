@@ -1,6 +1,11 @@
 #NTUIM-2015OC
 National Taiwan University Information Management 2015 Orientation Camp
 ##Update
+* 20150603/0.3.1.2/form improved
+```
+After submiting the form, tha page will scroll to the thank you page.
+Add cover page.
+```
 * 20150529/0.3.1.1/bugs fixed
 * 20150528/0.3.1/bugs fixed
 ```

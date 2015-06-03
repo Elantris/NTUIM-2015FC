@@ -122,6 +122,9 @@ function formValidation() {
 		$('#ErrorMessage, #Staff span.like').hide();
 		$('#Sign form').slideUp(300);
 		$('#ThanksPage').slideDown(300);
+		$('html,body').animate({
+			scrollTop: $('#Sign').offset().top
+		}, 300);
 	} else {
 		$('#ErrorMessage').show();
 	}
@@ -138,8 +141,12 @@ function formValidation_Feedback() {
 		$('#EM, #Staff span.like').hide();
 		$('#Feedback form').slideUp(300);
 		$('#TP').slideDown(300);
+		$('html,body').animate({
+			scrollTop: $('#Feedback').offset().top
+		}, 300);
 	} else {
 		$('#EM').show();
 	}
+	return false;
 	return validation;
 }

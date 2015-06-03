@@ -1,8 +1,4 @@
-html,
-body {
-	height: auto;
-	background: transparent;
-}
+body {}
 
 p {
 	margin: .5em 0;
@@ -34,6 +30,7 @@ iframe {
 
 .row img {
 	width: 100%;
+	max-width: 300px;
 }
 /*default style*/
 
@@ -71,10 +68,6 @@ nav a:hover {
 	color: #1565C0;
 }
 
-header {
-	margin-top: 7em;
-}
-
 footer {
 	height: 150px;
 	background-color: #EEE;
@@ -87,11 +80,10 @@ footer .container {
 
 .page {
 	width: 100%;
-	padding: 7em 0;
+	padding: 64px 0;
 }
 
 .page .container {
-	padding-bottom: 32px;
 	border-bottom: 3px solid silver;
 }
 
@@ -104,10 +96,42 @@ footer .container {
 	height: 100vh;
 	width: 100%;
 	background-color: #EEE;
+	background-image: url('http://i.imgur.com/AZq9rOX.jpg');
+	background-position: center top;
+	background-repeat: no-repeat;
+	background-size: cover;
+}
+
+@media (max-width: 549px) {
+	#Cover {
+		background-image: url('http://i.imgur.com/kUDiyMN.jpg');
+	}
 }
 
 #Cover .container {
-	padding: 128px 32px;
+	width: 100%;
+	max-width: 100%;
+	padding-top: 64px;
+}
+
+#Cover h1 {
+	padding: 32px 0;
+	text-align: center;
+	background-color: rgba(255, 255, 255, .4);
+	transition-property: background-color box-shadow;
+	transition-duration: .1s;
+	transition-timing-function: linear;
+	-webkit-transition-property: background-color box-shadow;
+	-webkit-transition-duration: .1s;
+	-webkit-transition-timing-function: linear;
+	-moz-transition-property: background-color box-shadow;
+	-moz-transition-duration: .1s;
+	-moz-transition-timing-function: linear;
+}
+
+#Cover h1:hover {
+	background-color: white;
+	box-shadow: 0 4px 8px silver;
 }
 
 #Staff .tab {
@@ -146,8 +170,7 @@ footer .container {
 .message {
 	margin-bottom: 16px;
 	padding: 8px 16px;
-	border-radius: 8px;
-	box-shadow: 0 0 8px silver;
+	border: 1px dashed silver;
 }
 
 label i {
@@ -161,10 +184,18 @@ select {
 	-webkit-appearance: none;
 }
 
-input[type="text"],
-select,
+input[type="text"] {
+	width: 100%;
+}
+
+input[type="radio"] {
+	font-size: 2em;
+}
+
 textarea {
 	width: 100%;
+	max-width: 100%;
+	height: 10em;
 }
 
 select {
@@ -184,14 +215,5 @@ select {
 	border: 1px solid #bbb;
 	cursor: pointer;
 	box-sizing: border-box;
-}
-
-input[type="radio"] {
-	font-size: 2em;
-}
-
-textarea {
-	max-width: 100%;
-	height: 10em;
 }
 /*form style*/
