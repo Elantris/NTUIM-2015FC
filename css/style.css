@@ -1,4 +1,6 @@
-body {}
+body {
+	/*background-color: #EEE;*/
+}
 
 p {
 	margin: .5em 0;
@@ -28,23 +30,64 @@ iframe {
 	font-size: .8em;
 }
 
+.message {
+	margin-bottom: 16px;
+	padding: 16px;
+	border: 1px dashed silver;
+}
+
 .row img {
 	width: 100%;
-	max-width: 300px;
+	max-width: 250px;
+}
+
+@media (max-width: 549px) {
+	.row .image {
+		float: left;
+		width: 40%;
+	}
+	.row .description {
+		float: right;
+		width: 50%;
+	}
 }
 /*default style*/
 
 nav {
 	z-index: 10;
-	position: fixed;
-	top: 0;
+	position: absolute;
 	left: 0;
 	right: 0;
+	bottom: 0;
 	overflow-x: auto;
 	overflow-y: hidden;
+	background-color: transparent;
+	background-color: rgba(0, 0, 0, .4);
 	text-align: center;
-	background-color: #FFF;
-	box-shadow: 0 4px 8px silver;
+	transition-property: background-color box-shadow;
+	transition-duration: .2s;
+	transition-timing-function: linear;
+	-webkit-transition-property: background-color box-shadow;
+	-webkit-transition-duration: .2s;
+	-webkit-transition-timing-function: linear;
+	-moz-transition-property: background-color box-shadow;
+	-moz-transition-duration: .2s;
+	-moz-transition-timing-function: linear;
+}
+
+nav:hover {
+	background-color: rgba(0, 0, 0, .8);
+}
+
+nav.fixed {
+	position: fixed;
+	top: 0;
+	bottom: auto;
+	background-color: rgba(0, 0, 0, .6);
+}
+
+nav.fixed:hover {
+	background-color: rgba(0, 0, 0, .8);
 }
 
 nav .container {
@@ -54,23 +97,24 @@ nav .container {
 nav a {
 	margin: 0;
 	padding: 4px 16px;
-	color: #90CAF9;
+	color: #03A9F4;
 	font-size: 1.2em;
 	line-height: 3em;
+	font-weight: bold;
 }
 
 nav a.active {
-	color: #2196F3;
-	border-bottom: 2px solid silver;
+	color: #4FC3F7;
+	border-bottom: 3px solid silver;
 }
 
 nav a:hover {
-	color: #1565C0;
+	color: #B3E5FC;
 }
 
 footer {
 	height: 150px;
-	background-color: #EEE;
+	background-color: #DDD;
 }
 
 footer .container {
@@ -80,7 +124,7 @@ footer .container {
 
 .page {
 	width: 100%;
-	padding: 64px 0;
+	padding: 128px 0;
 }
 
 .page .container {
@@ -95,7 +139,7 @@ footer .container {
 #Cover {
 	height: 100vh;
 	width: 100%;
-	background-color: #EEE;
+	background-color: #DDD;
 	background-image: url('http://i.imgur.com/AZq9rOX.jpg');
 	background-position: center top;
 	background-repeat: no-repeat;
@@ -112,26 +156,6 @@ footer .container {
 	width: 100%;
 	max-width: 100%;
 	padding-top: 64px;
-}
-
-#Cover h1 {
-	padding: 32px 0;
-	text-align: center;
-	background-color: rgba(255, 255, 255, .4);
-	transition-property: background-color box-shadow;
-	transition-duration: .1s;
-	transition-timing-function: linear;
-	-webkit-transition-property: background-color box-shadow;
-	-webkit-transition-duration: .1s;
-	-webkit-transition-timing-function: linear;
-	-moz-transition-property: background-color box-shadow;
-	-moz-transition-duration: .1s;
-	-moz-transition-timing-function: linear;
-}
-
-#Cover h1:hover {
-	background-color: white;
-	box-shadow: 0 4px 8px silver;
 }
 
 #Staff .tab {
@@ -163,22 +187,20 @@ footer .container {
 }
 
 .fa-heart:hover:after {
-	content: " Love";
+	content: " Like";
 }
 /*like button*/
 
-.message {
-	margin-bottom: 16px;
-	padding: 8px 16px;
-	border: 1px dashed silver;
+#Basic-infor .message {
+	padding: 8px;
 }
 
 label i {
 	color: red;
 }
 
-textarea,
-select {
+select,
+textarea {
 	appearance: none;
 	-moz-appearance: none;
 	-webkit-appearance: none;
@@ -188,32 +210,13 @@ input[type="text"] {
 	width: 100%;
 }
 
-input[type="radio"] {
-	font-size: 2em;
+select {
+	width: 100%;
 }
 
 textarea {
 	width: 100%;
 	max-width: 100%;
 	height: 10em;
-}
-
-select {
-	width: 100%;
-	display: inline-block;
-	height: 38px;
-	padding: 0 12px;
-	color: #555;
-	font-size: 14px;
-	line-height: 38px;
-	letter-spacing: .1rem;
-	text-transform: uppercase;
-	text-decoration: none;
-	white-space: nowrap;
-	background-color: transparent;
-	border-radius: 4px;
-	border: 1px solid #bbb;
-	cursor: pointer;
-	box-sizing: border-box;
 }
 /*form style*/

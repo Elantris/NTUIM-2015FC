@@ -7,8 +7,13 @@ function isScrolledIntoView(elem) {
 }
 
 $(document).scroll(function() {
-	var y = window.pageYOffset;
 	var flag = 1;
+	if($(window).scrollTop() > $('#Cover').height() - $('nav').height()) {
+		$('nav').addClass('fixed');
+	}
+	else {
+		$('nav').removeClass('fixed');
+	}
 	$('nav a').removeClass('active').each(function() {
 		if (flag && isScrolledIntoView($($(this).attr('href')))) {
 			$(this).addClass('active');
