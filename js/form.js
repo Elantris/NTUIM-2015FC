@@ -9,14 +9,14 @@ $('#Staff span.like').html('<i class="fa fa-heart-o"></i><i class="fa fa-heart h
 	likeVal[$(this).attr('data-id')]++;
 });
 
-$('#form-check').click(function() {
-	$(this).removeClass('fa-square-o').addClass('fa-check-square-o');
-	$('#form-submit').removeAttr('disabled');
+$('#form-extra').click(function() {
+	$(this).hide(300);
+	$('#Extra-infor').slideDown(300);
 });
 
-$('#form-extra').click(function() {
-	$(this).hide(500);
-	$('#Extra-infor').slideDown(500);
+$('#form-check').click(function() {
+	$(this).find('i').removeClass('fa-square-o').addClass('fa-check-square-o');
+	$('#form-submit').removeAttr('disabled');
 });
 
 var formInputs = {
@@ -62,7 +62,7 @@ $(formInputs.birthYear + ', ' + formInputs.birthMonth).change(function() {
 	}
 });
 
-$(formInputs.F_ver + ', ' + formInputs.ver).val('20150605/0.3.2/Attach google form');
+$(formInputs.F_ver + ', ' + formInputs.ver).val('20150608/0.3.2.1/bugs fixed');
 $(formInputs.F_ua + ', ' + formInputs.ua).val(navigator.userAgent);
 
 function formValidation() {
@@ -128,7 +128,6 @@ function formValidation() {
 		tmp += likeVal[i] + ' ';
 	}
 	$(formInputs.like).val(tmp);
-	// validation = true;
 	if (validation) {
 		$('#Staff span.like').hide();
 		$('#Sign form').slideUp(300);

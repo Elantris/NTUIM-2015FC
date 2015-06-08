@@ -26,5 +26,5 @@ $('#Staff button.tab').click(function() {
 	$('#Staff button.tab').removeAttr('disabled');
 	$(this).attr('disabled', true);
 	$('#Staff .tab-page').slideUp(300);
-	$('#Staff #tab' + $(this).attr('data-tab')).slideDown(300);
+	$('#Staff #' + $(this).attr('data-tab')).slideDown(300);
 });

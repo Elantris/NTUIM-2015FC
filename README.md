@@ -3,6 +3,13 @@ National Taiwan University Information Management 2015 Orientation Camp
 
 ##Update
 
+20150608/0.3.2.1/bugs fixed
+> Fixed like button in RWD structure.  
+> Improved feedback form.  
+> Improved navgator.  
+> Use same color style for buttons.  
+> Modify the speed of scrolling animation.  
+
 20150605/0.3.2/Attach google form
 > Modify the position of navigator.  
 > Change the colors of navigator and links.  

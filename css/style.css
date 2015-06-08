@@ -1,7 +1,3 @@
-body {
-	/*background-color: #EEE;*/
-}
-
 p {
 	margin: .5em 0;
 	line-height: 1.7em;
@@ -61,8 +57,8 @@ nav {
 	bottom: 0;
 	overflow-x: auto;
 	overflow-y: hidden;
-	background-color: transparent;
-	background-color: rgba(0, 0, 0, .4);
+	min-width: 480px;
+	background-color: rgba(0, 0, 0, .2);
 	text-align: center;
 	transition-property: background-color box-shadow;
 	transition-duration: .2s;
@@ -90,17 +86,12 @@ nav.fixed:hover {
 	background-color: rgba(0, 0, 0, .8);
 }
 
-nav .container {
-	min-width: 480px;
-}
-
 nav a {
 	margin: 0;
 	padding: 4px 16px;
 	color: #03A9F4;
 	font-size: 1.2em;
 	line-height: 3em;
-	font-weight: bold;
 }
 
 nav a.active {
@@ -110,6 +101,14 @@ nav a.active {
 
 nav a:hover {
 	color: #B3E5FC;
+}
+
+@media (max-width: 549px) {
+	nav a {
+		font-size: 1em;
+		padding: 4px 8px;
+		line-height: 2.5em;
+	}
 }
 
 footer {
@@ -124,7 +123,8 @@ footer .container {
 
 .page {
 	width: 100%;
-	padding: 128px 0;
+	padding: 128px 0 64px;
+	background-color: #FFF;
 }
 
 .page .container {
@@ -152,12 +152,6 @@ footer .container {
 	}
 }
 
-#Cover .container {
-	width: 100%;
-	max-width: 100%;
-	padding-top: 64px;
-}
-
 #Staff .tab {
 	border: 0;
 	border-radius: 0;
@@ -178,16 +172,17 @@ footer .container {
 	color: #90CAF9;
 }
 
-.fa-heart-o:hover:after {
-	content: " Click";
-}
-
 .fa-heart {
 	color: #2196F3;
 }
 
-.fa-heart:hover:after {
-	content: " Like";
+@media (min-width: 549px) {
+	.fa-heart-o:hover:after {
+		content: " Click";
+	}
+	.fa-heart:hover:after {
+		content: " Like";
+	}
 }
 /*like button*/
 
@@ -218,5 +213,9 @@ textarea {
 	width: 100%;
 	max-width: 100%;
 	height: 10em;
+}
+
+#form-check:hover {
+	text-decoration: underline;
 }
 /*form style*/

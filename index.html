@@ -15,15 +15,14 @@
 </head>
 
 <body>
-	<div id="Cover"></div>
-	<nav>
-		<div class="container">
+	<div id="Cover">
+		<nav>
 			<a href="#Cover" class="link active">封面故事</a>
 			<a href="#Intro" class="link">活動介紹</a>
 			<a href="#Staff" class="link">工作人員</a>
 			<a href="#Sign" class="link">立刻報名</a>
-		</div>
-	</nav>
+		</nav>
+	</div>
 	<div class="page" id="Intro">
 		<div class="container">
 			<h2>活動介紹</h2>
@@ -78,12 +77,12 @@
 				</div>
 				<div class="six columns">
 					<p>網頁設計：許承佑 <span class="like"></span></p>
-					<button class="button amber" id="Feedback-check">問題回報</button>
+					<button class="button indigo" id="Feedback-check">填寫回饋</button>
 				</div>
 			</div>
 			<div class="hidden" id="Feedback">
 				<hr>
-				<h3>Problem Report</h3>
+				<h3>Feedback</h3>
 				<form action="https://docs.google.com/forms/d/13VLVI-xiJv33yk1TgguYdIvmEc-UwB68h8uTWfgfdw4/formResponse" method="post" target="hidden_frame" onsubmit="return formValidation_Feedback();">
 					<label for="">Title <i>*</i></label>
 					<div class="row">
@@ -91,16 +90,16 @@
 							<input type="text" name="entry.1404204003">
 						</div>
 						<div class="six columns">
-							<span class="meta">讓網頁設計師知道問題點 ლ(╹◡╹ლ)</span>
+							<span class="meta">為你的回饋下個簡潔的標題吧 ლ(╹◡╹ლ)</span>
 						</div>
 					</div>
-					<label for="">Report <i>*</i></label>
+					<label for="">Feedback <i>*</i></label>
 					<div class="row">
 						<div class="six columns">
 							<textarea name="entry.2002821061"></textarea>
 						</div>
 						<div class="six columns">
-							<span class="meta">問題回報、操作障礙、功能新增、設計建議...</span>
+							<span class="meta">問題回報、操作感想、功能新增、設計建議...</span>
 						</div>
 					</div>
 					<div class="row hidden">
@@ -120,12 +119,12 @@
 				</div>
 			</div>
 			<hr>
-			<button class="tab button red" data-tab="0">活動部</button>
-			<button class="tab button purple" data-tab="1">公關部</button>
-			<button class="tab button indigo" data-tab="2">庶務部</button>
-			<button class="tab button light-blue" data-tab="3">美宣部</button>
-			<button class="tab button teal" data-tab="4">器材部</button>
-			<button class="tab button light-green" data-tab="5">資訊部</button>
+			<button class="tab button blue" data-tab="tab0">活動部</button>
+			<button class="tab button blue" data-tab="tab1">公關部</button>
+			<button class="tab button blue" data-tab="tab2">庶務部</button>
+			<button class="tab button blue" data-tab="tab3">美宣部</button>
+			<button class="tab button blue" data-tab="tab4">器材部</button>
+			<button class="tab button blue" data-tab="tab5">資訊部</button>
 			<div class="row tab-page hidden message" id="tab0">
 				<h3>活動部</h3>
 				<div class="row">
@@ -382,7 +381,7 @@
 						</div>
 					</div>
 					<div class="row">
-						<div class="button purple" id="form-extra">填寫其他欄位</div>
+						<div class="button deep-purple" id="form-extra">填寫其他欄位</div>
 					</div>
 				</div>
 				<!-- end basic infor -->
@@ -422,7 +421,7 @@
 					<input type="text" name="entry.1243370905">
 				</div>
 				<hr>
-				<p><i class="fa fa-square-o" id="form-check"></i> 我已詳細閱讀並同意遵守 <a href="">2015 台大資管迎新宿營公開說明書</a> 之內容</p>
+				<p id="form-check"><i class="fa fa-square-o"></i> 我已詳細閱讀並同意遵守 <a href="">2015 台大資管迎新宿營公開說明書</a> 之內容</p>
 				<button class="button blue" id="form-submit" disabled>提交表單</button>
 			</form>
 			<div class="hidden bg-light-blue message" id="ThanksPage">
@@ -432,7 +431,7 @@
 				<div class="meta">
 					<p>（文案）</p>
 					<p>小隊員：網頁報名 -> 資料確認信 -> 匯款 -> 匯款確認信</p>
-					<p>工作人員：檢查資料 -> 對帳 -> 寄確認信</p>
+					<p>工作人員：檢查資料（公關部） -> 對帳 -> 寄確認信（公關部）</p>
 				</div>
 			</div>
 		</div>
@@ -441,7 +440,7 @@
 		<div class="container">
 			<h2>Pending Issues</h2>
 			<div class="row">
-				<div class="six columns bg-pink message">
+				<div class="six columns bg-indigo	 message">
 					<h3>文案</h3>
 					<ul>
 						<li>封面設計</li>
