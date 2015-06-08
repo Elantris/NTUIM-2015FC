@@ -3,6 +3,9 @@ National Taiwan University Information Management 2015 Orientation Camp
 
 ##Update
 
+20150608/0.3.2.2/bugs fixed
+> Set the position of Cover page to absolute.  
+
 20150608/0.3.2.1/bugs fixed
 > Fixed like button in RWD structure.  
 > Improved feedback form.  

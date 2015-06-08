@@ -57,9 +57,7 @@ nav {
 	bottom: 0;
 	overflow-x: auto;
 	overflow-y: hidden;
-	min-width: 480px;
 	background-color: rgba(0, 0, 0, .2);
-	text-align: center;
 	transition-property: background-color box-shadow;
 	transition-duration: .2s;
 	transition-timing-function: linear;
@@ -84,6 +82,11 @@ nav.fixed {
 
 nav.fixed:hover {
 	background-color: rgba(0, 0, 0, .8);
+}
+
+nav .container {
+	min-width: 480px;
+	text-align: center;
 }
 
 nav a {
@@ -137,8 +140,11 @@ footer .container {
 /*page*/
 
 #Cover {
-	height: 100vh;
-	width: 100%;
+	position: absolute;
+	left: 0;
+	right: 0;
+	top: 0;
+	bottom: 0;
 	background-color: #DDD;
 	background-image: url('http://i.imgur.com/AZq9rOX.jpg');
 	background-position: center top;
@@ -150,6 +156,10 @@ footer .container {
 	#Cover {
 		background-image: url('http://i.imgur.com/kUDiyMN.jpg');
 	}
+}
+
+.blank {
+	margin-top: 100vh;
 }
 
 #Staff .tab {

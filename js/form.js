@@ -62,7 +62,7 @@ $(formInputs.birthYear + ', ' + formInputs.birthMonth).change(function() {
 	}
 });
 
-$(formInputs.F_ver + ', ' + formInputs.ver).val('20150608/0.3.2.1/bugs fixed');
+$(formInputs.F_ver + ', ' + formInputs.ver).val('20150608/0.3.2.2/bugs fixed');
 $(formInputs.F_ua + ', ' + formInputs.ua).val(navigator.userAgent);
 
 function formValidation() {
