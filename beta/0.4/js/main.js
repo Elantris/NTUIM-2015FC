@@ -62,7 +62,7 @@ $(document).scroll(function() {
 
 $('#Sign-Contract').load('doc/contract.md', function() {
 	$(this).html(markdown.toHTML($(this).text()));
-});
+}); // standard form contract
 
 $('#Sign-Check').click(function() {
 	$(this).find('i').removeClass('fa-square-o').addClass('fa-check-square-o');
@@ -72,7 +72,7 @@ $('#Sign-Check').click(function() {
 			moveTo('#Sign');
 		});
 	});;
-});
+}); // the button for agreement of the contract
 
 $('#Form-Show-Extra').click(function() {
 	$(this).hide();

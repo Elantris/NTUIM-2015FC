@@ -4,6 +4,10 @@ National Taiwan University Information Management 2015 Freshman Camp
 
 ## Update
 
+20150804/0.4.1/bugss fixed
+> Add documentaries in js.
+> Fixed the lost of background.
+
 20150804/0.4/beta
 > Pre-release version with the sign up form.
 
@@ -25,7 +29,7 @@ National Taiwan University Information Management 2015 Freshman Camp
 > Hide the feedback form under Staff page.  
 > Improved like button.  
 
-20150603/0.3.1.2/form improved
+20150603/0.3.1.2/Form improved
 > After submiting the form, tha page will scroll to the thank you page.  
 > Add cover page.  
 
