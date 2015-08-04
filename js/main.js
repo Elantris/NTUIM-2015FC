@@ -1,30 +1,17 @@
-function isScrolledIntoView(elem) {
-	var docViewTop = $(window).scrollTop(),
-		docViewBottom = docViewTop + $(window).height(),
-		elemTop = $(elem).offset().top,
-		elemBottom = elemTop + $(elem).height();
-	return elemBottom > docViewTop;
+var numRow = Math.floor($(window).height() / $(window).width() * 10) + 1;
+
+for (var i = 0; i < numRow * 10; i++) {
+	$('#board').append('<div class="box"></div>');
 }
 
-$(document).scroll(function() {
-	var flag = 1;
-	if($(window).scrollTop() > $('#Cover').height() - $('nav').height()) {
-		$('nav').addClass('fixed');
-	}
-	else {
-		$('nav').removeClass('fixed');
-	}
-	$('nav a').removeClass('active').each(function() {
-		if (flag && isScrolledIntoView($($(this).attr('href')))) {
-			$(this).addClass('active');
-			flag = 0;
-		}
-	});
-});
+var index = 0;
 
-$('#Staff button.tab').click(function() {
-	$('#Staff button.tab').removeAttr('disabled');
-	$(this).attr('disabled', true);
-	$('#Staff .tab-page').slideUp(300);
-	$('#Staff #' + $(this).attr('data-tab')).slideDown(300);
+$(function() {
+	$('.box').delay(500).each(function() {
+		$(this).delay(100 * Math.floor(index / 10 + index % 10)).animate({
+			opacity: 0
+		}, 100);
+		index++;
+	});
+	$('#board').delay(500).fadeOut(1000 + Math.max(10, numRow) * 100);
 });

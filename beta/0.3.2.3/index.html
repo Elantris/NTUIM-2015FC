@@ -1,0 +1,490 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<base target="_blank">
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>NTUIM 2015 Orientation Camp</title>
+	<link rel="stylesheet" href="css/normalize.css">
+	<link rel="stylesheet" href="css/skeleton.css">
+	<link rel="stylesheet" href="css/font-awesome.min.css">
+	<script src="js/jquery-1.11.2.min.js"></script>
+	<link rel="stylesheet" href="css/style.css">
+	<link rel="stylesheet" href="css/colors.css">
+</head>
+
+<body>
+	<div id="Cover"></div>
+	<nav>
+		<div class="container">
+			<a href="#News" class="link">最新消息</a>
+			<a href="#Intro" class="link">活動介紹</a>
+			<a href="#Staff" class="link">工作人員</a>
+			<a href="#Sign" class="link">立刻報名</a>
+		</div>
+	</nav>
+	<div class="blank"></div>
+	<div class="page" id="News">
+		<div class="container">
+			<h2>最新消息</h2>
+			<div class="meta">
+				<p>News page</p>
+				<p>文案</p>
+				<p>最新消息、網站公告、活動公告</p>
+			</div>
+		</div>
+	</div>
+	<div class="page" id="Intro">
+		<div class="container">
+			<h2>活動介紹</h2>
+			<div class="meta">
+				<p>Introduction Page</p>
+				<p>（文案）</p>
+				<p>開頭劇情、活動流程、地點介紹</p>
+			</div>
+		</div>
+	</div>
+	<div class="page" id="Staff">
+		<div class="container">
+			<h2>工作人員</h2>
+			<h3>召部</h3>
+			<div class="row">
+				<div class="four columns">
+					<div class="image"><img src="http://i.imgur.com/2JqOltL.jpg" alt="profile picture"></div>
+					<div class="description">
+						<p>總召：張晉華 / 剛毛 <span class="like"></span></p>
+						<div class="meta">
+							<p>0987 628 990</p>
+							<p>典型綽號比本名還有名的人</p>
+						</div>
+					</div>
+				</div>
+				<div class="four columns">
+					<div class="image"><img src="http://i.imgur.com/2JqOltL.jpg" alt="profile picture"></div>
+					<div class="description">
+						<p>副召：徐嘉琪 / 卷姐 <span class="like"></span></p>
+						<div class="meta">
+							<p>0978 108 098</p>
+							<p>不叫綽號不回頭的人</p>
+						</div>
+					</div>
+				</div>
+				<div class="four columns">
+					<div class="image"><img src="http://i.imgur.com/2JqOltL.jpg" alt="profile picture"></div>
+					<div class="description">
+						<p>副召：黃楷翔 <span class="like"></span></p>
+						<div class="meta">
+							<p>09XX XXX XXX</p>
+							<p>好像沒有綽號的人</p>
+						</div>
+					</div>
+				</div>
+			</div>
+			<hr>
+			<div class="row">
+				<div class="six columns">
+					<p>財秘：張博程 / 老博 <span class="like"></span></p>
+					<div class="meta">
+						<p>財務我來管，宿營你來玩！</p>
+					</div>
+					<p><b>匯款帳戶：</b></p>
+				</div>
+				<div class="six columns">
+					<p>網頁設計：許承佑 <span class="like"></span></p>
+					<button class="button indigo" id="Feedback-check">填寫回饋</button>
+				</div>
+			</div>
+			<div class="hidden" id="Feedback">
+				<hr>
+				<h3>Feedback</h3>
+				<form action="https://docs.google.com/forms/d/13VLVI-xiJv33yk1TgguYdIvmEc-UwB68h8uTWfgfdw4/formResponse" method="post" target="hidden_frame" onsubmit="return formValidation_Feedback();">
+					<label for="">Title <i>*</i></label>
+					<div class="row">
+						<div class="six columns">
+							<input type="text" name="entry.1404204003">
+						</div>
+						<div class="six columns">
+							<span class="meta">為你的回饋下個簡潔的標題吧 ლ(╹◡╹ლ)</span>
+						</div>
+					</div>
+					<label for="">Feedback <i>*</i></label>
+					<div class="row">
+						<div class="six columns">
+							<textarea name="entry.2002821061"></textarea>
+						</div>
+						<div class="six columns">
+							<span class="meta">問題回報、操作感想、功能新增、設計建議...</span>
+						</div>
+					</div>
+					<div class="row hidden">
+						<input type="text" name="entry.455410392">
+						<input type="text" name="entry.481937225">
+					</div>
+					<div class="row">
+						<div class="six columns bg-red message hidden" id="EM">
+							<p>所有欄位必填</p>
+						</div>
+					</div>
+					<input type="submit" value="Send">
+				</form>
+				<div class="bg-light-blue message hidden" id="TP">
+					<p>感謝填寫回饋單 (๑ơ ₃ ơ)♥</p>
+					<p>網頁設計團隊將會在近期內處理回應 ouo//</p>
+				</div>
+			</div>
+			<hr>
+			<button class="tab button blue" data-tab="tab0">活動部</button>
+			<button class="tab button blue" data-tab="tab1">公關部</button>
+			<button class="tab button blue" data-tab="tab2">庶務部</button>
+			<button class="tab button blue" data-tab="tab3">美宣部</button>
+			<button class="tab button blue" data-tab="tab4">器材部</button>
+			<button class="tab button blue" data-tab="tab5">資訊部</button>
+			<div class="row tab-page hidden message" id="tab0">
+				<h3>活動部</h3>
+				<div class="row">
+					<div class="three columns">
+						<p>活動長：陳品 <span class="like"></span></p>
+						<div class="meta">
+							<p>（文案）想說的話</p>
+						</div>
+					</div>
+					<div class="three columns">
+						<p>副活動長：林品瑢 <span class="like"></span></p>
+						<div class="meta">
+							<p>（文案）想說的話</p>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="row tab-page hidden message" id="tab1">
+				<h3>公關部</h3>
+				<div class="row">
+					<div class="three columns">
+						<p>公關長：王思淇 <span class="like"></span></p>
+						<div class="meta">
+							<p>（文案）想說的話</p>
+						</div>
+					</div>
+					<div class="three columns">
+						<p>副公關長：洪念綺 <span class="like"></span></p>
+						<div class="meta">
+							<p>（文案）想說的話</p>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="row tab-page hidden message" id="tab2">
+				<h3>庶務部</h3>
+				<div class="row">
+					<div class="three columns">
+						<p>庶務長：陳維漢 <span class="like"></span></p>
+						<div class="meta">
+							<p>（文案）想說的話</p>
+						</div>
+					</div>
+					<div class="three columns">
+						<p>副庶務長：張睿君 <span class="like"></span></p>
+						<div class="meta">
+							<p>（文案）想說的話</p>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="row tab-page hidden message" id="tab3">
+				<h3>美宣部</h3>
+				<div class="row">
+					<div class="three columns">
+						<p>美宣長：謝惠羽 <span class="like"></span></p>
+						<div class="meta">
+							<p>（文案）想說的話</p>
+						</div>
+					</div>
+					<div class="three columns">
+						<p>副美宣長：黃詣 <span class="like"></span></p>
+						<div class="meta">
+							<p>（文案）想說的話</p>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="row tab-page hidden message" id="tab4">
+				<h3>器材部</h3>
+				<div class="row">
+					<div class="three columns">
+						<p>器材長：林書攸 <span class="like"></span></p>
+						<div class="meta">
+							<p>（文案）想說的話</p>
+						</div>
+					</div>
+					<div class="three columns">
+						<p>副器材長：林軒逸 <span class="like"></span></p>
+						<div class="meta">
+							<p>（文案）想說的話</p>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="row tab-page hidden message" id="tab5">
+				<h3>資訊部</h3>
+				<div class="row">
+					<div class="three columns">
+						<p>資訊長：林子期 <span class="like"></span></p>
+						<div class="meta">
+							<p>（文案）想說的話</p>
+						</div>
+					</div>
+					<div class="three columns">
+						<p>副資訊長：陳主牧 <span class="like"></span></p>
+						<div class="meta">
+							<p>（文案）想說的話</p>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<div class="page" id="Sign">
+		<div class="container">
+			<h2>立刻報名</h2>
+			<iframe name="hidden_frame" class="hidden"></iframe>
+			<form action="https://docs.google.com/forms/d/14m-3mn9t_bcqL5kyEKLw1WWtrXdlLVEMRX40hR-xUKw/formResponse" method="post" target="hidden_frame" onsubmit="return formValidation();">
+				<div id="Basic-infor">
+					<h3>基本資料</h3>
+					<div class="row">
+						<div class="four columns">
+							<label for="">姓名 <i>*</i> <span class="meta">辦理保險</span></label>
+							<input type="text" name="entry.964583837">
+							<div class="bg-red message hidden realName">必須填寫</div>
+						</div>
+						<div class="four columns">
+							<label for="">生日 <i>*</i> <span class="meta">辦理保險</span></label>
+							<div class="row">
+								<div class="four columns">
+									<select name="entry.1066476723">
+										<option value="83">83年</option>
+										<option value="84">84年</option>
+										<option value="85">85年</option>
+										<option value="86" selected>86年</option>
+										<option value="87">87年</option>
+										<option value="88">88年</option>
+									</select>
+								</div>
+								<div class="four columns">
+									<select name="entry.1611764283">
+										<option value="1">1月</option>
+										<option value="2">2月</option>
+										<option value="3">3月</option>
+										<option value="4">4月</option>
+										<option value="5">5月</option>
+										<option value="6">6月</option>
+										<option value="7">7月</option>
+										<option value="8">8月</option>
+										<option value="9">9月</option>
+										<option value="10">10月</option>
+										<option value="11">11月</option>
+										<option value="12">12月</option>
+									</select>
+								</div>
+								<div class="four columns">
+									<select name="entry.2053091259">
+										<option value="1">1日</option>
+										<option value="2">2日</option>
+										<option value="3">3日</option>
+										<option value="4">4日</option>
+										<option value="5">5日</option>
+										<option value="6">6日</option>
+										<option value="7">7日</option>
+										<option value="8">8日</option>
+										<option value="9">9日</option>
+										<option value="10">10日</option>
+										<option value="11">11日</option>
+										<option value="12">12日</option>
+										<option value="13">13日</option>
+										<option value="14">14日</option>
+										<option value="15">15日</option>
+										<option value="16">16日</option>
+										<option value="17">17日</option>
+										<option value="18">18日</option>
+										<option value="19">19日</option>
+										<option value="20">20日</option>
+										<option value="21">21日</option>
+										<option value="22">22日</option>
+										<option value="23">23日</option>
+										<option value="24">24日</option>
+										<option value="25">25日</option>
+										<option value="26">26日</option>
+										<option value="27">27日</option>
+										<option value="28">28日</option>
+										<option value="29">29日</option>
+										<option value="30">30日</option>
+										<option value="31">31日</option>
+									</select>
+								</div>
+							</div>
+						</div>
+						<div class="four columns">
+							<label for="">身份證字號 <i>*</i> <span class="meta">辦理保險</span></label>
+							<input type="text" name="entry.622678089" placeholder="A123456789">
+							<div class="bg-red message hidden IdNumber1">填寫錯誤</div>
+							<div class="bg-red message hidden IdNumber2">格式錯誤（英文 + 9 個數字）</div>
+						</div>
+					</div>
+					<div class="row">
+						<div class="four columns">
+							<label for="">聯絡電話 <i>*</i></label>
+							<input type="text" name="entry.362600180" placeholder="手機或家電">
+							<div class="bg-red message hidden phoneNumber">格式錯誤：10 位數字不含空白或減號</div>
+						</div>
+						<div class="four columns">
+							<label for="">電子信箱 <i>*</i></label>
+							<input type="text" name="entry.1445610279" placeholder="username@domain.com">
+							<div class="bg-red message hidden emailAddress">格式錯誤</div>
+						</div>
+					</div>
+					<div class="row">
+						<div class="four columns">
+							<label for="">緊急聯絡人電話 <i>*</i></label>
+							<input type="text" name="entry.2110180731" placeholder="0912345678">
+							<div class="bg-red message hidden emergencyCall">格式錯誤：10 位數字不含空白或減號</div>
+						</div>
+						<div class="four columns">
+							<label for="">匯款帳號末五碼 <i>*</i> <span class="meta">核對帳戶</span></label>
+							<input type="text" name="entry.1511944138" placeholder="12345">
+							<div class="bg-red message hidden account">格式錯誤：五位數字</div>
+						</div>
+					</div>
+					<div class="row">
+						<div class="four columns">
+							<label for="">綽號 <i>*</i> <span class="meta">名牌</span></label>
+							<input type="text" name="entry.1341100529">
+							<div class="bg-red message hidden nickname">必須填寫</div>
+						</div>
+						<div class="four columns">
+							<label for="">生理性別 <i>*</i> <span class="meta">住宿分房</span></label>
+							<div class="row">
+								<div class="four columns">
+									<input type="radio" name="entry.1620987134" value="男" checked> 男
+								</div>
+								<div class="four columns">
+									<input type="radio" name="entry.1620987134" value="女"> 女
+								</div>
+							</div>
+						</div>
+						<div class="four columns">
+							<label for="">營服尺寸 <i>*</i> <span class="meta"><a href="http://i.imgur.com/aoVnYnR.jpg">尺寸表</a></span></label>
+							<select name="entry.569168868">
+								<option value="SS">SS</option>
+								<option value="S">S</option>
+								<option value="M" selected="">M</option>
+								<option value="L">L</option>
+								<option value="XL">XL</option>
+								<option value="2L">2L</option>
+								<option value="3L">3L</option>
+							</select>
+						</div>
+					</div>
+					<div class="row">
+						<div class="six columns">
+							<label for="">飲食習慣 <i>*</i> <span class="meta">葷、素、食物過敏等其他飲食要求</span></label>
+							<textarea name="entry.1852489224"></textarea>
+							<div class="bg-red message hidden eatingHabit">必須填寫</div>
+						</div>
+						<div class="six columns">
+							<label for="">自我介紹 <span class="meta">專長、興趣、任何能代表你的故事</span></label>
+							<textarea name="entry.2048275994"></textarea>
+						</div>
+					</div>
+					<div class="row">
+						<div class="button deep-purple" id="form-extra">填寫其他欄位</div>
+					</div>
+				</div>
+				<!-- end basic infor -->
+				<div class="hidden" id="Extra-infor">
+					<h3>其他欄位</h3>
+					<p class="meta">填寫此區欄位可以讓我們在活動前更加認識你們唷 ouo//</p>
+					<div class="row">
+						<div class="twelve columns">
+							<label for="">想對學長姐說的話</label>
+							<textarea name="entry.162312682"></textarea>
+						</div>
+					</div>
+					<div class="row">
+						<div class="four columns">
+							<label for="">感情狀態</label>
+							<select name="entry.909153445">
+								<option value=""></option>
+								<option value="不公開">不公開</option>
+								<option value="單身">單身</option>
+								<option value="穩定交往中">穩定交往中</option>
+								<option value="交往中但保有交友空間">交往中但保有交友空間</option>
+								<option value="已訂婚">已訂婚</option>
+								<option value="已婚">已婚</option>
+								<option value="一言難盡">一言難盡</option>
+							</select>
+						</div>
+						<div class="four columns">
+							<label for="">性向</label>
+							<input type="text" name="entry.334248260">
+						</div>
+					</div>
+				</div>
+				<!-- end extra infor -->
+				<div class="row hidden">
+					<input type="text" name="entry.1861483295">
+					<input type="text" name="entry.665308974">
+					<input type="text" name="entry.1243370905">
+				</div>
+				<hr>
+				<p id="form-check"><i class="fa fa-square-o"></i> 我已詳細閱讀並同意遵守 <a href="">2015 台大資管迎新宿營公開說明書</a> 之內容</p>
+				<button class="button blue" id="form-submit" disabled>提交表單</button>
+			</form>
+			<div class="hidden bg-light-blue message" id="ThanksPage">
+				<h3>報名完成！</h3>
+				<p>填寫的資料將經過人工驗證後寄出資料確認信，如果檢查有誤請回信告知。</p>
+				<p>匯款之後一日內工作團隊會再寄出匯款確認信，如果超過兩天尚未收到確認信請來信告知。</p>
+				<div class="meta">
+					<p>（文案）</p>
+					<p>小隊員：網頁報名 -> 資料確認信 -> 匯款 -> 匯款確認信</p>
+					<p>工作人員：檢查資料（公關部） -> 對帳 -> 寄確認信（公關部）</p>
+				</div>
+			</div>
+		</div>
+	</div>
+	<div class="page" id="pending">
+		<div class="container">
+			<h2>Pending Issues</h2>
+			<div class="row">
+				<div class="six columns bg-indigo  message">
+					<h3>文案</h3>
+					<ul>
+						<li>封面設計</li>
+						<li>活動介紹：開頭劇情、活動流程、地點介紹......</li>
+						<li>工作人員：自我介紹</li>
+						<li>報名表單：欄位提示文字、公開說明書、感謝報名訊息</li>
+					</ul>
+				</div>
+				<div class="six columns bg-deep-purple message">
+					<h3>圖稿</h3>
+					<ul>
+						<li>封面設計</li>
+						<li>背景圖</li>
+						<li>宿營人物</li>
+					</ul>
+				</div>
+			</div>
+		</div>
+	</div>
+	<script src="js/main.js"></script>
+	<script src="js/form.js"></script>
+	<script src="js/smoothScrolling.js"></script>
+	<footer>
+		<div class="container">
+			<p class="meta">National Taiwan University Information Management 2015 Orientation Camp All Right Reserved.</p>
+			<a href="http://elantris.github.io">Elantris</a>
+		</div>
+	</footer>
+	<div id="test1"></div>
+</body>
+
+</html>

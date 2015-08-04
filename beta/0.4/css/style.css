@@ -1,0 +1,172 @@
+body {
+	font-family: Helvetica, Arial, sans-serif;
+	background-attachment: fixed;
+	background-image: url('../img/dark_embroidery.png');
+}
+
+a {
+	text-decoration: none;
+}
+
+iframe {
+	border: none;
+}
+
+p {
+	margin-bottom: .7em;
+	line-height: 1.7em;
+	text-align: justify;
+	text-justify: ideographic;
+}
+
+.hidden {
+	display: none;
+}
+
+.button,
+button,
+input[type="submit"],
+input[type="reset"],
+input[type="button"] {
+	font-size: 14px;
+}
+
+
+/*#board {
+	z-index: 10;
+	position: fixed;
+	top: 0;
+	left: 0;
+	right: 0;
+	bottom: 0;
+}
+
+.box {
+	height: 10vw;
+	width: 10vw;
+	float: left;
+	background-color: #EEE;
+}*/
+
+.page {
+	padding: 128px 0;
+}
+
+.page > .container {
+	padding: 64px 32px;
+	box-sizing: border-box;
+	background-color: #EEE;
+}
+
+.page > .container > h1 {
+	border-bottom: gray 2px solid;
+}
+
+nav {
+	z-index: 10;
+	position: absolute;
+	top: 100vh;
+	width: 100%;
+	background-color: black;
+	height: 64px;
+	line-height: 64px;
+}
+
+nav.fixed {
+	position: fixed;
+	top: 0;
+}
+
+nav a.link {
+	margin: 32px;
+	padding: 8px;
+	font-size: 1.2em;
+}
+
+#Cover {
+	height: 100vh;
+	/*box-sizing: border-box;*/
+	overflow: hidden;
+}
+
+#Cover > .container {
+	margin: 10vh auto;
+	padding: 64px 32px;
+	box-sizing: border-box;
+	background: linear-gradient(120deg, #444, #888);
+	background: -moz-linear-gradient(120deg, #444, #888);
+	background: -webkit-linear-gradient(120deg, #444, #888);
+	/*text-align: center;*/
+}
+
+#Cover > .container h1 {
+	padding: 8px 0;
+	color: lightblue;
+	border-bottom: white 1px solid;
+}
+
+#Cover > .container h3 {
+	color: white;
+	margin: 0;
+}
+
+#Cover > .container p {
+	margin: 0 0 .7em 0;
+	line-height: 1.7em;
+	color: white;
+}
+
+#Sign label {
+	margin-top: 15px;
+}
+
+#Sign label i {
+	color: red;
+}
+
+#Sign p.meta,
+#Sign span.meta {
+	font-size: .8em;
+	color: gray;
+}
+
+#Sign input[type="text"],
+#Sign select,
+#Sign textarea {
+	margin: 0;
+	width: 100%;
+	appearance: none;
+	-moz-appearance: none;
+	-webkit-appearance: none;
+}
+
+#Sign textarea {
+	max-width: 100%;
+	height: 10em;
+}
+
+#Sign .error {
+	border: 1px solid #F44336;
+	background-color: #FFCDD2;
+}
+
+#Sign .error-message {
+	font-size: .8em;
+	color: red;
+	/*display: none;*/
+}
+
+#Sign .row img {
+	width: 100%;
+	max-width: 250px;
+	background-color: #DDD;
+}
+
+.message {
+	height: 20em;
+	overflow: auto;
+	padding: 16px;
+	background-color: #FAFAFA;
+	border: 2px solid #9E9E9E;
+	border-radius: 16px;
+}

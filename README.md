@@ -1,7 +1,11 @@
-#NTUIM-2015OC
-National Taiwan University Information Management 2015 Orientation Camp
+# Freshman Camp
 
-##Update
+National Taiwan University Information Management 2015 Freshman Camp
+
+## Update
+
+20150804/0.4/beta
+> Pre-release version with the sign up form.
 
 20150608/0.3.2.2/bugs fixed
 > Set the position of Cover page to absolute.  
