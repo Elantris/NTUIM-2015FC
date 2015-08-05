@@ -19,6 +19,7 @@
 	<div id="Cover">
 		<div class="container">
 			<h1>網站測試 Beta</h1>
+			<p class="neta">20150805/0.4.2/Feedback Received</p>
 			<h3>臺大資管迎新宿營</h3>
 			<p>Freshman Camp for NTUIM</p>
 			<h3>IM 107 x IM 108</h3>
@@ -43,7 +44,7 @@
 			<div class="message markdown-body" id="Sign-Contract"></div>
 			<hr>
 			<p id="Sign-Check"><i class="fa fa-square-o"></i> 我已詳細閱讀並同意遵守 <a href="#Sign">2015 臺大資管迎新宿營公開說明書</a> 之內容</p>
-			<button class="hidden" id="Sign-Next">下一步</button>
+			<button id="Sign-Next" disabled="">下一步</button>
 		</div>
 		<div class="container hidden" id="Sign-Form">
 			<h1>報名表單</h1>
@@ -63,7 +64,7 @@
 							<input type="text" name="entry.139380639" id="Name">
 						</div>
 						<div class="four columns">
-							<label for="">生日 <i>*</i></label>
+							<label for="">生日 <i>*</i> <span class="meta">民國</span></label>
 							<div class="row">
 								<div class="four columns">
 									<select name="entry.2084050948" id="BirthYear">
@@ -137,7 +138,7 @@
 					<p class="meta">為遵守個資法相關規定，以上資料僅用作辦理保險之業務，並於活動結束後全數刪除。</p>
 					<div class="row">
 						<div class="four columns">
-							<label for="">聯絡電話 <i>*</i></label>
+							<label for="">手機號碼 <i>*</i> <span class="meta">簡訊通知</span></label>
 							<input type="text" name="entry.907655804" id="Phone" placeholder="0912345678">
 						</div>
 						<div class="four columns">
@@ -154,7 +155,7 @@
 							</select>
 						</div>
 						<div class="four columns">
-							<label for="">營服尺寸 <i>*</i> <span class="meta"><a href="http://i.imgur.com/aoVnYnR.jpg">尺寸表</a></span></label>
+							<label for="">營服尺寸 <i>*</i> <span class="meta"><a href="http://i.imgur.com/aoVnYnR.jpg" target="_blank">尺寸表</a></span></label>
 							<select name="entry.2050718574" id="Size">
 								<option value="SS">SS</option>
 								<option value="S">S</option>
@@ -177,8 +178,7 @@
 						</div>
 					</div>
 				</div>
-				<div class="button" id="Form-Show-Extra">其他欄位</div>
-				<div class="hidden" id="Form-Extra">
+				<div id="Form-Extra">
 					<hr>
 					<h3>其他欄位</h3>
 					<p class="meta">填寫此區的欄位可以讓我們在活動前先認識你們唷 ouo//</p>

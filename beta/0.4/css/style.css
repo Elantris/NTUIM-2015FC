@@ -65,7 +65,7 @@ input[type="button"] {
 nav {
 	z-index: 10;
 	position: absolute;
-	top: 100vh;
+	bottom: 0;
 	width: 100%;
 	background-color: black;
 	height: 64px;
@@ -85,7 +85,6 @@ nav a.link {
 
 #Cover {
 	height: 100vh;
-	/*box-sizing: border-box;*/
 	overflow: hidden;
 }
 
@@ -96,7 +95,6 @@ nav a.link {
 	background: linear-gradient(120deg, #444, #888);
 	background: -moz-linear-gradient(120deg, #444, #888);
 	background: -webkit-linear-gradient(120deg, #444, #888);
-	/*text-align: center;*/
 }
 
 #Cover > .container h1 {
@@ -148,12 +146,6 @@ nav a.link {
 #Sign .error {
 	border: 1px solid #F44336;
 	background-color: #FFCDD2;
-}
-
-#Sign .error-message {
-	font-size: .8em;
-	color: red;
-	/*display: none;*/
 }
 
 #Sign .row img {

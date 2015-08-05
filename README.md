@@ -4,6 +4,13 @@ National Taiwan University Information Management 2015 Freshman Camp
 
 ## Update
 
+20150805/0.4.2/Feedback Received
+> Open the link in new tab.
+> The checkbox of agreement can be cancelled.
+> Add additional words to describe birth year.
+> Set the default of Extra form to display.
+> Upgrade the validation of ID number.
+
 20150804/0.4.1/bugss fixed
 > Add documentaries in js.
 > Fixed the lost of background.
@@ -12,76 +19,76 @@ National Taiwan University Information Management 2015 Freshman Camp
 > Pre-release version with the sign up form.
 
 20150608/0.3.2.2/bugs fixed
-> Set the position of Cover page to absolute.  
+> Set the position of Cover page to absolute.
 
 20150608/0.3.2.1/bugs fixed
-> Fixed like button in RWD structure.  
-> Improved feedback form.  
-> Improved navgator.  
-> Use same color style for buttons.  
-> Modify the speed of scrolling animation.  
+> Fixed like button in RWD structure.
+> Improved feedback form.
+> Improved navgator.
+> Use same color style for buttons.
+> Modify the speed of scrolling animation.
 
 20150605/0.3.2/Attach google form
-> Modify the position of navigator.  
-> Change the colors of navigator and links.  
-> Add description to Staff image.  
-> Put error message under each field.  
-> Hide the feedback form under Staff page.  
-> Improved like button.  
+> Modify the position of navigator.
+> Change the colors of navigator and links.
+> Add description to Staff image.
+> Put error message under each field.
+> Hide the feedback form under Staff page.
+> Improved like button.
 
 20150603/0.3.1.2/Form improved
-> After submiting the form, tha page will scroll to the thank you page.  
-> Add cover page.  
+> After submiting the form, tha page will scroll to the thank you page.
+> Add cover page.
 
 20150529/0.3.1.1/bugs fixed
 
 20150528/0.3.1/bugs fixed
-> Modify styles to fit the phone viewing.  
-> Fix pictures source url.  
+> Modify styles to fit the phone viewing.
+> Fix pictures source url.
 
 20150528/0.3/Skeleton
-> Use framework "Skeleton".  
-> Re-design the sign up form.  
-> Add scrollInToView function.  
-> Use regular expression for validation.  
+> Use framework "Skeleton".
+> Re-design the sign up form.
+> Add scrollInToView function.
+> Use regular expression for validation.
 
 20150408/0.2.1/Fixed Backgrounds
-> Fix background image path.  
-> Modify footer positoin.  
+> Fix background image path.
+> Modify footer positoin.
 
 20150408/0.2/Parallax JS
-> Add parallax javascript framework.  
-> Re-design the feedback form for more technical needed.  
-> Add check(), validate() methods to form.  
-> Use regular expression for form validation.  
+> Add parallax javascript framework.
+> Re-design the feedback form for more technical needed.
+> Add check(), validate() methods to form.
+> Use regular expression for form validation.
 
 20150326/0.1.5.1/Little change
 
 20150326/0.1.5/Clear view
-> Modify background colors.  
-> Modify components box-model.  
+> Modify background colors.
+> Modify components box-model.
 
 20150325/0.1.4/Check Method
-> Modify checkForm() method.  
-> Modify styles of default frames.  
-> Correct some spellings.  
-> Bugs fixed: Parallax overflow, pages height, box-models.  
+> Modify checkForm() method.
+> Modify styles of default frames.
+> Correct some spellings.
+> Bugs fixed: Parallax overflow, pages height, box-models.
 
 20150325/0.1.3/Form Improved
-> Modify external javaScript files.  
-> Modify chip styles.  
-> Add School ID field for testers.  
-> Use cards to place staff introduction.  
-> Bugs fixed: right useless space (webkit).  
+> Modify external javaScript files.
+> Modify chip styles.
+> Add School ID field for testers.
+> Use cards to place staff introduction.
+> Bugs fixed: right useless space (webkit).
 
 20150324/0.1.2/Form
-> Bugs fixed.  
+> Bugs fixed.
 
 20150324/0.1.1/form
-> Modify frames colors.  
-> Create form javascript.  
+> Modify frames colors.
+> Create form javascript.
 
 20150324/0.1/test
-> Add default frames.  
-> Cover equipt parallax.  
-> Add test report form without validation.  
+> Add default frames.
+> Cover equipt parallax.
+> Add test report form without validation.

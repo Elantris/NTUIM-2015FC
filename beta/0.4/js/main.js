@@ -47,7 +47,7 @@ function moveTo(target) {
 
 $(document).scroll(function() {
 	var flag = 1;
-	if ($(window).scrollTop() > $('#Cover').height()) {
+	if ($(window).scrollTop() > $('#Cover').height() - $('nav').height()) {
 		$('nav').addClass('fixed');
 	} else {
 		$('nav').removeClass('fixed');
@@ -64,22 +64,26 @@ $('#Sign-Contract').load('doc/contract.md', function() {
 	$(this).html(markdown.toHTML($(this).text()));
 }); // standard form contract
 
+var signChecked = false;
+
 $('#Sign-Check').click(function() {
-	$(this).find('i').removeClass('fa-square-o').addClass('fa-check-square-o');
-	$('#Sign-Next').show().click(function() {
-		$('#Sign-Start').slideUp(200);
-		$('#Sign-Form').slideDown(200, function() {
-			moveTo('#Sign');
-		});
-	});;
+	signChecked = !signChecked;
+	if (signChecked) {
+		$(this).find('i').removeClass('fa-square-o').addClass('fa-check-square-o');
+		$('#Sign-Next').addClass('button-primary').removeAttr('disabled');
+	} else {
+		$(this).find('i').removeClass('fa-check-square-o').addClass('fa-square-o');
+		$('#Sign-Next').removeClass('button-primary').attr('disabled', true);
+	}
 }); // the button for agreement of the contract
 
-$('#Form-Show-Extra').click(function() {
-	$(this).hide();
-	$('#Form-Extra').slideDown(200);
+$('#Sign-Next').click(function() {
+	$('#Sign-Start').slideUp(200);
+	$('#Sign-Form').slideDown(200);
+	moveTo('#Sign');
 });
 
-$('#Version').val('20150804/0.4/beta');
+$('#Version').val('20150805/0.4.2/Feedback Received');
 $('#UserAgent').val(navigator.userAgent);
 
 var daysOfMonth = [31, 28, 31, 30, 31, 30, 31, 31, 30, 31, 30, 31];
@@ -101,18 +105,52 @@ $('#BirthYear, #BirthMonth').change(function() {
 	}
 });
 
-var field = ['#Name', '#IDNumber', '#Phone', '#Email', '#Habit', '#Account'];
+var field = [
+		'#Name',
+		'#IDNumber',
+		'#Phone',
+		'#Email',
+		'#Habit',
+		'#Account'
+	],
+	regex = [
+		/^\S+$/,
+		/^[A-Za-z]{1}[1-2]{1}[0-9]{8}$/,
+		/^[0-9]{10}$/,
+		/^([\w-]+(?:\.[\w-]+)*)@((?:[\w-]+\.)*\w[\w-]{0,66})\.([a-z]{2,6}(?:\.[a-z]{2})?)$/i,
+		/^\S+$/,
+		/^[0-9]{5}$/
+	],
+	validation = [];
 
 function formValidate() {
-	var validation = [
-			/^\S+$/.test($('#Name').val()),
-			/^[A-Z]{1}[1-2]{1}[0-9]{8}$/.test($('#IDNumber').val()),
-			/^[0-9]{10}$/.test($('#Phone').val()),
-			/^([\w-]+(?:\.[\w-]+)*)@((?:[\w-]+\.)*\w[\w-]{0,66})\.([a-z]{2,6}(?:\.[a-z]{2})?)$/i.test($('#Email').val()),
-			/^\S+$/.test($('#Habit').val()),
-			/^[0-9]{5}$/.test($('#Account').val())
-		],
-		result = true;
+	var result = true;
+
+	for (var i = 0; i < field.length; i++) {
+		validation[i] = regex[i].test($(field[i]).val());
+	}
+
+	$('#IDNumber').val($('#IDNumber').val().toUpperCase());
+
+	if (validation[1]) { // ID Number validation
+		var letterToNumber = 'ABCDEFGHJKLMNPQRSTUVWXYZIO',
+			x = 0;
+		for (var i = 0; i < letterToNumber.length; i++) {
+			if ($('#IDNumber').val()[0] == letterToNumber[i]) {
+				i += 10;
+				x += Math.floor(i / 10) + (i % 10) * 9;
+				break;
+			}
+		}
+		for (var i = 0; i < 8; i++) {
+			x += $('#IDNumber').val()[i + 1] * (8 - i);
+		}
+		x += $('#IDNumber').val()[9] * 1;
+		if (x % 10 != 0) {
+			validation[1] = false;
+		}
+	}
+
 	for (var i = 0; i < validation.length; i++) {
 		if (!validation[i]) {
 			$(field[i]).addClass('error');
