@@ -19,7 +19,7 @@
 	<div id="Cover">
 		<div class="container">
 			<h1>網站測試 Beta</h1>
-			<p class="neta">20150805/0.4.2/Feedback Received</p>
+			<p class="neta">20150806/0.4.3/Staff</p>
 			<h3>臺大資管迎新宿營</h3>
 			<p>Freshman Camp for NTUIM</p>
 			<h3>IM 107 x IM 108</h3>
@@ -30,7 +30,7 @@
 		<div class="container">
 			<!-- <a href="#Infor" class="link">活動介紹</a> -->
 			<a href="#Sign" class="link">現在報名</a>
-			<!-- <a href="#Staff" class="link">工作人員</a> -->
+			<a href="#Staff" class="link">工作人員</a>
 		</div>
 	</nav>
 	<!-- <div class="page" id="Infor">
@@ -131,12 +131,16 @@
 							</div>
 						</div>
 						<div class="four columns">
-							<label for="">身份證字號 <i>*</i></label>
+							<label for="">身分證字號 <i>*</i></label>
 							<input type="text" name="entry.27815516" id="IDNumber" placeholder="A123456789">
 						</div>
 					</div>
 					<p class="meta">為遵守個資法相關規定，以上資料僅用作辦理保險之業務，並於活動結束後全數刪除。</p>
 					<div class="row">
+						<div class="four columns">
+							<label for="">學號 <i>*</i></label>
+							<input type="text" name="entry.1744484492" id="StudentID" placeholder="B047050XX">
+						</div>
 						<div class="four columns">
 							<label for="">手機號碼 <i>*</i> <span class="meta">簡訊通知</span></label>
 							<input type="text" name="entry.907655804" id="Phone" placeholder="0912345678">
@@ -175,6 +179,7 @@
 						<div class="six columns">
 							<label for="">匯款帳號末五碼 <i>*</i></label>
 							<input type="text" name="entry.1996054162" id="Account" placeholder="00000">
+							<p class="notice">匯款帳戶：</p>
 						</div>
 					</div>
 				</div>
@@ -202,11 +207,148 @@
 			<p>請靜待工作人員審核驗證後寄送電子郵件確認信 owo//</p>
 		</div>
 	</div>
-	<!-- <div class="page" id="Staff">
+	<!-- End Sign page -->
+	<div class="page" id="Staff">
 		<div class="container">
 			<h1>工作人員</h1>
+			<h3>召部</h3>
+			<div class="row">
+				<div class="four columns">
+					<img src="http://i.imgur.com/puHiQaB.jpg" alt="">
+					<p><b>總召：張晉華 / 剛毛</b> <i class="like"></i></p>
+					<p>0987 628 990</p>
+					<p class="notice">典型綽號比本名還有名的人</p>
+				</div>
+				<div class="four columns">
+					<img src="http://i.imgur.com/puHiQaB.jpg" alt="">
+					<p><b>副召：徐嘉琪 / 卷姐</b> <i class="like"></i></p>
+					<p>0978 108 098</p>
+					<p class="notice">不叫綽號不回頭的人</p>
+				</div>
+				<div class="four columns">
+					<img src="http://i.imgur.com/puHiQaB.jpg" alt="">
+					<p><b>副召：黃楷翔</b> <i class="like"></i></p>
+					<p>09XX XXX XXX</p>
+					<p class="notice">好像沒有綽號的人</p>
+				</div>
+			</div>
+			<hr>
+			<div class="row">
+				<div class="six columns">
+					<p><b>財秘：張博程 / 老博</b> <i class="like"></i></p>
+					<p class="notice">財務我來管，宿營你來玩！</p>
+				</div>
+				<div class="six columns">
+					<p><b>網頁設計：許承佑</b> <i class="like"></i></p>
+					<p class="notice">ouo//</p>
+				</div>
+			</div>
+			<hr>
+			<button class="show-tab" data-tab="1" disabled>活動部</button>
+			<button class="button-primary show-tab" data-tab="2">公關部</button>
+			<button class="button-primary show-tab" data-tab="3">庶務部</button>
+			<button class="button-primary show-tab" data-tab="4">美宣部</button>
+			<button class="button-primary show-tab" data-tab="5">器材部</button>
+			<button class="button-primary show-tab" data-tab="6">資訊部</button>
+			<div class="tab" id="tab1">
+				<h3>活動部</h3>
+				<div class="row">
+					<div class="three columns">
+						<p><b>活動長：陳品</b> <i class="like"></i></p>
+						<p class="notice">......</p>
+					</div>
+					<div class="three columns">
+						<p><b>副活動長：林品瑢</b> <i class="like"></i></p>
+						<p class="notice">......</p>
+					</div>
+				</div>
+				<div class="row">
+					<div class="three columns">
+						<p><b>水大地：侯宗佑 / 球球</b> <i class="like"></i></p>
+						<p class="notice">躺著看，坐著看，趴著看，還是球球最帥</p>
+					</div>
+					<div class="three columns">
+						<p><b>大地：周祐鈞</b> <i class="like"></i></p>
+						<p class="notice">大地活動負責人裡最帥沒有之一</p>
+					</div>
+					<div class="three columns">
+						<p><b>螢光舞：盧慶元</b> <i class="like"></i></p>
+						<p class="notice">別人在耀眼的燈下競歌熱舞
+							<br> 我們在漆黑的臺上綻放光芒
+							<br> We are the light in the night.</p>
+					</div>
+				</div>
+			</div>
+			<div class="tab hidden" id="tab2">
+				<h3>公關部</h3>
+				<div class="row">
+					<div class="three columns">
+						<p><b>公關長：王思淇</b> <i class="like"></i></p>
+						<p class="notice">......</p>
+					</div>
+					<div class="three columns">
+						<p><b>副公關長：洪念綺</b> <i class="like"></i></p>
+						<p class="notice">......</p>
+					</div>
+				</div>
+				<hr>
+			</div>
+			<div class="tab hidden" id="tab3">
+				<h3>庶務部</h3>
+				<div class="row">
+					<div class="three columns">
+						<p><b>庶務長：陳維漢</b> <i class="like"></i></p>
+						<p class="notice">......</p>
+					</div>
+					<div class="three columns">
+						<p><b>副庶務長：張睿君</b> <i class="like"></i></p>
+						<p class="notice">......</p>
+					</div>
+				</div>
+			</div>
+			<div class="tab hidden" id="tab4">
+				<h3>美宣部</h3>
+				<div class="row">
+					<div class="three columns">
+						<p><b>美宣長：謝惠羽</b> <i class="like"></i></p>
+						<p class="notice">......</p>
+					</div>
+					<div class="three columns">
+						<p><b>副美宣長：黃詣</b> <i class="like"></i></p>
+						<p class="notice">......</p>
+					</div>
+				</div>
+			</div>
+			<div class="tab hidden" id="tab5">
+				<h3>器材部</h3>
+				<div class="row">
+					<div class="three columns">
+						<p><b>器材長：林書攸</b> <i class="like"></i></p>
+						<p class="notice">......</p>
+					</div>
+					<div class="three columns">
+						<p><b>副器材長：林軒逸</b> <i class="like"></i></p>
+						<p class="notice">......</p>
+					</div>
+				</div>
+			</div>
+			<div class="tab hidden" id="tab6">
+				<h3>資訊部</h3>
+				<div class="row">
+					<div class="three columns">
+						<p><b>資訊長：林子期</b> <i class="like"></i></p>
+						<p class="notice">......</p>
+					</div>
+					<div class="three columns">
+						<p><b>副資訊長：陳主牧</b> <i class="like"></i></p>
+						<p class="notice">......</p>
+					</div>
+				</div>
+			</div>
+			<hr>
 		</div>
-	</div> -->
+		<!-- End Staff page -->
+	</div>
 	<script src="js/main.js"></script>
 </body>
 

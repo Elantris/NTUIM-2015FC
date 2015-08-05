@@ -46,18 +46,11 @@ function moveTo(target) {
 }
 
 $(document).scroll(function() {
-	var flag = 1;
 	if ($(window).scrollTop() > $('#Cover').height() - $('nav').height()) {
 		$('nav').addClass('fixed');
 	} else {
 		$('nav').removeClass('fixed');
 	}
-	$('nav a').removeClass('active').each(function() {
-		if (flag && isScrolledIntoView($($(this).attr('href')))) {
-			$(this).addClass('active');
-			flag = 0;
-		}
-	});
 });
 
 $('#Sign-Contract').load('doc/contract.md', function() {
@@ -78,13 +71,28 @@ $('#Sign-Check').click(function() {
 }); // the button for agreement of the contract
 
 $('#Sign-Next').click(function() {
-	$('#Sign-Start').slideUp(200);
-	$('#Sign-Form').slideDown(200);
+	$('#Sign-Start').slideUp(300);
+	$('#Sign-Form').slideDown(300);
 	moveTo('#Sign');
 });
 
-$('#Version').val('20150805/0.4.2/Feedback Received');
+$('#Version').val('20150806/0.4.3/Staff');
 $('#UserAgent').val(navigator.userAgent);
+
+var likeVal = [],
+	likeCount = 0;
+
+$('.like').each(function() {
+	$(this).addClass('fa fa-heart-o').attr('data-id', likeCount);
+	likeVal[likeCount++] = 0;
+}).click(function() {
+	likeVal[$(this).attr('data-id')]++;
+	if (likeVal[$(this).attr('data-id')] % 2) {
+		$(this).removeClass('fa-heart-o').addClass('fa-heart');
+	} else {
+		$(this).removeClass('fa-heart').addClass('fa-heart-o');
+	}
+});
 
 var daysOfMonth = [31, 28, 31, 30, 31, 30, 31, 31, 30, 31, 30, 31];
 
@@ -108,6 +116,7 @@ $('#BirthYear, #BirthMonth').change(function() {
 var field = [
 		'#Name',
 		'#IDNumber',
+		'#StudentID',
 		'#Phone',
 		'#Email',
 		'#Habit',
@@ -116,6 +125,7 @@ var field = [
 	regex = [
 		/^\S+$/,
 		/^[A-Za-z]{1}[1-2]{1}[0-9]{8}$/,
+		/^[BbRr]{1}[0-9]{8}$/,
 		/^[0-9]{10}$/,
 		/^([\w-]+(?:\.[\w-]+)*)@((?:[\w-]+\.)*\w[\w-]{0,66})\.([a-z]{2,6}(?:\.[a-z]{2})?)$/i,
 		/^\S+$/,
@@ -130,7 +140,9 @@ function formValidate() {
 		validation[i] = regex[i].test($(field[i]).val());
 	}
 
+	$('#StudentID').val($('#StudentID').val().toUpperCase());
 	$('#IDNumber').val($('#IDNumber').val().toUpperCase());
+	$('#Like').val(likeVal);
 
 	if (validation[1]) { // ID Number validation
 		var letterToNumber = 'ABCDEFGHJKLMNPQRSTUVWXYZIO',
@@ -158,8 +170,9 @@ function formValidate() {
 		}
 	}
 	if (result) {
-		$('#Sign-Form').slideUp(200);
-		$('#Sign-Finish').slideDown(200);
+		$('#Sign-Form').slideUp(300);
+		$('#Sign-Finish').slideDown(300);
+		$('.like').addClass('hidden');
 	}
 	moveTo('#Sign');
 	return result;
@@ -167,4 +180,11 @@ function formValidate() {
 
 $('input, select, textarea').focus(function() {
 	$(this).removeClass('error');
+});
+
+$('.show-tab').click(function() {
+	$('.show-tab[disabled]').addClass('button-primary').removeAttr('disabled');
+	$(this).removeClass('button-primary').attr('disabled', true);
+	$('.tab').slideUp(300);
+	$('#tab' + $(this).attr('data-tab')).slideDown(300);
 });

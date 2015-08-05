@@ -19,6 +19,20 @@ p {
 	text-justify: ideographic;
 }
 
+p.meta,
+span.meta {
+	font-size: .8em;
+	color: gray;
+}
+
+p.notice {
+	color: #512DA8;
+}
+
+h3, hr {
+	clear: both;
+}
+
 .hidden {
 	display: none;
 }
@@ -66,10 +80,11 @@ nav {
 	z-index: 10;
 	position: absolute;
 	bottom: 0;
+	height: 64px;
 	width: 100%;
 	background-color: black;
-	height: 64px;
 	line-height: 64px;
+	text-align: center;
 }
 
 nav.fixed {
@@ -78,8 +93,8 @@ nav.fixed {
 }
 
 nav a.link {
-	margin: 32px;
-	padding: 8px;
+	margin: 16px;
+	padding: 8px 16px;
 	font-size: 1.2em;
 }
 
@@ -122,12 +137,6 @@ nav a.link {
 	color: red;
 }
 
-#Sign p.meta,
-#Sign span.meta {
-	font-size: .8em;
-	color: gray;
-}
-
 #Sign input[type="text"],
 #Sign select,
 #Sign textarea {
@@ -148,7 +157,8 @@ nav a.link {
 	background-color: #FFCDD2;
 }
 
-#Sign .row img {
+#Sign .row img,
+#Staff .row img {
 	width: 100%;
 	max-width: 250px;
 	background-color: #DDD;
@@ -161,4 +171,41 @@ nav a.link {
 	background-color: #FAFAFA;
 	border: 2px solid #9E9E9E;
 	border-radius: 16px;
+}
+
+#Staff .card {
+	float: left;
+	width: 20%;
+	padding: 2%;
+}
+
+#Staff .card img {
+	width: 100%;
+}
+
+#Staff .like.fa-heart-o {
+	color: #64B5F6;
+}
+
+#Staff .like.fa-heart {
+	color: #2196F3;
+}
+
+#Staff .like:hover {
+	color: #1976D2;
+}
+
+#Staff .like.fa-heart-o:hover:after {
+	font-family: "Comic Sans MS", cursive, sans-serif;
+	content: " Click";
+}
+
+#Staff .like.fa-heart:hover:after {
+	font-family: "Comic Sans MS", cursive, sans-serif;
+	content: " Like";
+}
+
+#Staff .tab {
+	border: 2px gray dashed;
+	padding: 16px;
 }

@@ -4,6 +4,10 @@ National Taiwan University Information Management 2015 Freshman Camp
 
 ## Update
 
+20150806/0.4.3/Staff
+> Add a new field for Student ID.
+> Add staff page.
+
 20150805/0.4.2/Feedback Received
 > Open the link in new tab.
 > The checkbox of agreement can be cancelled.
