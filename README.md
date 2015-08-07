@@ -4,6 +4,12 @@ National Taiwan University Information Management 2015 Freshman Camp
 
 ## Update
 
+20150807/0.4.4/Infor Page
+> Add Infor page.
+> Fix the line break in navigator.
+> Fix the color of tab buttons.
+> Modify the padding of page container.
+
 20150806/0.4.3/Staff
 > Add a new field for Student ID.
 > Add staff page.

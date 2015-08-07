@@ -1,3 +1,5 @@
+/* theme settings*/
+
 body {
 	font-family: Helvetica, Arial, sans-serif;
 	background-attachment: fixed;
@@ -26,10 +28,11 @@ span.meta {
 }
 
 p.notice {
-	color: #512DA8;
+	color: #9C27B0;
 }
 
-h3, hr {
+h3,
+hr {
 	clear: both;
 }
 
@@ -67,8 +70,8 @@ input[type="button"] {
 }
 
 .page > .container {
-	padding: 64px 32px;
-	box-sizing: border-box;
+	padding: 3vw 2vw;
+	width: 95%;
 	background-color: #EEE;
 }
 
@@ -76,37 +79,71 @@ input[type="button"] {
 	border-bottom: gray 2px solid;
 }
 
+.card-group,
+.button-group {
+	overflow-x: auto;
+	white-space: nowrap;
+}
+
+.card {
+	margin: 16px;
+	border-bottom: 4px #333 solid;
+	padding: 16px;
+	min-width: 250px;
+	display: inline-block;
+	background-color: white;
+	box-shadow: 0 4px 8px #BBB;
+	border-radius: 8px;
+}
+
+.row img,
+.card-group img {
+	width: 100%;
+	max-width: 250px;
+	background-color: #DDD;
+}
+
+
+/* navigator */
+
 nav {
 	z-index: 10;
 	position: absolute;
 	bottom: 0;
+	left: 0;
+	right: 0;
+	white-space: nowrap;
+	overflow-x: auto;
+	background-color: white;
 	height: 64px;
-	width: 100%;
-	background-color: black;
-	line-height: 64px;
 	text-align: center;
+	line-height: 64px;
 }
 
 nav.fixed {
 	position: fixed;
 	top: 0;
+	box-shadow: 0 4px 8px #666;
 }
 
 nav a.link {
-	margin: 16px;
-	padding: 8px 16px;
+	margin: 0 8px;
+	padding: 0 16px;
 	font-size: 1.2em;
 }
+
+
+/* Cover page */
 
 #Cover {
 	height: 100vh;
 	overflow: hidden;
+	text-align: center;
 }
 
 #Cover > .container {
 	margin: 10vh auto;
-	padding: 64px 32px;
-	box-sizing: border-box;
+	padding: 3vw;
 	background: linear-gradient(120deg, #444, #888);
 	background: -moz-linear-gradient(120deg, #444, #888);
 	background: -webkit-linear-gradient(120deg, #444, #888);
@@ -124,9 +161,24 @@ nav a.link {
 }
 
 #Cover > .container p {
-	margin: 0 0 .7em 0;
+	margin-bottom: .7em;
 	line-height: 1.7em;
 	color: white;
+	text-align: center;
+}
+
+
+/* Sign Up page */
+
+#Sign .message {
+	height: 20em;
+	overflow: auto;
+	padding: 16px;
+	background-color: #FAFAFA;
+	border: 2px solid #9E9E9E;
+	border-radius: 16px;
+	line-height: 0;
+	font-size: 0.8em;
 }
 
 #Sign label {
@@ -157,31 +209,8 @@ nav a.link {
 	background-color: #FFCDD2;
 }
 
-#Sign .row img,
-#Staff .row img {
-	width: 100%;
-	max-width: 250px;
-	background-color: #DDD;
-}
 
-.message {
-	height: 20em;
-	overflow: auto;
-	padding: 16px;
-	background-color: #FAFAFA;
-	border: 2px solid #9E9E9E;
-	border-radius: 16px;
-}
-
-#Staff .card {
-	float: left;
-	width: 20%;
-	padding: 2%;
-}
-
-#Staff .card img {
-	width: 100%;
-}
+/* Staff page */
 
 #Staff .like.fa-heart-o {
 	color: #64B5F6;
@@ -203,6 +232,10 @@ nav a.link {
 #Staff .like.fa-heart:hover:after {
 	font-family: "Comic Sans MS", cursive, sans-serif;
 	content: " Like";
+}
+
+#Staff .show-tab {
+	margin: 16px 8px;
 }
 
 #Staff .tab {

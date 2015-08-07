@@ -76,7 +76,7 @@ $('#Sign-Next').click(function() {
 	moveTo('#Sign');
 });
 
-$('#Version').val('20150806/0.4.3/Staff');
+$('#Version').val('20150807/0.4.4/Infor Page');
 $('#UserAgent').val(navigator.userAgent);
 
 var likeVal = [],
@@ -183,8 +183,13 @@ $('input, select, textarea').focus(function() {
 });
 
 $('.show-tab').click(function() {
-	$('.show-tab[disabled]').addClass('button-primary').removeAttr('disabled');
-	$(this).removeClass('button-primary').attr('disabled', true);
 	$('.tab').slideUp(300);
-	$('#tab' + $(this).attr('data-tab')).slideDown(300);
+	if ($(this).hasClass('button-primary')) {
+		$(this).removeClass('button-primary');
+	} else {
+		$('.show-tab.button-primary').not(this).removeClass('button-primary');
+		$(this).addClass('button-primary');
+		$('#tab' + $(this).attr('data-tab')).slideDown(300);
+	}
+	moveTo('#Tabs');
 });

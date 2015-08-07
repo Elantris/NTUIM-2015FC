@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>臺大資管迎新宿營 | 2015 Freshman Camp for NTUIM</title>
+	<link rel="stylesheet" href="css/normalize.css">
+	<link rel="stylesheet" href="css/skeleton.css">
+	<link rel="stylesheet" href="css/github-markdown.css">
+	<link rel="stylesheet" href="css/font-awesome.min.css">
+	<link rel="stylesheet" href="css/style.css">
+	<script src="js/jquery-1.11.2.min.js"></script>
+	<script src="js/markdown.min.js"></script>
+</head>
+
+<body>
+	<div class="page" id="Sign">
+		<div class="container" id="Sign-Form">
+			<h1>工作人員專用表單</h1>
+			<iframe name="hidden_frame" class="hidden"></iframe>
+			<form action="https://docs.google.com/forms/d/1k8ABFUqrgQ-tuZfriwq2iNMdG8nLaAEQv0myTvn3ZGg/formResponse" method="post" target="hidden_frame" onsubmit="return formValidate();">
+				<input type="text" name="entry.1327237729" class="hidden" id="Version">
+				<input type="text" name="entry.854866725" class="hidden" id="UserAgent">
+				<input type="text" name="entry.607151158" class="hidden" id="Like">
+				<h3>基本資料</h3>
+				<p class="meta">
+					<label for=""><i>*</i> 為必填項目</label>
+				</p>
+				<div class="row">
+					<div class="four columns">
+						<label for="">姓名 <i>*</i></label>
+						<input type="text" name="entry.139380639" id="Name">
+					</div>
+					<div class="four columns">
+						<label for="">生日 <i>*</i> <span class="meta">民國</span></label>
+						<div class="row">
+							<div class="four columns">
+								<select name="entry.2084050948" id="BirthYear">
+									<option value="83">83年</option>
+									<option value="84">84年</option>
+									<option value="85">85年</option>
+									<option value="86" selected="selected">86年</option>
+									<option value="87">87年</option>
+									<option value="88">88年</option>
+									<option value="89">89年</option>
+								</select>
+							</div>
+							<div class="four columns">
+								<select name="entry.1129118360" id="BirthMonth">
+									<option value="1" selected="selected">1月</option>
+									<option value="2">2月</option>
+									<option value="3">3月</option>
+									<option value="4">4月</option>
+									<option value="5">5月</option>
+									<option value="6">6月</option>
+									<option value="7">7月</option>
+									<option value="8">8月</option>
+									<option value="9">9月</option>
+									<option value="10">10月</option>
+									<option value="11">11月</option>
+									<option value="12">12月</option>
+								</select>
+							</div>
+							<div class="four columns">
+								<select name="entry.1406238254" id="BirthDay">
+									<option value="1" selected="selected">1日</option>
+									<option value="2">2日</option>
+									<option value="3">3日</option>
+									<option value="4">4日</option>
+									<option value="5">5日</option>
+									<option value="6">6日</option>
+									<option value="7">7日</option>
+									<option value="8">8日</option>
+									<option value="9">9日</option>
+									<option value="10">10日</option>
+									<option value="11">11日</option>
+									<option value="12">12日</option>
+									<option value="13">13日</option>
+									<option value="14">14日</option>
+									<option value="15">15日</option>
+									<option value="16">16日</option>
+									<option value="17">17日</option>
+									<option value="18">18日</option>
+									<option value="19">19日</option>
+									<option value="20">20日</option>
+									<option value="21">21日</option>
+									<option value="22">22日</option>
+									<option value="23">23日</option>
+									<option value="24">24日</option>
+									<option value="25">25日</option>
+									<option value="26">26日</option>
+									<option value="27">27日</option>
+									<option value="28">28日</option>
+									<option value="29">29日</option>
+									<option value="30">30日</option>
+									<option value="31">31日</option>
+								</select>
+							</div>
+						</div>
+					</div>
+					<div class="four columns">
+						<label for="">身分證字號 <i>*</i></label>
+						<input type="text" name="entry.27815516" id="IDNumber" placeholder="A123456789">
+					</div>
+				</div>
+				<p class="meta">為遵守個資法相關規定，以上資料僅用作辦理保險之業務，並於活動結束後全數刪除。</p>
+				<div class="row">
+					<div class="four columns">
+						<label for="">學號 <i>*</i></label>
+						<input type="text" name="entry.1744484492" id="StudentID" placeholder="B037050XX">
+					</div>
+					<div class="four columns">
+						<label for="">營服尺寸 <i>*</i> <span class="meta"><a href="http://i.imgur.com/aoVnYnR.jpg" target="_blank">尺寸表</a></span></label>
+						<select name="entry.2050718574" id="Size">
+							<option value="SS">SS</option>
+							<option value="S">S</option>
+							<option value="M" selected="selected">M</option>
+							<option value="L">L</option>
+							<option value="XL">XL</option>
+							<option value="2L">2L</option>
+							<option value="3L">3L</option>
+						</select>
+					</div>
+				</div>
+				<hr>
+				<input type="submit" value="確認送出" class="button-primary" id="Form-Submit">
+			</form>
+		</div>
+		<div class="container hidden" id="Sign-Finish">
+			<h1>填寫完畢</h1>
+			<p>請靜待工作人員審核驗證後寄送電子郵件確認信 owo//</p>
+		</div>
+	</div>
+	<!-- // <script src="js/main.js"></script> -->
+	<script>
+	$('#Version').val('20150807/0.4.4/Infor Page');
+	$('#UserAgent').val(navigator.userAgent);
+	var field = [
+			'#Name',
+			'#IDNumber',
+			'#StudentID',
+		],
+		regex = [
+			/^\S+$/,
+			/^[A-Za-z]{1}[1-2]{1}[0-9]{8}$/,
+			/^[BbRr]{1}[0-9]{8}$/,
+		],
+		validation = [];
+
+	function formValidate() {
+		var result = true;
+
+		for (var i = 0; i < field.length; i++) {
+			validation[i] = regex[i].test($(field[i]).val());
+		}
+
+		$('#StudentID').val($('#StudentID').val().toUpperCase());
+		$('#IDNumber').val($('#IDNumber').val().toUpperCase());
+
+		if (validation[1]) { // ID Number validation
+			var letterToNumber = 'ABCDEFGHJKLMNPQRSTUVWXYZIO',
+				x = 0;
+			for (var i = 0; i < letterToNumber.length; i++) {
+				if ($('#IDNumber').val()[0] == letterToNumber[i]) {
+					i += 10;
+					x += Math.floor(i / 10) + (i % 10) * 9;
+					break;
+				}
+			}
+			for (var i = 0; i < 8; i++) {
+				x += $('#IDNumber').val()[i + 1] * (8 - i);
+			}
+			x += $('#IDNumber').val()[9] * 1;
+			if (x % 10 != 0) {
+				validation[1] = false;
+			}
+		}
+
+		for (var i = 0; i < validation.length; i++) {
+			if (!validation[i]) {
+				$(field[i]).addClass('error');
+				result = false;
+			}
+		}
+		if (result) {
+			$('#Sign-Form').slideUp(300);
+			$('#Sign-Finish').slideDown(300);
+		}
+		return result;
+	}
+	</script>
+</body>
+
+</html>
