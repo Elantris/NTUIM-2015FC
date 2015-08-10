@@ -18,30 +18,54 @@
 	<div id="board"></div>
 	<div id="Cover">
 		<div class="container">
-			<h1>網站測試 Beta</h1>
-			<p>20150807/0.4.4/Infor Page</p>
+			<h1>臺大資管迎新宿營</h1>
+			<p>2015 Freshman Camp for NTUIM</p>
 			<div class="row">
-				<div class="six columns">
-					<h3>臺大資管迎新宿營</h3>
-					<p>Freshman Camp for NTUIM</p>
+				<div class="four columns">
+					<h3>活動日期</h3>
+					<p>2015/9/7 ~ 2015/9/10</p>
 				</div>
-				<div class="six columns">
-					<h3>IM 107 x IM 108</h3>
-					<p>2015/8/12　｜　Coming Soon</p>
+				<div class="four columns">
+					<h3>立即報名</h3>
+					<p><a href="#Sign"><i class="fa fa-pencil-square-o"></i> 前往表單</a></p>
+				</div>
+				<div class="four columns">
+					<h3>報名期間</h3>
+					<p>2015/8/12 ~ 2015/8/29</p>
+				</div>
+			</div>
+			<h1>網站測試</h1>
+			<p>20150810/0.4.5/Demo</p>
+		</div>
+	</div>
+	<!-- End Cover page -->
+	<nav>
+		<a href="#News" class="link">最新消息</a>
+		<a href="#Intro" class="link">活動簡介</a>
+		<a href="#Staff" class="link">工作人員</a>
+		<a href="#Sign" class="link">立即報名</a>
+	</nav>
+	<!-- Navigator -->
+	<div class="page" id="News">
+		<div class="container">
+			<h1>最新消息</h1>
+			<div class="group">
+				<div class="news wait">
+					<div class="title" data-file="0">20150810 小迎新</div>
+					<pre class="content markdown-body" data-file="0"></pre>
 				</div>
 			</div>
 		</div>
 	</div>
-	<nav>
-		<a href="#Infor" class="link">活動簡介</a>
-		<a href="#Sign" class="link">現在報名</a>
-		<a href="#Staff" class="link">工作人員</a>
-	</nav>
-	<div class="page" id="Infor">
+	<!-- End News page -->
+	<div class="page" id="Intro">
 		<div class="container">
 			<h1>活動簡介</h1>
-			<h3>日程表</h3>
-			<div class="card-group">
+			<h3>故事</h3>
+			<pre class="message wait" id="Story"></pre>
+			<hr>
+			<h3>行程</h3>
+			<div class="group wait">
 				<div class="card">
 					<h3>Day 1</h3>
 					<p>08:00 出發YA
@@ -93,28 +117,196 @@
 				</div>
 			</div>
 			<hr>
-			<h3>活動地點</h3>
-			<p>流星花園景觀民宿
-				<br>地址：台中市豐原區水源路坪頂巷8號
-				<br>電話：04-25151456</p>
+			<h3>資訊</h3>
+			<div class="group wait">
+				<table>
+					<tr>
+						<th>活動時間</th>
+						<td>2015/9/7 ~ 2015/9/10</td>
+					</tr>
+					<tr>
+						<th>活動場地</th>
+						<td>
+							<a href="http://www.glp.com.tw" target="_blank">流星花園景觀民宿</a>
+							<br>台中市豐原區水源路坪頂巷8號
+							<br>04-25151456</td>
+					</tr>
+					<tr>
+						<th>報名期間</th>
+						<td>2015/8/12 ~ 2015/8/29</td>
+					</tr>
+					<tr>
+						<th>報名費用</th>
+						<td><strong>NT$ 3,500</strong></td>
+					</tr>
+					<tr>
+						<th>匯款帳戶</th>
+						<td><strong>134-20-032500-7</strong>
+							<br>戶名：張博程
+							<br>華南銀行 東湖分行</td>
+					</tr>
+				</table>
+			</div>
 		</div>
 	</div>
+	<!-- End Infor page -->
+	<div class="page" id="Staff">
+		<div class="container">
+			<h1>工作人員</h1>
+			<h3>召部</h3>
+			<div class="group wait">
+				<div class="card">
+					<img src="img/BL3NZET.jpg" alt="">
+					<p><b>總召 / 張晉華 / 剛毛</b> <i class="like"></i></p>
+					<p>0987 628 990</p>
+					<p class="notice">綽號比本名還有名的人</p>
+				</div>
+				<div class="card">
+					<img src="img/6jy0iOX.jpg.jpg" alt="">
+					<p><b>副召 / 徐嘉琪 / Chessy</b> <i class="like"></i></p>
+					<p>0978 108 098</p>
+					<p class="notice">不叫卷姐不回頭的人</p>
+				</div>
+				<div class="card">
+					<img src="img/36ILrtq.jpg" alt="">
+					<p><b>副召 / 黃楷翔</b> <i class="like"></i></p>
+					<p>0925 528 819</p>
+					<p class="notice">好像沒有綽號的人</p>
+				</div>
+			</div>
+			<!-- End card group -->
+			<hr>
+			<div class="row wait">
+				<div class="six columns">
+					<p><b>財秘 / 張博程 / 老博</b> <i class="like"></i></p>
+					<p class="notice">財務我來管，宿營你來玩！</p>
+				</div>
+				<div class="six columns">
+					<p><b>網頁設計 / 許承佑 / Elantris </b> <i class="like"></i></p>
+					<p class="notice">ouo//</p>
+				</div>
+			</div>
+			<hr>
+			<div class="group button-group wait">
+				<button class="show-tab" data-tab="1">活動部</button>
+				<button class="show-tab" data-tab="2">公關部</button>
+				<button class="show-tab" data-tab="3">庶務部</button>
+				<button class="show-tab" data-tab="4">美宣部</button>
+				<button class="show-tab" data-tab="5">器材部</button>
+				<button class="show-tab" data-tab="6">資訊部</button>
+			</div>
+			<div class="tab hidden" data-tab="1">
+				<h3>活動部</h3>
+				<div class="row">
+					<div class="three columns">
+						<p><b>活動長 / 陳品</b> <i class="like"></i></p>
+						<p class="notice">......</p>
+					</div>
+					<div class="three columns">
+						<p><b>副活動長 / 林品瑢</b> <i class="like"></i></p>
+						<p class="notice">......</p>
+					</div>
+				</div>
+				<div class="row">
+					<div class="three columns">
+						<p><b>水大地 / 侯宗佑 / 球球</b> <i class="like"></i></p>
+						<p class="notice">躺著看，坐著看，趴著看，還是球球最帥</p>
+					</div>
+					<div class="three columns">
+						<p><b>大地 / 周祐鈞</b> <i class="like"></i></p>
+						<p class="notice">大地活動負責人裡最帥沒有之一</p>
+					</div>
+					<div class="three columns">
+						<p><b>螢光舞 / 盧慶元</b> <i class="like"></i></p>
+						<p class="notice">別人在耀眼的燈下競歌熱舞
+							<br> 我們在漆黑的臺上綻放光芒
+							<br> We are the light in the night.</p>
+					</div>
+				</div>
+			</div>
+			<div class="tab hidden" data-tab="2">
+				<h3>公關部</h3>
+				<div class="row">
+					<div class="three columns">
+						<p><b>公關長 / 王思淇</b> <i class="like"></i></p>
+						<p class="notice">......</p>
+					</div>
+					<div class="three columns">
+						<p><b>副公關長 / 洪念綺</b> <i class="like"></i></p>
+						<p class="notice">......</p>
+					</div>
+				</div>
+			</div>
+			<div class="tab hidden" data-tab="3">
+				<h3>庶務部</h3>
+				<div class="row">
+					<div class="three columns">
+						<p><b>庶務長 / 陳維漢</b> <i class="like"></i></p>
+						<p class="notice">......</p>
+					</div>
+					<div class="three columns">
+						<p><b>副庶務長 / 張睿君</b> <i class="like"></i></p>
+						<p class="notice">......</p>
+					</div>
+				</div>
+			</div>
+			<div class="tab hidden" data-tab="4">
+				<h3>美宣部</h3>
+				<div class="row">
+					<div class="three columns">
+						<p><b>美宣長 / 謝惠羽</b> <i class="like"></i></p>
+						<p class="notice">......</p>
+					</div>
+					<div class="three columns">
+						<p><b>副美宣長 / 黃詣</b> <i class="like"></i></p>
+						<p class="notice">......</p>
+					</div>
+				</div>
+			</div>
+			<div class="tab hidden" data-tab="5">
+				<h3>器材部</h3>
+				<div class="row">
+					<div class="three columns">
+						<p><b>器材長 / 林書攸</b> <i class="like"></i></p>
+						<p class="notice">......</p>
+					</div>
+					<div class="three columns">
+						<p><b>副器材長 / 林軒逸</b> <i class="like"></i></p>
+						<p class="notice">......</p>
+					</div>
+				</div>
+			</div>
+			<div class="tab hidden" data-tab="6">
+				<h3>資訊部</h3>
+				<div class="row">
+					<div class="three columns">
+						<p><b>資訊長 / 林子期</b> <i class="like"></i></p>
+						<p class="notice">......</p>
+					</div>
+					<div class="three columns">
+						<p><b>副資訊長 / 陳主牧</b> <i class="like"></i></p>
+						<p class="notice">......</p>
+					</div>
+				</div>
+			</div>
+			<!-- End tabs -->
+		</div>
+	</div>
+	<!-- End Staff page -->
 	<div class="page" id="Sign">
 		<div class="container" id="Sign-Start">
-			<h1>現在報名</h1>
+			<h1>立即報名</h1>
 			<h3>2015 臺大資管迎新宿營公開說明書</h3>
-			<pre class="markdown-body message" id="Sign-Contract"></pre>
+			<pre class="message markdown-body wait" id="Sign-Contract"></pre>
 			<hr>
-			<p id="Sign-Check"><i class="fa fa-square-o"></i> 我已詳細閱讀並同意遵守 <a href="#Sign">2015 臺大資管迎新宿營公開說明書</a> 之內容</p>
+			<p id="Sign-Check"><i class="fa fa-square-o"></i> 我已詳細閱讀 <a href="#Sign">2015 臺大資管迎新宿營公開說明書</a> 之內容並前往報名頁面</p>
 			<button id="Sign-Next" disabled="">下一步</button>
 		</div>
+		<!-- Form initial page -->
 		<div class="container hidden" id="Sign-Form">
 			<h1>報名表單</h1>
 			<iframe name="hidden_frame" class="hidden"></iframe>
 			<form action="https://docs.google.com/forms/d/1k8ABFUqrgQ-tuZfriwq2iNMdG8nLaAEQv0myTvn3ZGg/formResponse" method="post" target="hidden_frame" onsubmit="return formValidate();">
-				<input type="text" name="entry.1327237729" class="hidden" id="Version">
-				<input type="text" name="entry.854866725" class="hidden" id="UserAgent">
-				<input type="text" name="entry.607151158" class="hidden" id="Like">
 				<div id="Form-Basic">
 					<h3>基本資料</h3>
 					<p class="meta">
@@ -192,6 +384,7 @@
 								</div>
 							</div>
 						</div>
+						<!-- End birth field -->
 						<div class="four columns">
 							<label for="">身分證字號 <i>*</i></label>
 							<input type="text" name="entry.27815516" id="IDNumber" placeholder="A123456789">
@@ -241,10 +434,13 @@
 						<div class="six columns">
 							<label for="">匯款帳號末五碼 <i>*</i></label>
 							<input type="text" name="entry.1996054162" id="Account" placeholder="00000">
-							<p class="notice">匯款帳戶：</p>
+							<p class="notice">匯款帳戶：<strong>134-20-032500-7</strong></p>
+							<p class="meta">戶名：張博程
+								<br>華南銀行 東湖分行</p>
 						</div>
 					</div>
 				</div>
+				<!-- End Basic Form -->
 				<div id="Form-Extra">
 					<hr>
 					<h3>其他欄位</h3>
@@ -259,158 +455,44 @@
 							<textarea name="entry.1254973911" id="ToSenpai"></textarea>
 						</div>
 					</div>
+					<div class="row hidden">
+						<input type="text" name="entry.1327237729" id="Version">
+						<input type="text" name="entry.854866725" id="UserAgent">
+						<input type="text" name="entry.607151158" id="Like">
+					</div>
 				</div>
+				<!-- End Extra Form -->
 				<hr>
 				<input type="submit" value="確認送出" class="button-primary" id="Form-Submit">
 			</form>
 		</div>
+		<!-- Main form -->
 		<div class="container hidden" id="Sign-Finish">
 			<h1>填寫完畢</h1>
 			<p>請靜待工作人員審核驗證後寄送電子郵件確認信 owo//</p>
-		</div>
-	</div>
-	<!-- End Sign page -->
-	<div class="page" id="Staff">
-		<div class="container">
-			<h1>工作人員</h1>
-			<h3>召部</h3>
-			<div class="card-group">
-				<div class="card">
-					<img src="http://i.imgur.com/puHiQaB.jpg" alt="">
-					<p><b>總召：張晉華 / 剛毛</b> <i class="like"></i></p>
-					<p>0987 628 990</p>
-					<p class="notice">典型綽號比本名還有名的人</p>
-				</div>
-				<div class="card">
-					<img src="http://i.imgur.com/puHiQaB.jpg" alt="">
-					<p><b>副召：徐嘉琪 / 卷姐</b> <i class="like"></i></p>
-					<p>0978 108 098</p>
-					<p class="notice">不叫綽號不回頭的人</p>
-				</div>
-				<div class="card">
-					<img src="http://i.imgur.com/puHiQaB.jpg" alt="">
-					<p><b>副召：黃楷翔</b> <i class="like"></i></p>
-					<p>　</p>
-					<p class="notice">好像沒有綽號的人</p>
-				</div>
-			</div>
 			<hr>
 			<div class="row">
 				<div class="six columns">
-					<p><b>財秘：張博程 / 老博</b> <i class="like"></i></p>
-					<p class="notice">財務我來管，宿營你來玩！</p>
+					<h4>活動時間</h4>
+					<p>2015/9/7 ~ 2015/9/10</p>
 				</div>
 				<div class="six columns">
-					<p><b>網頁設計：許承佑</b> <i class="like"></i></p>
-					<p class="notice">ouo//</p>
+					<h4>活動場地</h4>
+					<p><a href="http://www.glp.com.tw" target="_blank">流星花園景觀民宿</a>
+						<br>台中市豐原區水源路坪頂巷8號
+						<br>04-25151456</p>
 				</div>
-			</div>
-			<hr>
-			<div class="tab hidden" id="tab1">
-				<h3>活動部</h3>
-				<div class="row">
-					<div class="three columns">
-						<p><b>活動長：陳品</b> <i class="like"></i></p>
-						<p class="notice">......</p>
-					</div>
-					<div class="three columns">
-						<p><b>副活動長：林品瑢</b> <i class="like"></i></p>
-						<p class="notice">......</p>
-					</div>
-				</div>
-				<div class="row">
-					<div class="three columns">
-						<p><b>水大地：侯宗佑 / 球球</b> <i class="like"></i></p>
-						<p class="notice">躺著看，坐著看，趴著看，還是球球最帥</p>
-					</div>
-					<div class="three columns">
-						<p><b>大地：周祐鈞</b> <i class="like"></i></p>
-						<p class="notice">大地活動負責人裡最帥沒有之一</p>
-					</div>
-					<div class="three columns">
-						<p><b>螢光舞：盧慶元</b> <i class="like"></i></p>
-						<p class="notice">別人在耀眼的燈下競歌熱舞
-							<br> 我們在漆黑的臺上綻放光芒
-							<br> We are the light in the night.</p>
-					</div>
-				</div>
-			</div>
-			<div class="tab hidden" id="tab2">
-				<h3>公關部</h3>
-				<div class="row">
-					<div class="three columns">
-						<p><b>公關長：王思淇</b> <i class="like"></i></p>
-						<p class="notice">......</p>
-					</div>
-					<div class="three columns">
-						<p><b>副公關長：洪念綺</b> <i class="like"></i></p>
-						<p class="notice">......</p>
-					</div>
-				</div>
-			</div>
-			<div class="tab hidden" id="tab3">
-				<h3>庶務部</h3>
-				<div class="row">
-					<div class="three columns">
-						<p><b>庶務長：陳維漢</b> <i class="like"></i></p>
-						<p class="notice">......</p>
-					</div>
-					<div class="three columns">
-						<p><b>副庶務長：張睿君</b> <i class="like"></i></p>
-						<p class="notice">......</p>
-					</div>
-				</div>
-			</div>
-			<div class="tab hidden" id="tab4">
-				<h3>美宣部</h3>
-				<div class="row">
-					<div class="three columns">
-						<p><b>美宣長：謝惠羽</b> <i class="like"></i></p>
-						<p class="notice">......</p>
-					</div>
-					<div class="three columns">
-						<p><b>副美宣長：黃詣</b> <i class="like"></i></p>
-						<p class="notice">......</p>
-					</div>
-				</div>
-			</div>
-			<div class="tab hidden" id="tab5">
-				<h3>器材部</h3>
-				<div class="row">
-					<div class="three columns">
-						<p><b>器材長：林書攸</b> <i class="like"></i></p>
-						<p class="notice">......</p>
-					</div>
-					<div class="three columns">
-						<p><b>副器材長：林軒逸</b> <i class="like"></i></p>
-						<p class="notice">......</p>
-					</div>
-				</div>
-			</div>
-			<div class="tab hidden" id="tab6">
-				<h3>資訊部</h3>
-				<div class="row">
-					<div class="three columns">
-						<p><b>資訊長：林子期</b> <i class="like"></i></p>
-						<p class="notice">......</p>
-					</div>
-					<div class="three columns">
-						<p><b>副資訊長：陳主牧</b> <i class="like"></i></p>
-						<p class="notice">......</p>
-					</div>
-				</div>
-			</div>
-			<div class="button-group" id="Tabs">
-				<button class="show-tab" data-tab="1">活動部</button>
-				<button class="show-tab" data-tab="2">公關部</button>
-				<button class="show-tab" data-tab="3">庶務部</button>
-				<button class="show-tab" data-tab="4">美宣部</button>
-				<button class="show-tab" data-tab="5">器材部</button>
-				<button class="show-tab" data-tab="6">資訊部</button>
 			</div>
 		</div>
-		<!-- End Staff page -->
+		<!-- Finished page -->
 	</div>
+	<!-- End Sign page -->
+	<footer>
+		<div class="container">
+			<p>National Taiwan University Information Management All Rights Reserved.</p>
+			<p><a href="https://ntu.im/">Official Site</a> | <a href="http://elantris.github.io">@Elantris</a></p>
+		</div>
+	</footer>
 	<script src="js/main.js"></script>
 </body>
 

@@ -36,14 +36,15 @@ function isScrolledIntoView(elem) {
 		docViewBottom = docViewTop + $(window).height(),
 		elemTop = $(elem).offset().top,
 		elemBottom = elemTop + $(elem).height();
-	return elemBottom > docViewTop;
+	return elemTop < docViewBottom;
 }
 
-function moveTo(target) {
+function moveTo(target, offset) {
+	if (!offset) offset = 0;
 	$('html,body').animate({
-		scrollTop: $(target).offset().top
+		scrollTop: $(target).offset().top - offset
 	}, 300);
-}
+} // scroll to target smoothly
 
 $(document).scroll(function() {
 	if ($(window).scrollTop() > $('#Cover').height() - $('nav').height()) {
@@ -51,7 +52,41 @@ $(document).scroll(function() {
 	} else {
 		$('nav').removeClass('fixed');
 	}
+	$('.wait').each(function() {
+		if (isScrolledIntoView($(this))) {
+			$(this).animate({
+				opacity: 1
+			}, 500).removeClass('wait');
+		}
+	});
+}); // navigator fixed when out of screen
+
+$('#News .news .title').click(function() {
+	$('.content').hide();
+	if ($(this).hasClass('active')) {
+		$(this).removeClass('active');
+	} else {
+		$(this).addClass('active');
+		$('.content[data-file="' + $(this).attr('data-file') + '"]').load('doc/news' + $(this).attr('data-file') + '.md', function() {
+			$(this).html(markdown.toHTML($(this).text()));
+		}).fadeIn(500);
+	}
 });
+
+$('#Story').load('doc/story.md', function() {
+	$(this).html(markdown.toHTML($(this).text()));
+}); // story message
+
+$('.show-tab').click(function() {
+	$('.tab.active').removeClass('active').hide();
+	if ($(this).hasClass('button-primary')) {
+		$(this).removeClass('button-primary');
+	} else {
+		$('.show-tab.button-primary').removeClass('button-primary');
+		$(this).addClass('button-primary');
+		$('.tab[data-tab="' + $(this).attr('data-tab') + '"]').addClass('active').fadeIn(300);
+	}
+}); // Staff
 
 $('#Sign-Contract').load('doc/contract.md', function() {
 	$(this).html(markdown.toHTML($(this).text()));
@@ -72,11 +107,11 @@ $('#Sign-Check').click(function() {
 
 $('#Sign-Next').click(function() {
 	$('#Sign-Start').slideUp(300);
-	$('#Sign-Form').slideDown(300);
+	$('#Sign-Form').fadeIn(300);
 	moveTo('#Sign');
 });
 
-$('#Version').val('20150807/0.4.4/Infor Page');
+$('#Version').val('20150810/0.4.5/Demo');
 $('#UserAgent').val(navigator.userAgent);
 
 var likeVal = [],
@@ -92,7 +127,7 @@ $('.like').each(function() {
 	} else {
 		$(this).removeClass('fa-heart').addClass('fa-heart-o');
 	}
-});
+}); // like function
 
 var daysOfMonth = [31, 28, 31, 30, 31, 30, 31, 31, 30, 31, 30, 31];
 
@@ -111,7 +146,7 @@ $('#BirthYear, #BirthMonth').change(function() {
 			$('#BirthDay option[value="' + i + '"]').attr('disabled', true);
 		}
 	}
-});
+}); // birth date condition
 
 var field = [
 		'#Name',
@@ -121,7 +156,7 @@ var field = [
 		'#Email',
 		'#Habit',
 		'#Account'
-	],
+	], // field IDs
 	regex = [
 		/^\S+$/,
 		/^[A-Za-z]{1}[1-2]{1}[0-9]{8}$/,
@@ -130,21 +165,21 @@ var field = [
 		/^([\w-]+(?:\.[\w-]+)*)@((?:[\w-]+\.)*\w[\w-]{0,66})\.([a-z]{2,6}(?:\.[a-z]{2})?)$/i,
 		/^\S+$/,
 		/^[0-9]{5}$/
-	],
+	], // regular expressions
 	validation = [];
 
 function formValidate() {
 	var result = true;
 
-	for (var i = 0; i < field.length; i++) {
-		validation[i] = regex[i].test($(field[i]).val());
-	}
-
 	$('#StudentID').val($('#StudentID').val().toUpperCase());
 	$('#IDNumber').val($('#IDNumber').val().toUpperCase());
 	$('#Like').val(likeVal);
 
-	if (validation[1]) { // ID Number validation
+	for (var i = 0; i < field.length; i++) {
+		validation[i] = regex[i].test($(field[i]).val());
+	}
+
+	if (validation[1]) {
 		var letterToNumber = 'ABCDEFGHJKLMNPQRSTUVWXYZIO',
 			x = 0;
 		for (var i = 0; i < letterToNumber.length; i++) {
@@ -161,7 +196,7 @@ function formValidate() {
 		if (x % 10 != 0) {
 			validation[1] = false;
 		}
-	}
+	} // ID Number validation
 
 	for (var i = 0; i < validation.length; i++) {
 		if (!validation[i]) {
@@ -169,27 +204,19 @@ function formValidate() {
 			result = false;
 		}
 	}
+
 	if (result) {
 		$('#Sign-Form').slideUp(300);
-		$('#Sign-Finish').slideDown(300);
+		$('#Sign-Finish').fadeIn(300);
 		$('.like').addClass('hidden');
+		moveTo('#Sign');
+	} else {
+		moveTo('.error:first', 128)
 	}
-	moveTo('#Sign');
+
 	return result;
 }
 
 $('input, select, textarea').focus(function() {
 	$(this).removeClass('error');
-});
-
-$('.show-tab').click(function() {
-	$('.tab').slideUp(300);
-	if ($(this).hasClass('button-primary')) {
-		$(this).removeClass('button-primary');
-	} else {
-		$('.show-tab.button-primary').not(this).removeClass('button-primary');
-		$(this).addClass('button-primary');
-		$('#tab' + $(this).attr('data-tab')).slideDown(300);
-	}
-	moveTo('#Tabs');
 });
