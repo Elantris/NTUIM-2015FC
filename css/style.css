@@ -1,14 +1,14 @@
 /* theme settings*/
 
-body {
-	font-family: Helvetica, Arial, sans-serif;
-	background-image: url('../img/bg.jpg');
-}
-
 body,
 #Cover {
 	background-attachment: fixed;
 	background-size: cover;
+}
+
+body {
+	font-family: Helvetica, Arial, sans-serif;
+	background-image: url('../img/bg.jpg');
 }
 
 #Cover {
@@ -43,6 +43,7 @@ em {
 	color: #9C27B0;
 }
 
+h1,
 h3,
 hr {
 	clear: both;
@@ -65,26 +66,12 @@ input[type="button"] {
 	border-bottom: 3px gray solid;
 }
 
+
+/* Custom Components */
+
 .wait {
 	opacity: 0;
 }
-
-
-/*#board {
-	z-index: 10;
-	position: fixed;
-	top: 0;
-	left: 0;
-	right: 0;
-	bottom: 0;
-}
-
-.box {
-	height: 10vw;
-	width: 10vw;
-	float: left;
-	background-color: #EEE;
-}*/
 
 .message {
 	height: 20em;
@@ -92,7 +79,7 @@ input[type="button"] {
 	overflow-x: visible;
 	overflow-y: auto;
 	-webkit-overflow-scrolling: touch;
-	padding: 32px;
+	padding: 16px;
 	background-color: white;
 	border-bottom: 4px solid #2196F3;
 	border-radius: 8px;
@@ -127,7 +114,6 @@ input[type="button"] {
 .group img {
 	width: 100%;
 	max-width: 250px;
-	background-color: #DDD;
 }
 
 .page {
@@ -142,6 +128,10 @@ input[type="button"] {
 
 .page > .container > h1 {
 	border-bottom: 2px #BA68C8 solid;
+}
+
+.page > .container > hr {
+	border-color: #AAA;
 }
 
 .page.blank {
@@ -159,8 +149,8 @@ input[type="button"] {
 }
 
 #Cover > .container {
-	margin: 10vh auto;
-	padding: 3vw;
+	margin-top: 10vh;
+	padding: 1vw;
 	color: white;
 	background-color: rgba(0, 0, 0, .6);
 	transition: background-color .2s linear;
@@ -176,6 +166,12 @@ input[type="button"] {
 	border-bottom: white 1px solid;
 }
 
+@media (min-width: 550px) {
+	#Cover > .container h1 {
+		font-size: 4rem;
+	}
+}
+
 #Cover > .container h3 {
 	margin: 0;
 }
@@ -188,6 +184,11 @@ input[type="button"] {
 
 #Cover > .container li {
 	text-align: left;
+}
+
+#icon {
+	width: 3em;
+	height: 3em;
 }
 
 
@@ -211,21 +212,24 @@ nav {
 nav.fixed {
 	position: fixed;
 	top: 0;
-	box-shadow: 0 4px 8px #888;
+	box-shadow: 0 4px 8px #444;
 }
 
 nav a.link {
-	margin: 0 8px;
-	padding: 0 16px;
+	margin: 0 1vw;
+	padding: 1vw;
 	font-size: 1.2em;
 }
 
 
 /* News page */
 
+#News .group {
+	border-radius: 8px;
+}
+
 #News .news {
 	border-bottom: 4px #2196F3 solid;
-	margin-bottom: 8px;
 	background-color: white;
 }
 
@@ -245,8 +249,8 @@ nav a.link {
 
 #News .news .content {
 	padding: 16px;
-	display: none;
 	overflow: auto;
+	display: none;
 }
 
 

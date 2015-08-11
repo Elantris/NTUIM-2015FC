@@ -4,6 +4,10 @@ National Taiwan University Information Management 2015 Freshman Camp
 
 ## Update
 
+20150812/1.0/Release
+> Release the first stable version.  
+> Sign up form is now available.  
+
 20150810/0.4.5/Demo
 > Add smooth scroll when overflow on mobile device.  
 > Add staff profile images.  

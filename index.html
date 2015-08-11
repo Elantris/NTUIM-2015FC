@@ -4,6 +4,7 @@
 <head>
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="shortcut icon" href="img/icon-small.png">
 	<title>臺大資管迎新宿營 | 2015 Freshman Camp for NTUIM</title>
 	<link rel="stylesheet" href="css/normalize.css">
 	<link rel="stylesheet" href="css/skeleton.css">
@@ -21,13 +22,16 @@
 			<h1>臺大資管迎新宿營</h1>
 			<p>2015 Freshman Camp for NTUIM</p>
 			<div class="row">
-				<div class="six columns">
+				<div class="five columns">
 					<h3>活動日期</h3>
 					<p>2015/9/7 ~ 2015/9/10</p>
 				</div>
-				<div class="six columns">
+				<div class="two columns">
+					<h3><img src="img/icon.png" alt="" id="icon"></h3>
+				</div>
+				<div class="five columns">
 					<h3>報名期間</h3>
-					<p>2015/8/12 ~ 2015/8/29</p>
+					<p>2015/8/12 ~ 2015/8/27</p>
 				</div>
 			</div>
 		</div>
@@ -37,16 +41,19 @@
 		<a href="#News" class="link">最新消息</a>
 		<a href="#Intro" class="link">活動簡介</a>
 		<a href="#Staff" class="link">工作人員</a>
+		<a href="#Sign" class="link">立即報名</a>
 	</nav>
 	<!-- Navigator -->
 	<div class="page" id="News">
 		<div class="container">
 			<h1>最新消息</h1>
-			<div class="group">
-				<div class="news wait">
-					<div class="title" data-file="0">20150810 小迎新</div>
-					<pre class="content markdown-body" data-file="0"></pre>
-				</div>
+			<div class="news wait">
+				<div class="title" data-file="1">20150812 開始報名</div>
+				<pre class="content markdown-body" data-file="1"></pre>
+			</div>
+			<div class="news wait">
+				<div class="title" data-file="0">20150810 小迎新</div>
+				<pre class="content markdown-body" data-file="0"></pre>
 			</div>
 		</div>
 	</div>
@@ -114,7 +121,7 @@
 			<div class="group wait">
 				<table>
 					<tr>
-						<th>活動時間</th>
+						<th>活動日期</th>
 						<td>2015/9/7 ~ 2015/9/10</td>
 					</tr>
 					<tr>
@@ -126,7 +133,7 @@
 					</tr>
 					<tr>
 						<th>報名期間</th>
-						<td>2015/8/12 ~ 2015/8/29</td>
+						<td>2015/8/12 ~ 2015/8/27</td>
 					</tr>
 					<tr>
 						<th>報名費用</th>
@@ -171,7 +178,7 @@
 			<hr>
 			<div class="row wait">
 				<div class="six columns">
-					<p><b>財秘 / 張博程 / 老博</b> <i class="like"></i></p>
+					<p><b>財務秘書 / 張博程 / 老博</b> <i class="like"></i></p>
 					<p class="notice">財務我來管，宿營你來玩！</p>
 				</div>
 				<div class="six columns">
@@ -286,10 +293,214 @@
 		</div>
 	</div>
 	<!-- End Staff page -->
+	<div class="page" id="Sign">
+		<div class="container" id="Sign-Start">
+			<h1>立即報名</h1>
+			<h3>2015 臺大資管迎新宿營公開說明書</h3>
+			<pre class="message markdown-body wait" id="Sign-Contract"></pre>
+			<hr>
+			<p id="Sign-Check"><i class="fa fa-square-o"></i> 我已詳細閱讀 <a href="#Sign">2015 臺大資管迎新宿營公開說明書</a> 之內容並前往報名頁面</p>
+			<button id="Sign-Next" disabled="">下一步</button>
+		</div>
+		<!-- Form initial page -->
+		<div class="container hidden" id="Sign-Form">
+			<h1>報名表單</h1>
+			<iframe name="hidden_frame" class="hidden"></iframe>
+			<form action="https://docs.google.com/forms/d/1k8ABFUqrgQ-tuZfriwq2iNMdG8nLaAEQv0myTvn3ZGg/formResponse" method="post" target="hidden_frame" onsubmit="return formValidate();">
+				<div id="Form-Basic">
+					<h3>基本資料</h3>
+					<p class="meta">
+						<label for=""><i>*</i> 為必填項目</label>
+					</p>
+					<div class="row">
+						<div class="four columns">
+							<label for="">姓名 <i>*</i></label>
+							<input type="text" name="entry.139380639" id="Name">
+						</div>
+						<div class="four columns">
+							<label for="">生日 <i>*</i> <span class="meta">民國</span></label>
+							<div class="row">
+								<div class="four columns">
+									<select name="entry.2084050948" id="BirthYear">
+										<option value="83">83年</option>
+										<option value="84">84年</option>
+										<option value="85">85年</option>
+										<option value="86" selected="selected">86年</option>
+										<option value="87">87年</option>
+										<option value="88">88年</option>
+										<option value="89">89年</option>
+									</select>
+								</div>
+								<div class="four columns">
+									<select name="entry.1129118360" id="BirthMonth">
+										<option value="1" selected="selected">1月</option>
+										<option value="2">2月</option>
+										<option value="3">3月</option>
+										<option value="4">4月</option>
+										<option value="5">5月</option>
+										<option value="6">6月</option>
+										<option value="7">7月</option>
+										<option value="8">8月</option>
+										<option value="9">9月</option>
+										<option value="10">10月</option>
+										<option value="11">11月</option>
+										<option value="12">12月</option>
+									</select>
+								</div>
+								<div class="four columns">
+									<select name="entry.1406238254" id="BirthDay">
+										<option value="1" selected="selected">1日</option>
+										<option value="2">2日</option>
+										<option value="3">3日</option>
+										<option value="4">4日</option>
+										<option value="5">5日</option>
+										<option value="6">6日</option>
+										<option value="7">7日</option>
+										<option value="8">8日</option>
+										<option value="9">9日</option>
+										<option value="10">10日</option>
+										<option value="11">11日</option>
+										<option value="12">12日</option>
+										<option value="13">13日</option>
+										<option value="14">14日</option>
+										<option value="15">15日</option>
+										<option value="16">16日</option>
+										<option value="17">17日</option>
+										<option value="18">18日</option>
+										<option value="19">19日</option>
+										<option value="20">20日</option>
+										<option value="21">21日</option>
+										<option value="22">22日</option>
+										<option value="23">23日</option>
+										<option value="24">24日</option>
+										<option value="25">25日</option>
+										<option value="26">26日</option>
+										<option value="27">27日</option>
+										<option value="28">28日</option>
+										<option value="29">29日</option>
+										<option value="30">30日</option>
+										<option value="31">31日</option>
+									</select>
+								</div>
+							</div>
+						</div>
+						<!-- End birth field -->
+						<div class="four columns">
+							<label for="">身分證字號 <i>*</i></label>
+							<input type="text" name="entry.27815516" id="IDNumber" placeholder="A123456789">
+						</div>
+					</div>
+					<p class="meta">為遵守個資法相關規定，以上資料僅用作辦理保險之業務，並於活動結束後全數刪除。</p>
+					<div class="row">
+						<div class="four columns">
+							<label for="">學號 <i>*</i></label>
+							<input type="text" name="entry.1744484492" id="StudentID" placeholder="B047050XX">
+						</div>
+						<div class="four columns">
+							<label for="">手機號碼 <i>*</i> <span class="meta">簡訊通知</span></label>
+							<input type="text" name="entry.907655804" id="Phone" placeholder="0912345678">
+						</div>
+						<div class="four columns">
+							<label for="">電子信箱 <i>*</i></label>
+							<input type="text" name="entry.631736295" id="Email" placeholder="username@domain">
+						</div>
+					</div>
+					<div class="row">
+						<div class="four columns">
+							<label for="">性別 <i>*</i></label>
+							<select name="entry.2091573447" id="Gender">
+								<option value="男" selected="selected">男</option>
+								<option value="女">女</option>
+							</select>
+						</div>
+						<div class="four columns">
+							<label for="">營服尺寸 <i>*</i> <span class="meta"><a href="http://i.imgur.com/aoVnYnR.jpg" target="_blank">尺寸表</a></span></label>
+							<select name="entry.2050718574" id="Size">
+								<option value="SS">SS</option>
+								<option value="S">S</option>
+								<option value="M" selected="selected">M</option>
+								<option value="L">L</option>
+								<option value="XL">XL</option>
+								<option value="2L">2L</option>
+								<option value="3L">3L</option>
+							</select>
+						</div>
+					</div>
+					<div class="row">
+						<div class="six columns">
+							<label for="">飲食習慣 <i>*</i> <span class="meta">葷、素、過敏、其他要求</span></label>
+							<textarea name="entry.1861020414" id="Habit"></textarea>
+						</div>
+						<div class="six columns">
+							<label for="">匯款帳號末五碼 <i>*</i></label>
+							<input type="text" name="entry.1996054162" id="Account" placeholder="00000">
+							<p><strong>匯款帳戶：134-20-032500-7</strong>
+								<br>戶名：張博程
+								<br>華南銀行 東湖分行</p>
+						</div>
+					</div>
+					<div class="row">
+						<div class="four columns">
+							<label for="">上車地點 <i>*</i></label>
+							<select name="entry.2120143769" id="Place">
+								<option value="臺大正門">臺大正門（羅斯福路跟新生南路口）</option>
+								<option value="高鐵台中站">高鐵台中站</option>
+								<option value="豐原火車站">豐原火車站</option>
+							</select>
+						</div>
+					</div>
+				</div>
+				<!-- End Basic Form -->
+				<div id="Form-Extra">
+					<hr>
+					<h3>其他欄位</h3>
+					<p class="meta">填寫此區的欄位可以讓我們在活動前先認識你們唷 ouo//</p>
+					<div class="row">
+						<div class="six columns">
+							<label for="">自我介紹</label>
+							<textarea name="entry.2098412177" id="SelfIntro"></textarea>
+						</div>
+						<div class="six columns">
+							<label for="">給學長姐的話</label>
+							<textarea name="entry.1254973911" id="ToSenpai"></textarea>
+						</div>
+					</div>
+					<div class="row hidden">
+						<input type="text" name="entry.1327237729" id="Version">
+						<input type="text" name="entry.854866725" id="UserAgent">
+						<input type="text" name="entry.607151158" id="Like">
+					</div>
+				</div>
+				<!-- End Extra Form -->
+				<hr>
+				<input type="submit" value="確認送出" class="button-primary" id="Form-Submit">
+			</form>
+		</div>
+		<!-- Main form -->
+		<div class="container hidden" id="Sign-Finish">
+			<h1>填寫完畢</h1>
+			<p>請靜待工作人員審核驗證後寄送電子郵件確認信 owo//</p>
+			<hr>
+			<div class="row">
+				<div class="six columns">
+					<h4>活動時間</h4>
+					<p>2015/9/7 ~ 2015/9/10</p>
+				</div>
+				<div class="six columns">
+					<h4>活動場地</h4>
+					<p><a href="http://www.glp.com.tw" target="_blank">流星花園景觀民宿</a>
+						<br>台中市豐原區水源路坪頂巷8號
+						<br>04-25151456</p>
+				</div>
+			</div>
+		</div>
+		<!-- Finished page -->
+	</div>
+	<!-- End Sign page -->
 	<footer>
 		<div class="container">
-			<p>National Taiwan University Information Management. All rights reserved.</p>
-			<p><a href="http://elantris.github.io">@Elantris</a></p>
+			<p>© 2015 Department of Information Management, National Taiwan University</p>
+			<p>Facebook | <a href="https://www.facebook.com/NTUIMSA">臺大資管系學會</a>　　Design | <a href="http://elantris.github.io">@Elantris</a></p>
 		</div>
 	</footer>
 	<script src="js/main.js"></script>
