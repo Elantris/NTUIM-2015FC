@@ -71,6 +71,7 @@ $('#News .news .title').click(function() {
 		$('#News .content[data-file="' + $(this).attr('data-file') + '"]').addClass('active').load('doc/news' + $(this).attr('data-file') + '.md', function() {
 			$(this).html(markdown.toHTML($(this).text()));
 		}).fadeIn(300);
+		moveTo('#News .title[data-file="' + $(this).attr('data-file') + '"]', 64);
 	}
 });
 
@@ -112,7 +113,7 @@ $('#Sign-Next').click(function() {
 	moveTo('#Sign');
 });
 
-$('#Version').val('20150812/1.0/Release');
+$('#Version').val('20150812/1.0.1/Bugs fixed');
 $('#UserAgent').val(navigator.userAgent);
 
 var likeVal = [],
@@ -156,7 +157,7 @@ var field = [
 		'#Phone',
 		'#Email',
 		'#Habit',
-		'#Account',
+		// '#Account',
 	], // field IDs
 	regex = [
 		/^\S+$/,
@@ -165,7 +166,7 @@ var field = [
 		/^[0-9]{10}$/,
 		/^([\w-]+(?:\.[\w-]+)*)@((?:[\w-]+\.)*\w[\w-]{0,66})\.([a-z]{2,6}(?:\.[a-z]{2})?)$/i,
 		/^\S+$/,
-		/^[0-9]{5}$/
+		// /^[0-9]{5}$/
 	], // regular expressions
 	validation = [];
 

@@ -4,6 +4,10 @@ National Taiwan University Information Management 2015 Freshman Camp
 
 ## Update
 
+20150812/1.0.1/Bugs fixed
+> Remove the account field.  
+> Fix loading doc method and style.  
+
 20150812/1.0/Release
 > Release the first stable version.  
 > Sign up form is now available.  

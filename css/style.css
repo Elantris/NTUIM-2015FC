@@ -161,6 +161,7 @@ input[type="button"] {
 }
 
 #Cover > .container h1 {
+	margin-bottom: 0;
 	padding: 8px 0;
 	color: lightblue;
 	border-bottom: white 1px solid;
@@ -187,8 +188,8 @@ input[type="button"] {
 }
 
 #icon {
-	width: 3em;
-	height: 3em;
+	width: 2em;
+	height: 2em;
 }
 
 
@@ -198,15 +199,20 @@ nav {
 	z-index: 10;
 	position: absolute;
 	bottom: 0;
-	border-bottom: 6px #2196F3 solid;
+	border-top: 6px #0D47A1 solid;
 	width: 100%;
 	white-space: nowrap;
 	overflow-x: auto;
 	overflow-y: hidden;
-	background-color: white;
 	height: 48px;
 	line-height: 48px;
 	text-align: center;
+	background-color: rgba(0, 0, 0, .8);
+	transition: background-color .2s linear;
+}
+
+nav:hover {
+	background-color: rgba(0, 0, 0, 1);
 }
 
 nav.fixed {
@@ -217,8 +223,9 @@ nav.fixed {
 
 nav a.link {
 	margin: 0 1vw;
-	padding: 1vw;
+	padding: 0 1vw;
 	font-size: 1.2em;
+	color: #BBDEFB;
 }
 
 
@@ -323,7 +330,11 @@ nav a.link {
 }
 
 footer {
-	padding: 32px 0;
+	padding: 16px 0;
 	color: white;
 	background-color: black;
+}
+
+footer p {
+	margin-bottom: 0;
 }
