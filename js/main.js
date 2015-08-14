@@ -77,7 +77,7 @@ $('#News .news .title').click(function() {
 		moveTo($(this), 64);
 		$('#News .title.active').removeClass('active');
 		$(this).addClass('active');
-		$('#News .content[data-file="' + $(this).attr('data-file') + '"]').addClass('active').load('doc/news' + $(this).attr('data-file') + '.md',
+		$('#News .content[data-file="' + $(this).attr('data-file') + '"]').addClass('active').html('Loading . . . ').load('doc/news' + $(this).attr('data-file') + '.md',
 			function() {
 				$(this).html(markdown.toHTML($(this).text()));
 			}).fadeIn(500);
@@ -151,7 +151,7 @@ $('#Sign-start-next').click(function() {
 	$('#Sign-form').fadeIn(500);
 });
 
-$('#Version').val('20150814/1.0.2/Infor Imporved');
+$('#Version').val('20150815/1.0.4/Discontinued');
 $('#UserAgent').val(navigator.userAgent); // hidden input field
 
 var daysOfMonth = [31, 28, 31, 30, 31, 30, 31, 31, 30, 31, 30, 31];

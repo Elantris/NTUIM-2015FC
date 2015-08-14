@@ -4,6 +4,9 @@ National Taiwan University Information Management 2015 Freshman Camp
 
 ## Update
 
+20150815/1.0.4/Discontinued
+> The content of this web page will not be changed a lot until 8/27.  
+
 20150814/1.0.3/Bugs fixed
 > Improve the like funciotn.  
 > Improve the staff form.  
