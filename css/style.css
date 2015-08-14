@@ -1,4 +1,4 @@
-/* ========== theme setting ==========s*/
+/* ========== theme settings ==========s*/
 
 body,
 #Cover {
@@ -96,6 +96,9 @@ input[type="button"] {
 	max-width: 250px;
 }
 
+
+/* ========== Page ========== */
+
 .page {
 	padding: 128px 0;
 }
@@ -188,7 +191,7 @@ input[type="button"] {
 }
 
 
-/* ========== navigator ========== */
+/* ========== Navigator ========== */
 
 nav {
 	z-index: 10;
@@ -323,6 +326,8 @@ nav a.link {
 	border: 1px solid #F44336;
 	background-color: #FFCDD2;
 }
+
+/* ========== Footer ========== */
 
 footer {
 	padding: 16px 0;

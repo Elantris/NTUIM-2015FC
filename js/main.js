@@ -18,7 +18,6 @@
 // 	$('#board').delay(500).fadeOut(1000 + Math.max(10, numRow) * 100);
 // }); // opening animation in prepare
 
-
 $(function() {
 	$('a[href*=#]:not([href=#])').click(function() {
 		if (location.pathname.replace(/^\//, '') == this.pathname.replace(/^\//, '') && location.hostname == this.hostname) {
@@ -109,7 +108,7 @@ $('span.like').each(function() {
 }).click(function() {
 	$(this).attr('data-count', parseInt($(this).attr('data-count')) + 1).find('span').text($(this).attr('data-count'));
 	$('#LikeName').val($(this).attr('data-name'));
-	$('#like-count-form').submit();
+	$('#like-count-form').submit().reset();
 }); // like function
 
 $('.show-tab').click(function() {
@@ -232,7 +231,6 @@ $('#Form-sign-up').submit(function() { // form onsubmit event
 		moveTo($('#Sign'));
 		$('#Sign-form').slideUp(500);
 		$('#Sign-finish').fadeIn(500);
-		$('.like').addClass('hidden');
 	} else {
 		moveTo($('.error:first'), 128);
 	}

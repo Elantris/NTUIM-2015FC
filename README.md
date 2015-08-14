@@ -4,6 +4,10 @@ National Taiwan University Information Management 2015 Freshman Camp
 
 ## Update
 
+20150814/1.0.3/Bugs fixed
+> Improve the like funciotn.  
+> Improve the staff form.  
+
 20150814/1.0.2/Infor Imporved
 > Add the description of signing up in every page.  
 > Correct the wrong spelling.  
