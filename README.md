@@ -4,6 +4,13 @@ National Taiwan University Information Management 2015 Freshman Camp
 
 ## Update
 
+20150814/1.0.2/Infor Imporved
+> Add the description of signing up in every page.  
+> Correct the wrong spelling.  
+> Slow down the animation in transition.  
+> Implement the like funciotn.  
+> Add documentation in main codes.  
+
 20150812/1.0.1/Bugs fixed
 > Remove the account field.  
 > Fix loading doc method and style.  

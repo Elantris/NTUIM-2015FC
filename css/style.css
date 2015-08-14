@@ -1,4 +1,4 @@
-/* theme settings*/
+/* ========== theme setting ==========s*/
 
 body,
 #Cover {
@@ -21,26 +21,6 @@ a {
 
 iframe {
 	border: none;
-}
-
-p {
-	margin-bottom: .7em;
-	line-height: 1.7em;
-	text-align: justify;
-	text-justify: ideographic;
-}
-
-p.meta,
-span.meta {
-	font-size: .8em;
-	color: gray;
-}
-
-p.notice,
-span.notice,
-strong,
-em {
-	color: #9C27B0;
 }
 
 h1,
@@ -67,7 +47,7 @@ input[type="button"] {
 }
 
 
-/* Custom Components */
+/* ========== Custom Components ========== */
 
 .wait {
 	opacity: 0;
@@ -126,21 +106,36 @@ input[type="button"] {
 	background-color: #EEE;
 }
 
-.page > .container > h1 {
+.page h1 {
 	border-bottom: 2px #BA68C8 solid;
 }
 
-.page > .container > hr {
+.page hr {
 	border-color: #AAA;
 }
 
-.page.blank {
-	padding: 0;
-	height: 100vh;
+.page p {
+	margin-bottom: .7em;
+	line-height: 1.7em;
+	text-align: justify;
+	text-justify: ideographic;
+}
+
+.page p.meta,
+.page span.meta {
+	font-size: .8em;
+	color: gray;
+}
+
+.page p.notice,
+.page span.notice,
+.page strong,
+.page em {
+	color: #9C27B0;
 }
 
 
-/* Cover page */
+/* ========== Cover page ========== */
 
 #Cover {
 	height: 100vh;
@@ -160,7 +155,7 @@ input[type="button"] {
 	background-color: rgba(0, 0, 0, .8);
 }
 
-#Cover > .container h1 {
+#Cover h1 {
 	margin-bottom: 0;
 	padding: 8px 0;
 	color: lightblue;
@@ -168,22 +163,22 @@ input[type="button"] {
 }
 
 @media (min-width: 550px) {
-	#Cover > .container h1 {
+	#Cover h1 {
 		font-size: 4rem;
 	}
 }
 
-#Cover > .container h3 {
+#Cover h3 {
 	margin: 0;
 }
 
-#Cover > .container p {
+#Cover p {
 	margin-bottom: .7em;
 	line-height: 1.7em;
 	text-align: center;
 }
 
-#Cover > .container li {
+#Cover li {
 	text-align: left;
 }
 
@@ -193,7 +188,7 @@ input[type="button"] {
 }
 
 
-/* navigator */
+/* ========== navigator ========== */
 
 nav {
 	z-index: 10;
@@ -229,7 +224,7 @@ nav a.link {
 }
 
 
-/* News page */
+/* ========== News page ========== */
 
 #News .group {
 	border-radius: 8px;
@@ -251,6 +246,7 @@ nav a.link {
 }
 
 #News .title.active {
+	background-color: #DDD;
 	border-bottom: 2px gray dashed;
 }
 
@@ -261,7 +257,7 @@ nav a.link {
 }
 
 
-/* Intro page */
+/* ========== Intro page ========== */
 
 #Intro table th,
 #Intro table td {
@@ -269,13 +265,13 @@ nav a.link {
 }
 
 
-/* Staff page */
+/* ========== Staff page ========== */
 
-#Staff .like.fa-heart-o {
+#Staff .like .fa-heart-o {
 	color: #64B5F6;
 }
 
-#Staff .like.fa-heart {
+#Staff .like .fa-heart {
 	color: #2196F3;
 }
 
@@ -283,14 +279,13 @@ nav a.link {
 	color: #1976D2;
 }
 
-#Staff .like.fa-heart-o:hover:after {
+#Staff .like .fa-heart-o:hover:after {
 	font-family: "Comic Sans MS", cursive, sans-serif;
 	content: " Click";
 }
 
-#Staff .like.fa-heart:hover:after {
-	font-family: "Comic Sans MS", cursive, sans-serif;
-	content: " Like";
+#Staff .like span {
+	color: blue;
 }
 
 #Staff .tab {
@@ -299,7 +294,7 @@ nav a.link {
 }
 
 
-/* Sign Up page */
+/* ========== Sign Up page ========== */
 
 #Sign label {
 	margin-top: 15px;

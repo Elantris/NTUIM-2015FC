@@ -1,3 +1,5 @@
+/* ========== document ========== */
+
 // var numRow = Math.floor($(window).height() / $(window).width() * 10) + 1;
 
 // for (var i = 0; i < numRow * 10; i++) {
@@ -14,7 +16,8 @@
 // 		index++;
 // 	});
 // 	$('#board').delay(500).fadeOut(1000 + Math.max(10, numRow) * 100);
-// });
+// }); // opening animation in prepare
+
 
 $(function() {
 	$('a[href*=#]:not([href=#])').click(function() {
@@ -24,7 +27,7 @@ $(function() {
 			if (target.length) {
 				$('html,body').animate({
 					scrollTop: target.offset().top
-				}, 300);
+				}, 500);
 				return false;
 			}
 		}
@@ -42,8 +45,8 @@ function isScrolledIntoView(elem) {
 function moveTo(target, offset) {
 	if (!offset) offset = 0;
 	$('html,body').animate({
-		scrollTop: $(target).offset().top - offset
-	}, 300);
+		scrollTop: target.offset().top - offset
+	}, 500);
 } // scroll to target smoothly
 
 $(document).scroll(function() {
@@ -61,23 +64,53 @@ $(document).scroll(function() {
 	});
 }); // navigator fixed when out of screen
 
+
+
+
+
+/* ========== News page ========== */
+
 $('#News .news .title').click(function() {
 	$('#News .content.active').removeClass('active').hide();
 	if ($(this).hasClass('active')) {
 		$(this).removeClass('active');
 	} else {
+		moveTo($(this), 64);
 		$('#News .title.active').removeClass('active');
 		$(this).addClass('active');
-		$('#News .content[data-file="' + $(this).attr('data-file') + '"]').addClass('active').load('doc/news' + $(this).attr('data-file') + '.md', function() {
-			$(this).html(markdown.toHTML($(this).text()));
-		}).fadeIn(300);
-		moveTo('#News .title[data-file="' + $(this).attr('data-file') + '"]', 64);
+		$('#News .content[data-file="' + $(this).attr('data-file') + '"]').addClass('active').load('doc/news' + $(this).attr('data-file') + '.md',
+			function() {
+				$(this).html(markdown.toHTML($(this).text()));
+			}).fadeIn(500);
 	}
 });
+
+
+
+
+
+/* ========== Infor page ========== */
 
 $('#Story').load('doc/story.md', function() {
 	$(this).html(markdown.toHTML($(this).text()));
 }); // story message
+
+
+
+
+
+/* ========== Staff page ========== */
+
+$('span.like').each(function() {
+	$(this).attr('data-count', 0).html('<i class="fa fa-heart-o"></i> <span></span>');
+	$('.like i.fa-heart-o').click(function() {
+		$(this).removeClass('fa-heart-o').addClass('fa-heart');
+	});
+}).click(function() {
+	$(this).attr('data-count', parseInt($(this).attr('data-count')) + 1).find('span').text($(this).attr('data-count'));
+	$('#LikeName').val($(this).attr('data-name'));
+	$('#like-count-form').submit();
+}); // like function
 
 $('.show-tab').click(function() {
 	$('.tab.active').removeClass('active').hide();
@@ -86,50 +119,41 @@ $('.show-tab').click(function() {
 	} else {
 		$('.show-tab.button-primary').removeClass('button-primary');
 		$(this).addClass('button-primary');
-		$('.tab[data-tab="' + $(this).attr('data-tab') + '"]').addClass('active').fadeIn(300);
+		$('.tab[data-tab="' + $(this).attr('data-tab') + '"]').addClass('active').fadeIn(500);
 	}
-}); // Staff
+}); // staff list
 
-$('#Sign-Contract').load('doc/contract.md', function() {
+
+
+
+
+/* ========== Sign up page ========== */
+
+$('#Sign-start-contract').load('doc/contract.md', function() {
 	$(this).html(markdown.toHTML($(this).text()));
 }); // standard form contract
 
 var signChecked = false;
 
-$('#Sign-Check').click(function() {
+$('#Sign-start-check').click(function() {
 	signChecked = !signChecked;
 	if (signChecked) {
-		$(this).find('i').removeClass('fa-square-o').addClass('fa-check-square-o');
-		$('#Sign-Next').addClass('button-primary').removeAttr('disabled');
+		$(this).find('i').addClass('fa-check-square-o').removeClass('fa-square-o');
+		$('#Sign-start-next').addClass('button-primary').removeAttr('disabled');
 	} else {
 		$(this).find('i').removeClass('fa-check-square-o').addClass('fa-square-o');
-		$('#Sign-Next').removeClass('button-primary').attr('disabled', true);
+		$('#Sign-start-next').removeClass('button-primary').attr('disabled', true);
 	}
 }); // the button for agreement of the contract
 
-$('#Sign-Next').click(function() {
-	$('#Sign-Start').slideUp(300);
-	$('#Sign-Form').fadeIn(300);
-	moveTo('#Sign');
+$('#Sign-start-next').click(function() {
+	moveTo($('#Sign'));
+	$('#Sign-start').slideUp(500);
+	$('#Sign-form').fadeIn(500);
 });
 
-$('#Version').val('20150812/1.0.1/Bugs fixed');
-$('#UserAgent').val(navigator.userAgent);
-
-var likeVal = [],
-	likeCount = 0;
-
-$('.like').each(function() {
-	$(this).addClass('fa fa-heart-o').attr('data-id', likeCount);
-	likeVal[likeCount++] = 0;
-}).click(function() {
-	likeVal[$(this).attr('data-id')]++;
-	if (likeVal[$(this).attr('data-id')] % 2) {
-		$(this).removeClass('fa-heart-o').addClass('fa-heart');
-	} else {
-		$(this).removeClass('fa-heart').addClass('fa-heart-o');
-	}
-}); // like function
+$('#Version').val('20150814/1.0.2/Infor Imporved');
+$('#UserAgent').val(navigator.userAgent); // hidden input field
 
 var daysOfMonth = [31, 28, 31, 30, 31, 30, 31, 31, 30, 31, 30, 31];
 
@@ -157,7 +181,6 @@ var field = [
 		'#Phone',
 		'#Email',
 		'#Habit',
-		// '#Account',
 	], // field IDs
 	regex = [
 		/^\S+$/,
@@ -166,20 +189,18 @@ var field = [
 		/^[0-9]{10}$/,
 		/^([\w-]+(?:\.[\w-]+)*)@((?:[\w-]+\.)*\w[\w-]{0,66})\.([a-z]{2,6}(?:\.[a-z]{2})?)$/i,
 		/^\S+$/,
-		// /^[0-9]{5}$/
 	], // regular expressions
-	validation = [];
+	validation = []; // result
 
-function formValidate() {
+$('#Form-sign-up').submit(function() { // form onsubmit event
 	var result = true;
 
 	$('#StudentID').val($('#StudentID').val().toUpperCase());
 	$('#IDNumber').val($('#IDNumber').val().toUpperCase());
-	$('#Like').val(likeVal);
 
 	for (var i = 0; i < field.length; i++) {
 		validation[i] = regex[i].test($(field[i]).val());
-	}
+	} // regular expression test
 
 	if (validation[1]) {
 		var letterToNumber = 'ABCDEFGHJKLMNPQRSTUVWXYZIO',
@@ -205,19 +226,19 @@ function formValidate() {
 			$(field[i]).addClass('error');
 			result = false;
 		}
-	}
+	} // add error message
 
 	if (result) {
-		$('#Sign-Form').slideUp(300);
-		$('#Sign-Finish').fadeIn(300);
+		moveTo($('#Sign'));
+		$('#Sign-form').slideUp(500);
+		$('#Sign-finish').fadeIn(500);
 		$('.like').addClass('hidden');
-		moveTo('#Sign');
 	} else {
-		moveTo('.error:first', 128)
+		moveTo($('.error:first'), 128);
 	}
 
 	return result;
-}
+});
 
 $('input, select, textarea').focus(function() {
 	$(this).removeClass('error');
