@@ -108,7 +108,7 @@ $('span.like').each(function() {
 }).click(function() {
 	$(this).attr('data-count', parseInt($(this).attr('data-count')) + 1).find('span').text($(this).attr('data-count'));
 	$('#LikeName').val($(this).attr('data-name'));
-	$('#like-count-form').submit().reset();
+	$('#like-count-form').submit();
 }); // like function
 
 $('.show-tab').click(function() {
@@ -175,7 +175,7 @@ $('#BirthYear, #BirthMonth').change(function() {
 
 var field = [
 		'#Name',
-		'#IDNumber',
+		// '#IDNumber',
 		'#StudentID',
 		'#Phone',
 		'#Email',
@@ -183,7 +183,7 @@ var field = [
 	], // field IDs
 	regex = [
 		/^\S+$/,
-		/^[A-Za-z]{1}[1-2]{1}[0-9]{8}$/,
+		// /^[A-Za-z]{1}[1-2]{1}[0-9]{8}$/,
 		/^[BbRr]{1}[0-9]{8}$/,
 		/^[0-9]{10}$/,
 		/^([\w-]+(?:\.[\w-]+)*)@((?:[\w-]+\.)*\w[\w-]{0,66})\.([a-z]{2,6}(?:\.[a-z]{2})?)$/i,
@@ -195,30 +195,30 @@ $('#Form-sign-up').submit(function() { // form onsubmit event
 	var result = true;
 
 	$('#StudentID').val($('#StudentID').val().toUpperCase());
-	$('#IDNumber').val($('#IDNumber').val().toUpperCase());
+	// $('#IDNumber').val($('#IDNumber').val().toUpperCase());
 
 	for (var i = 0; i < field.length; i++) {
 		validation[i] = regex[i].test($(field[i]).val());
 	} // regular expression test
 
-	if (validation[1]) {
-		var letterToNumber = 'ABCDEFGHJKLMNPQRSTUVWXYZIO',
-			x = 0;
-		for (var i = 0; i < letterToNumber.length; i++) {
-			if ($('#IDNumber').val()[0] == letterToNumber[i]) {
-				i += 10;
-				x += Math.floor(i / 10) + (i % 10) * 9;
-				break;
-			}
-		}
-		for (var i = 0; i < 8; i++) {
-			x += $('#IDNumber').val()[i + 1] * (8 - i);
-		}
-		x += $('#IDNumber').val()[9] * 1;
-		if (x % 10 != 0) {
-			validation[1] = false;
-		}
-	} // ID Number validation
+	// if (validation[1]) {
+	// 	var letterToNumber = 'ABCDEFGHJKLMNPQRSTUVWXYZIO',
+	// 		x = 0;
+	// 	for (var i = 0; i < letterToNumber.length; i++) {
+	// 		if ($('#IDNumber').val()[0] == letterToNumber[i]) {
+	// 			i += 10;
+	// 			x += Math.floor(i / 10) + (i % 10) * 9;
+	// 			break;
+	// 		}
+	// 	}
+	// 	for (var i = 0; i < 8; i++) {
+	// 		x += $('#IDNumber').val()[i + 1] * (8 - i);
+	// 	}
+	// 	x += $('#IDNumber').val()[9] * 1;
+	// 	if (x % 10 != 0) {
+	// 		validation[1] = false;
+	// 	}
+	// } // ID Number validation
 
 	for (var i = 0; i < validation.length; i++) {
 		if (!validation[i]) {

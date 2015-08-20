@@ -4,6 +4,11 @@ National Taiwan University Information Management 2015 Freshman Camp
 
 ## Update
 
+20150820/1.0.5/Crazy
+> Fix the wrong urls of links.  
+> Open link in new tab.  
+> Change the steps of signing up.  
+
 20150815/1.0.4/Discontinued
 > The content of this web page will not be changed a lot until 8/27.  
 
