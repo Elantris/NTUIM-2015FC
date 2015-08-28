@@ -52,6 +52,10 @@
 		<div class="container">
 			<h1>最新消息</h1>
 			<div class="news wait">
+				<div class="title" data-file="3">20150827 報名截止</div>
+				<div class="content markdown-body" data-file="3"></div>
+			</div>
+			<div class="news wait">
 				<div class="title" data-file="2">20150820 流程變更</div>
 				<div class="content markdown-body" data-file="2"></div>
 			</div>
@@ -145,11 +149,11 @@
 					</tr>
 					<tr>
 						<th>報名費用</th>
-						<td><strong>NT$ 3,500</strong></td>
+						<td><b>NT$ 3,500</b></td>
 					</tr>
 					<tr>
 						<th>匯款帳戶</th>
-						<td><strong>134-20-032500-7</strong>
+						<td><b>134-20-032500-7</b>
 							<br>戶名：張博程
 							<br>華南銀行 東湖分行</td>
 					</tr>
@@ -306,14 +310,14 @@
 	</div>
 	<!-- End Staff page -->
 	<div class="page" id="Sign">
-		<div class="container" id="Sign-start">
+		<div class="container hidden" id="Sign-start">
 			<h1>立即報名</h1>
 			<h3>報名流程</h3>
 			<p>
 				1.填寫報名表單
-				<br>2.填寫<strong>家長同意書</strong>，掃描寄至 imfreshcamp@gmail.com 或傳真至 03-5227793
+				<br>2.填寫<b>家長同意書</b>，掃描寄至 imfreshcamp@gmail.com 或傳真至 03-5227793
 				<br>3.匯款至指定帳號
-				<br>4.將<strong>匯款帳號末五碼（無摺存款請附上匯款人姓名）</strong>寄信至指定信箱
+				<br>4.將<b>匯款帳號末五碼（無摺存款請附上匯款人姓名）</b>寄信至指定信箱
 			</p>
 			<p class="meta">
 				指定信箱：b03705036@ntu.edu.tw
@@ -331,8 +335,7 @@
 		<div class="container hidden" id="Sign-form">
 			<h1>報名表單</h1>
 			<iframe name="hidden_frame" class="hidden"></iframe>
-			<form action="https://docs.google.com/forms/d/1k8ABFUqrgQ-tuZfriwq2iNMdG8nLaAEQv0myTvn3ZGg/formResponse" method="post" target="hidden_frame" id="Form-sign-up">
-				<!-- onsubmit="return formValidate();" -->
+			<form action="" method="post" target="hidden_frame" id="Form-sign-up">
 				<div id="Form-basic">
 					<h3>基本資料</h3>
 					<p class="meta">
@@ -344,10 +347,6 @@
 							<input type="text" name="entry.139380639" id="Name">
 						</div>
 						<div class="four columns">
-							<label for="">家長同意書</label>
-							<a href="doc/consent.docx" download>下載</a>
-						</div>
-						<!-- <div class="four columns">
 							<label for="">生日 <i>*</i> <span class="meta">民國</span></label>
 							<div class="row">
 								<div class="four columns">
@@ -413,14 +412,14 @@
 									</select>
 								</div>
 							</div>
-						</div> -->
+						</div>
 						<!-- End birth field -->
-						<!-- <div class="four columns">
+						<div class="four columns">
 							<label for="">身分證字號 <i>*</i></label>
 							<input type="text" name="entry.27815516" id="IDNumber" placeholder="A123456789">
-						</div> -->
+						</div>
 					</div>
-					<p class="meta">為遵守個資法相關規定，以上資料僅用作辦理保險之業務，並於活動結束後全數刪除。</p>
+					<p class="meta">未滿 20 歲者請下載 <a href="doc/consent.docx" download>家長同意書</a> 並寄送到指定的電子信箱。為遵守個資法相關規定，以上資料僅用作辦理保險之業務，並於活動結束後全數刪除。</p>
 					<div class="row">
 						<div class="four columns">
 							<label for="">學號 <i>*</i></label>
@@ -500,10 +499,37 @@
 		<div class="container hidden" id="Sign-finish">
 			<h1>填寫完畢</h1>
 			<p>請靜待工作人員審核驗證後打電話通知 owo//</p>
-			<p>在這期間請先將報名費用匯款至指定帳號，並且用電子郵件將<strong>匯款帳號末五碼（無摺存款請附上匯款人姓名）</strong>寄至指定信箱。</p>
+			<p>在這期間請先將報名費用匯款至指定帳號，並且用電子郵件將<b>匯款帳號末五碼（無摺存款請附上匯款人姓名）</b>寄至指定信箱。</p>
 			<p>指定信箱：b03705036@ntu.edu.tw
 				<br>信件主旨：姓名 + 臺大資管迎新宿營匯款核對
 				<br>信件內容：匯款帳號末五碼或無摺存款備註姓名</p>
+		</div>
+		<div class="container" id="Sign-end">
+			<h1>報名截止</h1>
+			<p>以下為網路報名成功的名單：</p>
+			<p>02、03、04、05、08、09
+				<br>10、11、12、14、15、16、17、18、19
+				<br>20、21、22、23、24、26、27、28、29
+				<br>31、32、33、34、38、39
+				<br>40、41、42、43、46、47、48
+				<br>50、57</p>
+			<hr>
+			<h3>家長同意書</h3>
+			<p><a href="doc/consent.docx" download>下載</a></p>
+			<p>未滿 20 歲的人請將「家長同意書」下載、列印並填妥資料
+				<br>掃描並將檔案寄到 imfreshcamp@gmail.com
+				<br>或傳真到 03-5227793</p>
+			<p>請於 <b>8/30</b> 前完成此步驟</p>
+			<hr>
+			<h3>繳交報名費用</h3>
+			<p>將「報名費用」 <b>NT$ 3,500</b> 匯款至
+				<br>　<b>134-20-032500-7</b>
+				<br>　戶名：張博程
+				<br>　華南銀行 東湖分行</p>
+			<p>接著寄一封電子郵件到
+				<br>　信箱：b03705036@ntu.edu.tw
+				<br>　主旨：姓名 + 臺大資管迎新宿營匯款核對
+				<br>　內容：匯款帳號末五碼或無摺存款備註姓名</p>
 		</div>
 		<!-- Finished page -->
 	</div>

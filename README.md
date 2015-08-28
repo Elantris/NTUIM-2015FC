@@ -4,6 +4,9 @@ National Taiwan University Information Management 2015 Freshman Camp
 
 ## Update
 
+20150827/1.1/Mission Complete
+> Turn off the sign up form.  
+
 20150820/1.0.5/Crazy
 > Fix the wrong urls of links.  
 > Open link in new tab.  

@@ -16,11 +16,10 @@
 
 <body>
 	<div class="page" id="Sign">
-		<div class="container" id="Sign-Form">
+		<div class="container" id="Sign-form">
 			<h1>工作人員專用表單</h1>
 			<iframe name="hidden_frame" class="hidden"></iframe>
 			<form action="https://docs.google.com/forms/d/1k8ABFUqrgQ-tuZfriwq2iNMdG8nLaAEQv0myTvn3ZGg/formResponse" method="post" target="hidden_frame" id="Form-sign-up">
-				<!-- onsubmit="return formValidate();" -->
 				<div id="Form-basic">
 					<h3>基本資料</h3>
 					<p class="meta">
@@ -136,8 +135,28 @@
 			<h1>填寫完畢</h1>
 		</div>
 	</div>
-	<!-- // <script src="js/main.js"></script> -->
 	<script>
+	$(function() {
+		$('a[href*=#]:not([href=#])').click(function() {
+			if (location.pathname.replace(/^\//, '') == this.pathname.replace(/^\//, '') && location.hostname == this.hostname) {
+				var target = $(this.hash);
+				target = target.length ? target : $('[name=' + this.hash.slice(1) + ']');
+				if (target.length) {
+					$('html,body').animate({
+						scrollTop: target.offset().top
+					}, 500);
+					return false;
+				}
+			}
+		});
+	}); // smooth scroll
+
+	function moveTo(target, offset) {
+		if (!offset) offset = 0;
+		$('html,body').animate({
+			scrollTop: target.offset().top - offset
+		}, 500);
+	} // scroll to target smoothly
 	$('#Version').val('20150815/1.0.4/Discontinued');
 	$('#UserAgent').val(navigator.userAgent); // hidden input field
 
