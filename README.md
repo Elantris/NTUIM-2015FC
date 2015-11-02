@@ -4,6 +4,8 @@ National Taiwan University Information Management 2015 Freshman Camp
 
 ## Update
 
+20151102/1.1.1/Archive
+
 20150827/1.1/Mission Complete
 > Turn off the sign up form.  
 
